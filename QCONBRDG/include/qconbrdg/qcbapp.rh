@@ -1,0 +1,438 @@
+//#if !defined(__qcbapp_rh)                // Sentry use file only if it's not already included.
+//#define __qcbapp_rh
+
+/*  Project QConBridge
+    WSDOT Bridge and Structures Office
+    Copyright © 1996. All Rights Reserved.
+
+    SUBSYSTEM:    qconbrdg.exe Application
+    FILE:         qcbapp.rh
+    AUTHOR:       Richard Brice
+
+
+    OVERVIEW
+    ========
+    Constant definitions for all resources defined in qcbapp.rc.
+*/
+
+#define IDI_WSDOT	2000
+#define IDI_ICON1	1
+#include <qconbrdg\menucmd.rh>
+
+#if !defined(IDHELP)
+#define IDHELP                  998
+#endif
+
+#define IDR_LEGAL					19200
+#define IDR_DISCLAIMER        19201
+#define IDD_LICENSEWIZ_1      19202
+#define IDC_LIC_TEXT          19203
+#define IDD_LICENSEWIZ_2      19204
+#define IDC_DISCLAIMER        19205
+#define IDC_CHECK             19206
+
+//
+// Application specific definitions:
+//
+#define IDI_MDIAPPLICATION      1001            // Application icon
+#define BMP_CREDIT	2002
+#define IDI_EDITORVIEW          1003            // Editor window icon
+#define IDI_SHEARVIEW           1004            // Shear results window icon
+#define IDI_MOMENTVIEW          1005            // Moment results view icon
+#define IDI_TABLEVIEW           1006            // Tabular results view icon
+#define IDI_REPORTVIEW          1007            // Report results view icon
+
+#define BMP_LOGO                 100
+#define BMP_SPLASH               1
+#define BMP_BKGROUND             2
+//
+// Display Options Dialog
+//
+#define IDD_DISPLAYOPTIONS       1000
+#define IDD_DISPLAYOPTIONS_PAGE1	1001
+#define IDD_DISPLAYOPTIONS_PAGE2	1002
+#define IDC_LABELS	            100
+#define IDC_TICKS	               101
+#define IDC_DIMENSIONS	         102
+#define IDC_GRID                 103
+#define IDC_INVERT               104
+#define IDC_COLORBASE            100
+#define IDC_COLORBASE0           100
+#define IDC_COLORBASE1           101
+#define IDC_COLORBASE2           102
+#define IDC_COLORBASE3           103
+#define IDC_COLORBASE4           104
+#define IDC_COLORBASE5           105
+#define IDC_COLORBASE6           106
+#define IDC_COLORBASE7           107
+#define IDC_COLORBASE8           108
+#define IDC_COLORBASE9           109
+#define IDC_COLORBASE10          110
+#define IDC_COLORBASE11          111
+#define IDC_COLORBASE12          112
+#define IDC_COLORBASE13          113
+#define IDC_SYMBOLBASE           200
+#define IDC_SYMBOLBASE0          200
+#define IDC_SYMBOLBASE1          201
+#define IDC_SYMBOLBASE2          202
+#define IDC_SYMBOLBASE3          203
+#define IDC_SYMBOLBASE4          204
+#define IDC_SYMBOLBASE5          205
+#define IDC_SYMBOLBASE6          206
+#define IDC_SYMBOLBASE7          207
+#define IDC_SYMBOLBASE8          208
+#define IDC_SYMBOLBASE9          209
+#define IDC_SYMBOLBASE10         210
+#define IDC_SYMBOLBASE11         211
+#define IDC_SYMBOLBASE12         212
+#define IDC_SYMBOLBASE13         213
+#define IDC_PENBASE              300
+#define IDC_PENBASE0             300
+#define IDC_PENBASE1             301
+#define IDC_PENBASE2             302
+#define IDC_PENBASE3             303
+#define IDC_PENBASE4             304
+#define IDC_PENBASE5             305
+#define IDC_PENBASE6             306
+#define IDC_PENBASE7             307
+#define IDC_PENBASE8             308
+#define IDC_PENBASE9             309
+#define IDC_PENBASE10            310
+#define IDC_PENBASE11            311
+#define IDC_PENBASE12            312
+#define IDC_PENBASE13            313
+
+//
+// Load Factors Dialog
+//
+#define IDD_LOADFACTORS	         1003
+#define IDD_LOADFACTORS_PAGE1	   1004
+#define IDD_LOADFACTORS_PAGE2	   1005
+#define IDC_STRENGTH_I	         101
+#define IDC_SERVICE_I	         102
+#define IDC_SERVICE_II	         103
+#define IDC_SERVICE_III	         104
+#define IDC_FATIGUE	            105
+#define IDC_DW_MAX	            201
+#define IDC_DW_MIN	            202
+#define IDC_DC_MAX	            203
+#define IDC_DC_MIN	            204
+#define IDC_LL                   205
+
+//
+// Add/Edit Span Dialog
+//
+#define IDD_SPAN	               1006
+#define IDD_SPAN_PROPERTIES	   1007
+#define IDD_SPAN_BC	            1008
+#define IDD_SPAN_HINGE	         1009
+#define IDD_SPAN_LIMSTATE	      1010
+#define IDD_SPAN_INSERTIONPT     1011
+#define IDD_SPAN_SUPPORTDATA     1012
+
+#define IDC_SORT                 103
+#define IDC_CALCULATOR           104
+#define IDC_TABLE                105
+
+#define IDC_LEFTEND              201
+#define IDC_RIGHTEND             202
+
+#define IDC_HINGEGRP             300
+#define IDC_HINGE0               301
+#define IDC_HINGE1               302
+#define IDC_HINGE2               303
+#define IDC_HINGE1LOCATION       304
+#define IDC_HINGE1_TAG           305
+#define IDC_HINGE2LOCATION       306
+#define IDC_HINGE2_TAG           307
+
+#define IDC_ND_STRENGTH          401
+#define IDC_NR_STRENGTH          402
+#define IDC_NI_STRENGTH          403
+#define IDC_ND_SERVICE           404
+#define IDC_NR_SERVICE           405
+#define IDC_NI_SERVICE           406
+
+#define IDC_START                501
+#define IDC_END                  502
+#define IDC_CURRENT              503
+
+// Edit Support Dialog
+#define IDD_EDITSUPPORT	         1013
+#define IDC_SIMPLE               101
+#define IDC_BCGROUP              102
+#define IDC_PINNED               103
+#define IDC_ROLLER               104
+#define IDC_FIXED                105
+
+// Paste Special Dialog
+#define IDD_PASTESPECIAL         1014
+#define IDC_PASTEOPTIONS         101
+#define IDC_REPLACESPAN          102
+#define IDC_REPLACESUPPORT       103
+#define IDC_MIRRORSPAN           104
+
+// Impact Dialog
+#define IDD_IMPACT               1015
+#define IDC_IMTRUCK              101
+#define IDC_IMLANE               102
+#define IDC_IMFATIGUE            103
+
+// Pedestrial Dialog
+#define IDD_PEDESTRIAN           1016
+#define IDC_PEDESTRIAN           101
+#define IDC_PEDESTRIAN_TAG       102
+
+// Live Load Generation Dialog
+#define IDD_LLGENERATION         1017
+#define IDD_LLGENERATION_PAGE1   1018
+#define IDD_LLGENERATION_PAGE2   1019
+#define IDD_LLGENERATION_PAGE3   1020
+#define IDC_AXLE_INCREMENTS      101
+#define IDC_LABEL                200
+#define IDC_DISABLE              201
+#define IDC_ENABLE_RANGE1        202
+#define IDC_R1_FROM              203
+#define IDC_R1_FROM_TAG          204
+#define IDC_MISC_TEXT1           205
+#define IDC_R1_TO                206
+#define IDC_R1_TO_TAG            207
+#define IDC_MISC_TEXT2           208
+#define IDC_R1_INC               209
+#define IDC_MISC_TEXT3           210
+#define IDC_ENABLE_RANGE2        211
+#define IDC_R2_FROM              212
+#define IDC_R2_FROM_TAG          213
+#define IDC_MISC_TEXT4           214
+#define IDC_R2_TO                215
+#define IDC_R2_TO_TAG            216
+#define IDC_MISC_TEXT5           217
+#define IDC_R2_INC               218
+#define IDC_MISC_TEXT6           219
+#define IDC_ENABLE_RANGE3        220
+#define IDC_R3_FROM              221
+#define IDC_R3_FROM_TAG          222
+#define IDC_MISC_TEXT7           223
+#define IDC_R3_TO                224
+#define IDC_R3_TO_TAG            225
+#define IDC_MISC_TEXT8           226
+#define IDC_R3_INC               227
+#define IDC_MISC_TEXT9           228
+
+// Concentrated/Uniform Load Dialogs
+#define IDD_CONCLOAD             1024
+#define IDD_UNIFLOAD             1025
+#define IDC_STARTLOC             101
+#define IDC_STARTLOC_FRACT       102
+#define IDC_STARTLOC_TAG         103
+#define IDC_ENDLOC               104
+#define IDC_ENDLOC_FRACT         105
+#define IDC_ENDLOC_TAG           106
+#define IDC_FRACTIONAL           107
+#define IDC_LOAD                 108
+#define IDC_LOAD_TAG             109
+#define IDC_ALLSPANS             110
+#define IDC_LOADINGGRP           111
+#define IDC_DC                   112
+#define IDC_DW                   113
+
+// Units Dialog
+#define IDD_UNITSDLG             1026
+
+// Diagram Selection Dialog
+#define IDD_SELLOADING 	         1027
+#define IDC_ACTIVE_DIAGRAMS	   101
+#define IDC_MARKALL	            102
+#define IDC_CLEARALL	            103
+
+// Diagram Table Dialog
+#define IDD_SELTABLE             1028
+
+// Analysis Progress Dialog
+#define IDD_PROGRESSDIALOG	      1035
+
+//
+// Menu Identifiers
+//
+#define MDI_MENU                100             // Menu resource ID and Accelerator IDs
+
+#define IDM_DOCMANAGERFILE      32401           // Menu for DocManager merging.
+#define IDM_EDITVIEW     	     32581           // Menu for TEditView merging.
+#define IDM_LISTVIEW            32582           // Menu for TListView merging.
+
+
+// Context sensitive help cursor.
+#define IDC_HELPCURSOR          24000
+
+
+//
+// About Dialogs
+//
+#define IDD_ABOUT               22000
+#define IDC_COMPANY	           22001
+#define IDC_DIVISION            22002
+#define IDC_PRODUCT	           22003
+#define IDC_VERSION             22004
+#define IDC_RELEASEDATE	        22005
+#define IDC_COPYRIGHT           22006
+#define IDC_DEBUG               22007
+#define IDC_AUTHOR	           22008
+#define IDC_WRITER	22009
+
+
+//
+// OWL defined strings
+//
+
+// Statusbar
+#define IDS_MODES               32530
+#define IDS_MODESOFF            32531
+
+
+// EditFile
+#define IDS_UNABLEREAD          32551
+#define IDS_UNABLEWRITE         32552
+#define IDS_FILECHANGED         32553
+#define IDS_FILEFILTER          32554
+
+// EditSearch
+#define IDS_CANNOTFIND          32540
+
+
+//
+// General & application exception messages (include\owl\except.rh)
+//
+#define IDS_UNKNOWNEXCEPTION    32767
+#define IDS_OWLEXCEPTION        32766
+#define IDS_OKTORESUME          32765
+#define IDS_UNHANDLEDXMSG       32764
+#define IDS_UNKNOWNERROR        32763
+#define IDS_NOAPP               32762
+#define IDS_OUTOFMEMORY         32761
+#define IDS_INVALIDMODULE       32760
+#define IDS_INVALIDMAINWINDOW   32759
+#define IDS_VBXLIBRARYFAIL      32758
+
+//
+// Owl 1 compatibility messages
+//
+#define IDS_INVALIDWINDOW       32709
+#define IDS_INVALIDCHILDWINDOW  32708
+#define IDS_INVALIDCLIENTWINDOW 32707
+
+//
+// TXWindow messages
+//
+#define IDS_CLASSREGISTERFAIL   32749
+#define IDS_CHILDREGISTERFAIL   32748
+#define IDS_WINDOWCREATEFAIL    32747
+#define IDS_WINDOWEXECUTEFAIL   32746
+#define IDS_CHILDCREATEFAIL     32745
+
+#define IDS_MENUFAILURE         32744
+#define IDS_VALIDATORSYNTAX     32743
+#define IDS_PRINTERERROR        32742
+
+#define IDS_LAYOUTINCOMPLETE    32741
+#define IDS_LAYOUTBADRELWIN     32740
+
+//
+// TXGdi messages
+//
+#define IDS_GDIFAILURE          32739
+#define IDS_GDIALLOCFAIL        32738
+#define IDS_GDICREATEFAIL       32737
+#define IDS_GDIRESLOADFAIL      32736
+#define IDS_GDIFILEREADFAIL     32735
+#define IDS_GDIDELETEFAIL       32734
+#define IDS_GDIDESTROYFAIL      32733
+#define IDS_INVALIDDIBHANDLE    32732
+
+
+// ListView (include\owl\listview.rh)
+#define IDS_LISTNUM             32584
+
+
+// DocView (include\owl\docview.rh)
+#define IDS_DOCMANAGERFILE      32500
+#define IDS_DOCLIST             32501
+#define IDS_VIEWLIST            32502
+#define IDS_UNTITLED            32503
+#define IDS_UNABLEOPEN          32504
+#define IDS_UNABLECLOSE         32505
+#define IDS_READERROR           32506
+#define IDS_WRITEERROR          32507
+#define IDS_DOCCHANGED          32508
+#define IDS_NOTCHANGED          32509
+#define IDS_NODOCMANAGER        32510
+#define IDS_NOMEMORYFORVIEW     32511
+#define IDS_DUPLICATEDOC        32512
+
+
+
+//
+// Printing error message string resource IDs (include\owl\printer.rh)
+//
+#define IDS_PRNON               32590
+#define IDS_PRNERRORTEMPLATE    32591
+#define IDS_PRNOUTOFMEMORY      32592
+#define IDS_PRNOUTOFDISK        32593
+#define IDS_PRNCANCEL           32594
+#define IDS_PRNMGRABORT         32595
+#define IDS_PRNGENERROR         32596
+#define IDS_PRNERRORCAPTION     32597
+
+//
+// Loading Strings
+//
+#define IDS_DC                   1900
+#define IDS_DW                   1901
+#define IDS_LL_ENV               1902
+#define IDS_TANDEM_ENV           1903
+#define IDS_TRUCK_ENV            1904
+#define IDS_TRKTRAIN_ENV         1905
+#define IDS_TANDEMTRAIN_ENV      1906
+#define IDS_FATIGUETRK_ENV       1907
+#define IDS_PEDESTRIAN_ENV       1908
+#define IDS_STRENGTH_I_ENV       1909
+#define IDS_SERVICE_I_ENV        1910
+#define IDS_SERVICE_II_ENV       1911
+#define IDS_SERVICE_III_ENV      1912
+#define IDS_FATIGUE_ENV          1913
+
+//
+// Filter Strings
+//
+#define IDS_TABLEEXPORTFILTER    1950
+#define IDS_REPORTEXPORTFILTER   1951
+#define IDS_METAFILEFILTER       1952
+
+//
+// Printer abort dialog & control IDs
+//
+#define IDD_ABORTDIALOG         32599            // keep different than any string IDs
+#define ID_TITLE                101              // Document title text control
+#define ID_DEVICE               102              // Device & optional port text control
+#define ID_PORT                 103              // Old port text control, unused
+#define ID_PAGE                 104              // Page # text control
+
+
+// TInputDialog DIALOG resource (include\owl\inputdia.rh)
+#define IDD_INPUTDIALOG         32514
+#define ID_PROMPT               4091
+#define ID_INPUT                4090
+
+
+// TSlider bitmaps (horizontal and vertical) (include\owl\slider.rh)
+#define IDB_HSLIDERTHUMB        32000
+#define IDB_VSLIDERTHUMB        32001
+
+
+// Validation messages (include\owl\validate.rh)
+#define IDS_VALPXPCONFORM       32520
+#define IDS_VALINVALIDCHAR      32521
+#define IDS_VALNOTINRANGE       32522
+#define IDS_VALNOTINLIST        32523
+
+
+//#endif         // __qcbapp_rh sentry.

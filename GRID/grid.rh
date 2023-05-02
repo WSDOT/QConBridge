@@ -1,0 +1,25 @@
+/////////////////////////////////////////////////////////////////////////////
+//                                                                         //
+// grid.rh                                                                 //
+//                                                                         //
+/////////////////////////////////////////////////////////////////////////////
+//                                                                         //
+// Grid control library - Version 1.40 - 22 oct 1995                       //
+// TGrid - Copyright © 1994,1995 H. Picot, All Rights Reserved.            //
+//                                                                         //
+/////////////////////////////////////////////////////////////////////////////
+
+#define CURSOR_1	1
+#define HREZSIZE 500
+#define BMP_CHK3D	100
+#define BMP_CHK3D_95	101
+
+#define ENGLISH_STRINGS     20000
+#define DUTCH_STRINGS       20100
+#define FRENCH_STRINGS      20200
+#define GERMAN_STRINGS      20300
+#define ITALIAN_STRINGS     20400
+#define PORTUGUESE_STRINGS  20500
+#define SPANISH_STRINGS     20600
+
+

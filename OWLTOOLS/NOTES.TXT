@@ -1,0 +1,55 @@
+General Notes for OWLtools
+===============================================================================
+The following compiler directives must be defined when building OWLtools:
+_BUILDOWLDLL
+_OWLDLL (this implies _RTLDLL and _BIDSDLL are defined as well)
+
+
+The following compiler directive must be defined for any project using OWLtools:
+_OWLDLL (this implies _RTLDLL and _BIDSDLL are defined as well)
+
+
+The compiler directives may be defined by selecting
+Options|Project|Compiler|Defines.
+
+
+When this library is in it's final form, the lib file should be placed in
+BC45\LIB or some other common library location. The dll should be placed in
+the WINDOWS or WINDOWS\SYSTEM directory, or some other command directory that
+is included in the path. The hpp files should be placed in BC45\INCLUDE or
+some other command header file location.
+
+
+Enhancement Notes for OWLtools
+===============================================================================
+
+BITMAP CONTROL:
+The Bitmap Control and the Bitmap Window should be combined to derive from one
+common ancestor. The are very closely related and should belong to the same
+family.
+
+TLinkedLBox and TLinkedLBoxButton:
+It would be better if these controls could be encapculated into one reusable
+control.
+
+TRealDC:
+I have found that it is by far faster to use native GDI commands that to
+use the TRealDC commands. In my latest application (CBA.EXE) I have been
+mapping the real numbers into integer numbers using TRealDC, but doing all
+of the actual drawing and painting with TDC. This leads me to the suggestion
+that TRealDC should be broken into two classes, TRealMapper and TRealDC
+
+   TDC     TRealMapper
+    ^           ^
+    |           |
+    +-----+-----+
+          |
+       TRealDC
+
+This will allow future applications to get the mapping benifits of TRealDC,
+without the overhead of the TRealDC drawing functions, in addition, the
+multiple inheritance will preserve any TRealDC object currently in use.
+
+UnitEdit controls:
+When updating the window size for a new text label, the size should change before
+the string is updated. This will eliminate the flicker problem.

@@ -1,0 +1,175 @@
+.MCAD 304020000 1 74 102 0
+.CMD FORMAT  rd=d ct=10 im=i et=3 zt=15 pr=3 mass length time charge temperature tr=0 vm=0
+.CMD SET ORIGIN 0
+.CMD SET TOL 0.001000000000000
+.CMD SET PRNCOLWIDTH 8
+.CMD SET PRNPRECISION 4
+.CMD PRINT_SETUP 1.200000 1.216667 1.200000 1.200000 0
+.CMD HEADER_FOOTER 1 1 *empty* *empty* *empty* 0 1 *empty* *empty* *empty*
+.CMD HEADER_FOOTER_FONT fontID=14 family=Arial points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD HEADER_FOOTER_FONT fontID=15 family=Arial points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFAULT_TEXT_PARPROPS 0 0 0
+.CMD DEFINE_FONTSTYLE_NAME fontID=0 name=Variables
+.CMD DEFINE_FONTSTYLE_NAME fontID=1 name=Constants
+.CMD DEFINE_FONTSTYLE_NAME fontID=2 name=Text
+.CMD DEFINE_FONTSTYLE_NAME fontID=4 name=User^1
+.CMD DEFINE_FONTSTYLE_NAME fontID=5 name=User^2
+.CMD DEFINE_FONTSTYLE_NAME fontID=6 name=User^3
+.CMD DEFINE_FONTSTYLE_NAME fontID=7 name=User^4
+.CMD DEFINE_FONTSTYLE_NAME fontID=8 name=User^5
+.CMD DEFINE_FONTSTYLE_NAME fontID=9 name=User^6
+.CMD DEFINE_FONTSTYLE_NAME fontID=10 name=User^7
+.CMD DEFINE_FONTSTYLE fontID=0 family=Times^New^Roman points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=1 family=Times^New^Roman points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=2 family=Arial points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=4 family=Arial points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=5 family=Courier^New points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=6 family=System points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=7 family=Script points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=8 family=Roman points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=9 family=Modern points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=10 family=Times^New^Roman points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD UNITS U=1
+.CMD DIMENSIONS_ANALYSIS 0 0
+.CMD COLORTAB_ENTRY 0 0 0
+.CMD COLORTAB_ENTRY 128 0 0
+.CMD COLORTAB_ENTRY 0 128 0
+.CMD COLORTAB_ENTRY 128 128 0
+.CMD COLORTAB_ENTRY 0 0 128
+.CMD COLORTAB_ENTRY 128 0 128
+.CMD COLORTAB_ENTRY 0 128 128
+.CMD COLORTAB_ENTRY 128 128 128
+.CMD COLORTAB_ENTRY 192 192 192
+.CMD COLORTAB_ENTRY 255 0 0
+.CMD COLORTAB_ENTRY 0 255 0
+.CMD COLORTAB_ENTRY 255 255 0
+.CMD COLORTAB_ENTRY 0 0 255
+.CMD COLORTAB_ENTRY 255 0 255
+.CMD COLORTAB_ENTRY 0 255 255
+.CMD COLORTAB_ENTRY 255 255 255
+.TXT 2 1 1 0 0
+Cg a73.000000,73.000000,37
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\fs32\b Prestressed 
+Girder Section Properties}}
+.TXT 3 0 3 0 0
+Cg a73.000000,73.000000,30
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b Noncomposite Girder 
+Properties}}
+.EQN 3 0 4 0 0
+{0:A.g}NAME:604.5*({0:in}NAME)^(2)
+.TXT 3 39 102 0 0
+Cg a36.000000,36.000000,21
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard W58G Interior Girders}
+.EQN 2 -39 5 0 0
+{0:I.g}NAME:110*(10)^(9)*({0:mm}NAME)^(4)
+.EQN 5 0 7 0 0
+{0:H.g}NAME:1473*{0:mm}NAME
+.EQN 5 0 8 0 0
+{0:Yb.g}NAME:710*{0:mm}NAME
+.EQN 5 0 9 0 0
+{0:Yt.g}NAME:763*{0:mm}NAME
+.EQN 4 0 100 0 0
+{0:fc.g}NAME:48*(10)^(9)*{0:Pa}NAME
+.EQN 5 0 80 0 0
+{0:St}NAME:({0:I.g}NAME)/({0:Yt.g}NAME)
+.EQN 1 9 81 0 0
+{0:St}NAME={0}?({0:mm}NAME)^(3)
+.EQN 5 -9 82 0 0
+{0:Sb}NAME:({0:I.g}NAME)/({0:Yb.g}NAME)
+.EQN 0 9 83 0 0
+{0:Sb}NAME={0}?({0:mm}NAME)^(3)
+.TXT 5 -9 13 0 0
+Cg a38.300000,38.300000,15
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b Slab Properties}}
+.EQN 3 0 15 0 0
+{0:W.eff}NAME:1.905*(10)^(3)*{0:mm}NAME
+.EQN 5 0 16 0 0
+{0:T.slab}NAME:190*{0:mm}NAME
+.EQN 5 0 17 0 0
+{0:fc.slab}NAME:28*(10)^(9)*{0:Pa}NAME
+.TXT 3 0 21 0 0
+Cg a73.000000,73.000000,13
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b Modular Ratio}}
+.EQN 6 0 19 0 0
+{0:n}NAME:\(({0:fc.g}NAME)/({0:fc.slab}NAME))
+.EQN 6 0 20 0 0
+{0:n}NAME={0}?_n_u_l_l_
+.TXT 4 0 22 0 0
+Cg a73.000000,73.000000,56
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b Composite Girder 
+Properties (for Superimposed Dead Load)}}
+.EQN 4 0 24 0 0
+{0:A.slab}NAME:2*{0:n}NAME*{0:W.eff}NAME*{0:T.slab}NAME
+.EQN 5 0 25 0 0
+{0:A.slab}NAME={0}?({0:mm}NAME)^(2)
+.EQN 4 0 26 0 0
+{0:A}NAME:{0:A.g}NAME+{0:A.slab}NAME
+.EQN 1 14 31 0 0
+{0:A}NAME={0}?({0:mm}NAME)^(2)
+.EQN 7 -14 84 0 0
+{0:Yb}NAME:({0:A.g}NAME*{0:Yb.g}NAME+{0:A.slab}NAME*({0:H.g}NAME+({0:T.slab}NAME)/(2)))/({0:A}NAME)
+.EQN 7 0 30 0 0
+{0:Yb}NAME={0}?{0:mm}NAME
+.EQN 4 0 35 0 0
+{0:Yt}NAME:{0:H.g}NAME+{0:T.slab}NAME-{0:Yb}NAME
+.EQN 5 0 34 0 0
+{0:Yt}NAME={0}?{0:mm}NAME
+.EQN 6 1 36 0 0
+{0:I}NAME:{0:I.g}NAME+{0:A.g}NAME*(({0:Yb.g}NAME-{0:Yb}NAME))^(2)+(1)/(12)*2*{0:n}NAME*{0:W.eff}NAME*({0:T.slab}NAME)^(3)+{0:A.slab}NAME*(({0:H.g}NAME+({0:T.slab}NAME)/(2)-{0:Yb}NAME))^(2)
+.EQN 6 0 37 0 0
+{0:I}NAME={0}?({0:mm}NAME)^(4)
+.EQN 4 0 60 0 0
+{0:Sb}NAME:({0:I}NAME)/({0:Yb}NAME)
+.EQN 1 14 69 0 0
+{0:Sb}NAME={0}?({0:mm}NAME)^(3)
+.EQN 4 -15 64 0 0
+{0:St.g}NAME:({0:I}NAME)/({0:Yt}NAME-{0:T.slab}NAME)
+.EQN 0 14 65 0 0
+{0:St.g}NAME={0}?({0:mm}NAME)^(3)
+.EQN 6 -13 66 0 0
+{0:St.s}NAME:({0:I}NAME)/({0:Yt}NAME)
+.EQN 1 13 68 0 0
+{0:St.s}NAME={0}?({0:mm}NAME)^(3)
+.TXT 4 -14 49 0 0
+Cg a73.000000,73.000000,43
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard {\b Composite Girder 
+Properties (for Live Load)}}
+.EQN 4 0 50 0 0
+{0:A.slab}NAME:{0:n}NAME*{0:W.eff}NAME*{0:T.slab}NAME
+.EQN 5 0 51 0 0
+{0:A.slab}NAME={0}?({0:mm}NAME)^(2)
+.EQN 4 0 52 0 0
+{0:A}NAME:{0:A.g}NAME+{0:A.slab}NAME
+.EQN 1 14 53 0 0
+{0:A}NAME={0}?({0:mm}NAME)^(2)
+.EQN 8 -14 54 0 0
+{0:Yb}NAME:({0:A.g}NAME*{0:Yb.g}NAME+{0:A.slab}NAME*({0:H.g}NAME+({0:T.slab}NAME)/(2)))/({0:A}NAME)
+.EQN 6 0 55 0 0
+{0:Yb}NAME={0}?{0:mm}NAME
+.EQN 3 0 76 0 0
+{0:Yt}NAME:{0:H.g}NAME+{0:T.slab}NAME-{0:Yb}NAME
+.EQN 3 0 86 0 0
+{0:Yt}NAME={0}?{0:mm}NAME
+.EQN 5 0 87 0 0
+{0:I}NAME:{0:I.g}NAME+{0:A.g}NAME*(({0:Yb.g}NAME-{0:Yb}NAME))^(2)+(1)/(12)*{0:n}NAME*{0:W.eff}NAME*({0:T.slab}NAME)^(3)+{0:A.slab}NAME*(({0:H.g}NAME+({0:T.slab}NAME)/(2)-{0:Yb}NAME))^(2)
+.EQN 5 0 88 0 0
+{0:I}NAME={0}?({0:mm}NAME)^(4)
+.EQN 4 1 89 0 0
+{0:Sb}NAME:({0:I}NAME)/({0:Yb}NAME)
+.EQN 0 9 95 0 0
+{0:Sb}NAME={0}?({0:mm}NAME)^(3)
+.EQN 0 17 96 0 0
+{0:St.g}NAME:({0:I}NAME)/({0:Yt}NAME-{0:T.slab}NAME)
+.EQN 0 14 97 0 0
+{0:St.g}NAME={0}?({0:mm}NAME)^(3)
+.EQN 6 -40 98 0 0
+{0:St.s}NAME:({0:I}NAME)/({0:Yt}NAME)
+.EQN 1 13 99 0 0
+{0:St.s}NAME={0}?({0:mm}NAME)^(3)

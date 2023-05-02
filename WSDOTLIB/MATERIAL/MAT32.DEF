@@ -1,0 +1,16 @@
+;------------------------------------------------
+;   Project MATERIAL
+;
+;   Copyright © 1995. All Rights Reserved.
+;
+;   SUBSYSTEM:    MATERIAL Module Defintion File
+;   FILE:         mat16.def
+;   AUTHOR:       Richard A. Brice
+;
+;------------------------------------------------
+
+LIBRARY        MAT32
+DESCRIPTION    'Material Properties Library'
+EXETYPE        WINDOWS
+CODE           PRELOAD MOVEABLE DISCARDABLE
+DATA           PRELOAD MOVEABLE SINGLE

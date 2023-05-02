@@ -1,0 +1,17 @@
+;------------------------------------------------
+;   Project FEM2D
+;
+;   Copyright © 1995. All Rights Reserved.
+;
+;   SUBSYSTEM:    FEM2D Module Defintion File
+;   FILE:         fem2d.def
+;   AUTHOR:       Richard A. Brice
+;
+;------------------------------------------------
+
+LIBRARY        FEM2D
+DESCRIPTION    'FEM2D Library'
+EXETYPE        WINDOWS
+CODE           PRELOAD MOVEABLE DISCARDABLE
+DATA           PRELOAD MOVEABLE SINGLE
+HEAPSIZE       1024

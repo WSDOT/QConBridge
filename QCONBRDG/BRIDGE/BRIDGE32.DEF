@@ -1,0 +1,17 @@
+;------------------------------------------------
+;   Project BRIDGE
+;
+;   Copyright © 1995. All Rights Reserved.
+;
+;   SUBSYSTEM:    BRIDGE Module Defintion File
+;   FILE:         bridge.def
+;   AUTHOR:       Richard A. Brice
+;
+;------------------------------------------------
+
+LIBRARY        BRIDGE32
+DESCRIPTION    'BRIDGE Library'
+EXETYPE        WINDOWS
+CODE           PRELOAD MOVEABLE DISCARDABLE
+DATA           PRELOAD MOVEABLE SINGLE
+;HEAPSIZE       1024

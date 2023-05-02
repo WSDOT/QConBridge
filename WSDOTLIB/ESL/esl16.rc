@@ -1,0 +1,36 @@
+1 VERSIONINFO 
+FILEVERSION 1, 0, 0, 0
+PRODUCTVERSION 1, 0, 0, 0
+FILEFLAGSMASK 0
+FILEFLAGS VS_FFI_FILEFLAGSMASK
+FILEOS VOS__WINDOWS16
+FILETYPE VFT_DLL
+{
+ BLOCK "StringFileInfo"
+ {
+  BLOCK "040904E4"
+  {
+   VALUE "CompanyName", "Washington State Department of Transportation\000"
+   VALUE "CompanyGroup","Bridge\000"
+   VALUE "ReleaseDate", "August 8, 1996\000"
+   VALUE "FileDescription", "Engineering Support Library\000"
+   VALUE "FileVersion", "1.0\000"
+   VALUE "InternalName", "ESL\000"
+   VALUE "LegalCopyright", "Copyright © 1996. All Rights Reserved.\000"
+   VALUE "LegalTrademarks", "Windows(TM) is a trademark of Microsoft Corporation\000"
+   VALUE "OriginalFilename", "esl16.dll\000"
+   VALUE "ProductName", "Engineering Support Library\000"
+   VALUE "ProductVersion", "1.0\000"
+   VALUE "OLESelfRegister",""
+  }
+
+ }
+
+ BLOCK "VarFileInfo"
+ {
+  VALUE "Translation", 0x0409, 0x04e4
+ }
+
+}
+
+

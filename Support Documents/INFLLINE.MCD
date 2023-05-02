@@ -1,0 +1,241 @@
+.MCAD 304020000 1 91 294 0
+.CMD PLOTFORMAT
+0 0 1 1 1 0 0 1 1 
+0 0 1 1 1 0 0 1 1 
+0 1 0 0 1 1 NO-TRACE-STRING
+0 2 1 0 1 1 NO-TRACE-STRING
+0 3 2 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 NO-TRACE-STRING
+0 1 1 21 15 0 0 3 
+.CMD FORMAT  rd=d ct=10 im=i et=3 zt=15 pr=3 mass length time charge temperature tr=1 vm=0
+.CMD SET ORIGIN 0
+.CMD SET TOL 0.001000000000000
+.CMD SET PRNCOLWIDTH 8
+.CMD SET PRNPRECISION 4
+.CMD PRINT_SETUP 0.500000 0.500000 0.500000 0.500000 0
+.CMD HEADER_FOOTER 1 1 *empty* *empty* |P 0 1 *empty* *empty* *empty*
+.CMD HEADER_FOOTER_FONT fontID=14 family=Arial points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD HEADER_FOOTER_FONT fontID=15 family=Arial points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFAULT_TEXT_PARPROPS 0 0 0
+.CMD DEFINE_FONTSTYLE_NAME fontID=0 name=Variables
+.CMD DEFINE_FONTSTYLE_NAME fontID=1 name=Constants
+.CMD DEFINE_FONTSTYLE_NAME fontID=2 name=Text
+.CMD DEFINE_FONTSTYLE_NAME fontID=4 name=User^1
+.CMD DEFINE_FONTSTYLE_NAME fontID=5 name=User^2
+.CMD DEFINE_FONTSTYLE_NAME fontID=6 name=User^3
+.CMD DEFINE_FONTSTYLE_NAME fontID=7 name=User^4
+.CMD DEFINE_FONTSTYLE_NAME fontID=8 name=User^5
+.CMD DEFINE_FONTSTYLE_NAME fontID=9 name=User^6
+.CMD DEFINE_FONTSTYLE_NAME fontID=10 name=User^7
+.CMD DEFINE_FONTSTYLE fontID=0 family=Times^New^Roman points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=1 family=Times^New^Roman points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=2 family=Arial points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=4 family=Arial points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=5 family=Courier^New points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=6 family=System points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=7 family=Script points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=8 family=Roman points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=9 family=Modern points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=10 family=Times^New^Roman points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD UNITS U=1
+.CMD DIMENSIONS_ANALYSIS 0 0
+.CMD COLORTAB_ENTRY 0 0 0
+.CMD COLORTAB_ENTRY 128 0 0
+.CMD COLORTAB_ENTRY 0 128 0
+.CMD COLORTAB_ENTRY 128 128 0
+.CMD COLORTAB_ENTRY 0 0 128
+.CMD COLORTAB_ENTRY 128 0 128
+.CMD COLORTAB_ENTRY 0 128 128
+.CMD COLORTAB_ENTRY 128 128 128
+.CMD COLORTAB_ENTRY 192 192 192
+.CMD COLORTAB_ENTRY 255 0 0
+.CMD COLORTAB_ENTRY 0 255 0
+.CMD COLORTAB_ENTRY 255 255 0
+.CMD COLORTAB_ENTRY 0 0 255
+.CMD COLORTAB_ENTRY 255 0 255
+.CMD COLORTAB_ENTRY 0 255 255
+.CMD COLORTAB_ENTRY 255 255 255
+.TXT 3 2 7 0 0
+Cg a72.000000,72.000000,274
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Given a bridge and the 
+influence coefficients with a single span for a point not located in 
+that span, and a truck having {\i p} axles with spacings {\i d},\par 
+\par Find\par \par 1. The location to put the truck to an extreme 
+force effect at the point under consideration\par 2. The extreme force effect}
+.TXT 24 37 71 0 0
+Cg a35.000000,35.000000,12
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Axle Weights}
+.TXT 0 14 72 0 0
+Cg a21.000000,21.000000,12
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Axle Spacing}
+.EQN 5 -14 66 0 0
+{0:P}NAME:({3,1}ö145ö145ö35)
+.EQN 0 11 69 0 0
+{0:d}NAME:({3,1}ö4.3ö4.3ö0)
+.EQN 1 -46 10 0 0
+{0:x}NAME:({11,1}ö80ö76ö72ö68ö64ö60ö56ö52ö48ö44ö40)
+.EQN 0 12 11 0 0
+{0:y}NAME:({11,1}ö0ö-0.792ö-1.536ö-2.184ö-2.688ö-3ö-3.072ö-2.856ö-2.304ö-1.368ö0)
+.EQN 1 11 236 0 0
+{0:m}NAME:{0:length}NAME({0:x}NAME)
+.EQN 0 36 239 0 0
+{0:p}NAME:{0:length}NAME({0:P}NAME)
+.EQN 4 -36 237 0 0
+{0:m}NAME={0}?_n_u_l_l_
+.EQN 0 36 240 0 0
+{0:p}NAME={0}?_n_u_l_l_
+.TXT 13 -57 195 0 0
+Cg a62.000000,62.000000,91
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Approximate influence 
+line with a forth order polymonial, using least squares approximation}
+.EQN 4 0 18 0 0
+{0:n}NAME:4
+.EQN 5 0 30 0 0
+{0:K}NAME({0:j}NAME):((0,{0:m}NAME-1,{0:i}NAME,((({0:x}NAME)[({0:i}NAME)))^({0:j}NAME)){64})
+.EQN 0 19 47 0 0
+{0:L}NAME({0:j}NAME):((0,{0:m}NAME-1,{0:i}NAME,({0:y}NAME)[({0:i}NAME)*((({0:x}NAME)[({0:i}NAME)))^({0:j}NAME)){64})
+.EQN 12 -20 32 0 0
+{0:A}NAME:({5,5}ö{0:K}NAME(8)ö{0:K}NAME(7)ö{0:K}NAME(6)ö{0:K}NAME(5)ö{0:K}NAME(4)ö{0:K}NAME(7)ö{0:K}NAME(6)ö{0:K}NAME(5)ö{0:K}NAME(4)ö{0:K}NAME(3)ö{0:K}NAME(6)ö{0:K}NAME(5)ö{0:K}NAME(4)ö{0:K}NAME(3)ö{0:K}NAME(2)ö{0:K}NAME(5)ö{0:K}NAME(4)ö{0:K}NAME(3)ö
+{0:K}NAME(2)ö{0:K}NAME(1)ö{0:K}NAME(4)ö{0:K}NAME(3)ö{0:K}NAME(2)ö{0:K}NAME(1)ö{0:K}NAME(0))
+.EQN 16 0 165 0 0
+{0:B}NAME:({5,1}ö{0:L}NAME(4)ö{0:L}NAME(3)ö{0:L}NAME(2)ö{0:L}NAME(1)ö{0:L}NAME(0))
+.EQN 17 -1 161 0 0
+{0:A}NAME={0}?_n_u_l_l_
+.EQN 0 54 163 0 0
+{0:B}NAME={0}?_n_u_l_l_
+.EQN 12 -54 164 0 0
+{0:a}NAME:({0:A}NAME)^(-1)*{0:B}NAME
+.EQN 12 -1 58 0 0
+{0:a}NAME={0}?_n_u_l_l_
+.TXT 11 0 59 0 0
+Cg a71.000000,71.000000,42
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Approximate equation of 
+the influence line}
+.EQN 6 0 265 0 0
+{0:f}NAME({0:x}NAME):((0,{0:n}NAME,{0:i}NAME,({0:a}NAME)[({0:i}NAME)*({0:x}NAME)^({0:i}NAME)){64})
+.EQN 0 19 271 0 0
+{0:X}NAME:40;80
+.EQN 5 -20 272 0 0
+&&(_n_u_l_l_&_n_u_l_l_)&{0:f}NAME({0:X}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:X}NAME
+0 0 1 1 1 0 0 1 1 
+0 0 1 1 1 0 0 1 1 
+0 1 0 0 1 1 NO-TRACE-STRING
+0 2 1 0 1 1 NO-TRACE-STRING
+0 3 2 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 NO-TRACE-STRING
+0 1 1 21 15 12 0 3 
+.EQN 8 38 273 0 0
+{0:E}NAME:((0,{0:n}NAME,{0:i}NAME,(({0:f}NAME(({0:x}NAME)[({0:i}NAME))-({0:y}NAME)[({0:i}NAME)))^(2)){64})
+.EQN 7 0 274 0 0
+{0:E}NAME={0}?_n_u_l_l_
+.TXT 0 13 275 0 0
+Cg a38.000000,38.000000,19
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Least Squares Error}
+.TXT 8 -51 276 0 0
+Cg a72.000000,72.000000,208
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard The structural response 
+at the point under consideration is defined by the following equation,
+\par where x is the distance from the left support in the span 
+containing the truck to the left most axle of the truck}
+.EQN 10 0 277 0 0
+{0:g}NAME({0:x}NAME):((0,{0:p}NAME-1,{0:j}NAME,{0:\F}NAME(-1*{0:f}NAME({0:x}NAME+((0,{0:j}NAME,{0:k}NAME,({0:d}NAME)[({0:k}NAME)){64})))*({0:P}NAME)[({0:j}NAME)*{0:f}NAME({0:x}NAME+((0,{0:j}NAME,{0:k}NAME,({0:d}NAME)[({0:k}NAME)){64}))){64})
+.EQN 5 0 278 0 0
+&&(_n_u_l_l_&_n_u_l_l_)&{0:g}NAME({0:X}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:X}NAME
+0 0 1 1 1 0 0 1 1 
+0 0 1 1 1 0 0 1 1 
+0 1 0 0 1 1 NO-TRACE-STRING
+0 2 1 0 1 1 NO-TRACE-STRING
+0 3 2 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 NO-TRACE-STRING
+0 1 1 21 15 12 0 3 
+.TXT 23 0 279 0 0
+Cg a72.000000,72.000000,63
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Find the location to 
+place the truck to obtain a extreme effect}
+.EQN 6 0 280 0 0
+{0:h}NAME({0:x}NAME):((0,{0:p}NAME-1,{0:j}NAME,{0:\F}NAME(-1*{0:f}NAME({0:x}NAME+((0,{0:j}NAME,{0:k}NAME,({0:d}NAME)[({0:k}NAME)){64})))*({0:P}NAME)[({0:j}NAME)*{0:x}NAME"{0:f}NAME({0:x}NAME+((0,{0:j}NAME,{0:k}NAME,({0:d}NAME)[({0:k}NAME)){64}))){64})
+.EQN 0 51 289 0 0
+&&(_n_u_l_l_&_n_u_l_l_)&{0:h}NAME({0:X}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:X}NAME
+0 0 1 1 1 0 0 1 1 
+0 0 1 1 1 0 0 1 1 
+0 1 0 0 1 1 NO-TRACE-STRING
+0 2 1 0 1 1 NO-TRACE-STRING
+0 3 2 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 NO-TRACE-STRING
+0 1 1 21 15 12 0 3 
+.EQN 6 -51 281 0 0
+{0:x}NAME:60
+.TXT 0 6 282 0 0
+Cg a83.000000,83.000000,7
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard (Guess)}
+.EQN 3 -6 290 0 0
+{0:x}NAME:{0:root}NAME({0:h}NAME({0:x}NAME),{0:x}NAME)
+.EQN 3 0 291 0 0
+{0:x}NAME={0}?_n_u_l_l_
+.TXT 0 12 292 0 0
+Cg a77.000000,77.000000,22
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Location to place axle}
+.EQN 3 -12 293 0 0
+{0:g}NAME({0:x}NAME)={0}?_n_u_l_l_
+.TXT 0 13 294 0 0
+Cg a76.000000,76.000000,20
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Extreme force effect}

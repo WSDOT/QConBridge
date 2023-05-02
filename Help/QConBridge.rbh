@@ -1,0 +1,34 @@
+
+[Document Files]
+QConBridge.doc=1
+Context.doc=2
+Loads.doc=3
+Spans.doc=4
+HSpans.doc=5
+HIntroduction.doc=6
+Menu Commands.doc=7
+Editing Techniques.doc=8
+HEditing.doc=9
+HCreate.doc=10
+HAnalyze.doc=15
+HReview.doc=12
+HPrinting.doc=13
+HPreface.doc=14
+HNotes.doc=16
+
+[File Properties]
+HasProperties=1
+BrowseType=0
+AutoMapFile=0
+StartingWith=0
+IncrementBy=20
+NextTopicNumber=0
+StartingNumber=1
+BrowseString=QConBridge:0
+DefaultBuildTag=
+
+[VERSION]
+RHFile=7.0
+
+[Project]
+CHFile=

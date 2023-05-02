@@ -1,0 +1,14 @@
+// Context ID's for section property calculator help
+
+#define SPHELP_INTRO       20000
+#define SPHELP_SUPPORT     20001
+#define SPHELP_DECKTYPE    20002
+#define SPHELP_WOODBEAM    20003
+#define SPHELP_STEELBEAM   20004
+#define SPHELP_IBEAM       20005
+#define SPHELP_WOODDECK    20006
+#define SPHELP_STEELGRID   20007
+#define SPHELP_CONCDECK    20008
+#define SPHELP_SKEWANGLE   20009
+#define SPHELP_RESULTS     20010
+#define SPHELP_ADDOWN      20011

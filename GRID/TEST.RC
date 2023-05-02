@@ -1,0 +1,43 @@
+/////////////////////////////////////////////////////////////////////////////
+//                                                                         //
+// test.rc                                                                 //
+//                                                                         //
+/////////////////////////////////////////////////////////////////////////////
+//                                                                         //
+// Grid control library - Version 1.40 - 22 oct 1995                       //
+// TGrid - Copyright © 1994,1995 H. Picot, All Rights Reserved.            //
+//                                                                         //
+/////////////////////////////////////////////////////////////////////////////
+
+#include "test.rh"
+#include <owl/except.rc>
+
+
+DIALOG_TEST DIALOG 0, 15, 340, 198
+STYLE 0x4L | WS_CHILD | WS_VISIBLE
+FONT 8, "MS Sans Serif"
+{
+ RTEXT "Some edit", 112, 54, 10, 60, 8
+ EDITTEXT 111, 118, 8, 32, 12, WS_BORDER | WS_TABSTOP
+ RTEXT "Total", -1, 190, 10, 69, 8
+ EDITTEXT 114, 270, 8, 58, 13, ES_RIGHT | ES_MULTILINE | ES_READONLY | NOT WS_TABSTOP | WS_BORDER
+ AUTO3STATE "", 100, 10, 27, 320, 133, BS_OWNERDRAW | WS_CHILD | WS_VISIBLE | WS_CLIPSIBLINGS | WS_BORDER | WS_TABSTOP
+ CONTROL "String", 101, "EDIT", ES_AUTOHSCROLL | NOT WS_VISIBLE | WS_BORDER | WS_TABSTOP, 63, 35, 54, 13
+ CONTROL "Real", 106, "EDIT", ES_RIGHT | ES_MULTILINE | ES_AUTOHSCROLL | NOT WS_VISIBLE | WS_BORDER | WS_TABSTOP, 142, 40, 32, 13
+ CONTROL "Integer", 113, "EDIT", ES_RIGHT | ES_MULTILINE | ES_AUTOHSCROLL | NOT WS_VISIBLE | WS_BORDER | WS_TABSTOP, 181, 40, 32, 13
+ CONTROL "Combo", 105, "COMBOBOX", CBS_DROPDOWN | CBS_SORT | WS_CHILD | NOT WS_VISIBLE | WS_VSCROLL | WS_TABSTOP, 37, 55, 60, 62
+ CONTROL "Date", 110, "EDIT", ES_AUTOHSCROLL | NOT WS_VISIBLE | WS_BORDER | WS_TABSTOP, 107, 69, 45, 13
+ CONTROL "Time", 116, "EDIT", ES_MULTILINE | ES_AUTOHSCROLL | NOT WS_VISIBLE | WS_BORDER | WS_TABSTOP, 224, 77, 55, 13
+ AUTOCHECKBOX "", 103, 111, 96, 30, 12, BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_TABSTOP
+ PUSHBUTTON "Button", 104, 60, 124, 45, 12, NOT WS_VISIBLE | WS_TABSTOP
+ LTEXT "Static", 102, 146, 127, 94, 10, NOT WS_GROUP | NOT WS_VISIBLE
+ PUSHBUTTON "Test refresh", 107, 15, 166, 46, 14
+ PUSHBUTTON "&Hide", 108, 15, 181, 46, 14
+ PUSHBUTTON "&Date", 109, 68, 166, 46, 14
+ PUSHBUTTON "Hide &cells", 115, 68, 181, 46, 14
+ PUSHBUTTON "&Add column", 117, 121, 166, 46, 14
+ PUSHBUTTON "Hide colu&mn", IDC_PUSHBUTTON1, 121, 181, 46, 14
+ CONTROL "&Cancel", IDCANCEL, "BorBtn", BS_PUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 181, 167, 37, 25
+ CONTROL "&OK", IDOK, "BorBtn", BS_DEFPUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 227, 167, 37, 25
+}
+

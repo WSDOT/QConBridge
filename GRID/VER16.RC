@@ -1,0 +1,37 @@
+/////////////////////////////////////////////////////////////////////////////
+//                                                                         //
+// ver16.rc                                                                //
+//                                                                         //
+/////////////////////////////////////////////////////////////////////////////
+//                                                                         //
+// Grid control library - Version 1.40 - 22 oct 1995                       //
+// TGrid - Copyright © 1994,1995 H. Picot, All Rights Reserved.            //
+//                                                                         //
+/////////////////////////////////////////////////////////////////////////////
+
+VERSIONINFO_1 VERSIONINFO 
+FILEVERSION 1, 40, 0, 0
+PRODUCTVERSION 1, 40, 0, 0
+FILEOS VOS_DOS_WINDOWS16
+FILETYPE VFT_DLL
+{
+ BLOCK "StringFileInfo"
+ {
+  BLOCK "040904E4"
+  {
+   VALUE "CompanyName", "H. Picot\000\000"
+   VALUE "FileDescription", "Grid library\000"
+   VALUE "FileVersion", "1.40\000\000"
+   VALUE "InternalName", "TGrid.dll\000"
+   VALUE "LegalCopyright", "Copyright © H. Picot 1994,1995\000\000"
+   VALUE "OriginalFilename", "TGrid.dll\000"
+  }
+
+ }
+
+ BLOCK "VarFileInfo"
+ {
+  VALUE "Translation", 0x409, 1252
+ }
+
+}

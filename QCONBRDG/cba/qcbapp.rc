@@ -1,0 +1,1881 @@
+
+#if !defined(WORKSHOP_INVOKED)
+#include <windows.h>
+#endif
+
+#include <qconbrdg\qcbapp.rh>
+#include <qconbrdg\newbridg.rh>
+#include <qconbrdg\sprpwiz.rh>
+#include <qconbrdg\stddload.rh>
+#include <qconbrdg\analdlg.rh>
+#include <qconbrdg\common.rh>
+#include <owltools\progress.rh>
+#include <owl\window.rh>
+
+// Application ICON
+IDI_MDIAPPLICATION ICON "appldocv.ico"
+
+MDI_MENU MENU 
+{
+ POPUP "&File"
+ {
+  MENUITEM "&New...", CM_FILENEW
+  MENUITEM "&Open...", CM_MDIFILEOPEN
+  MENUITEM "&Close", CM_FILECLOSE
+  MENUITEM SEPARATOR
+  MENUITEM "&Save", CM_FILESAVE, GRAYED
+  MENUITEM "Save &As...", CM_FILESAVEAS, GRAYED
+  MENUITEM SEPARATOR
+  MENUITEM "Sen&d...", CM_FILESEND, GRAYED
+  MENUITEM SEPARATOR
+  MENUITEM "&Export...", CM_EXPORT, GRAYED
+  MENUITEM SEPARATOR
+  MENUITEM "&Print...", CM_PRINT, GRAYED
+  MENUITEM "P&rinter Setup...", CM_PRINTERSETUP, GRAYED
+  MENUITEM SEPARATOR
+  MENUITEM "E&xit\tAlt+F4", CM_EXIT
+ }
+
+ POPUP "&Edit"
+ {
+  MENUITEM "Cu&t\tCtrl+X", CM_EDITCUT, GRAYED
+  MENUITEM "&Copy\tCtrl+C", CM_EDITCOPY, GRAYED
+  POPUP "&Paste"
+  {
+   MENUITEM "Paste &Insert\tCtrl+V", CM_PASTEINSERT, GRAYED
+   MENUITEM "Paste &Replace", CM_PASTEREPLACE, GRAYED
+   MENUITEM "Paste &Special...", CM_PASTESPECIAL, GRAYED
+  }
+
+  MENUITEM SEPARATOR
+  MENUITEM "Clear &All\tCtrl+Del", CM_EDITCLEAR, GRAYED
+  MENUITEM "&Delete\tDel", CM_EDITDELETE, GRAYED
+ }
+
+ POPUP "&Span/Support"
+ {
+  MENUITEM "&Add Span/Support...", CM_ADDSPAN
+  MENUITEM "Edit &Span...", CM_EDITSPAN, GRAYED
+  MENUITEM "Edit Su&pport...", CM_EDITSUPPORT, GRAYED
+  MENUITEM SEPARATOR
+  MENUITEM "&Make Cantilever", CM_MAKECANTILEVER, GRAYED
+  MENUITEM "Support &Cantilever", CM_SUPPORTCANTILEVER, GRAYED
+ }
+
+ POPUP "&Loads"
+ {
+  MENUITEM "&Standard Dead Loads...", CM_STANDARD_DEADLOAD
+  MENUITEM "Add &Concentrated Load...", CM_CONCENTRATED_LOAD
+  MENUITEM "Add &Uniform Load...", CM_UNIFORM_LOAD
+  MENUITEM "&Edit Load...", CM_EDITLOAD
+  MENUITEM SEPARATOR
+  MENUITEM "&Live Load Gen Parameters...", CM_LLGENERATION
+  MENUITEM "&Dynamic Load Allowance...", CM_IMPACT
+  MENUITEM "&Pedestrian Live Load...", CM_PEDESTRIAN
+ }
+
+ MENUITEM SEPARATOR
+ POPUP "&Bridge"
+ {
+  MENUITEM "&Load Factors...", CM_LOADFACTORS
+  MENUITEM SEPARATOR
+  MENUITEM "&Analyze...", CM_ANALYZE
+  MENUITEM SEPARATOR
+  MENUITEM "&Reset To Defaults", CM_RESET_TO_DEFAULTS
+ }
+
+ MENUITEM SEPARATOR
+ POPUP "&Options"
+ {
+  MENUITEM "&Units...", CM_UNITS
+  MENUITEM "&Display...", CM_DISPLAYOPTIONS
+  MENUITEM SEPARATOR
+  MENUITEM "Select &Left Support", CM_SELECTLEFT
+  MENUITEM "Select &Right Support", CM_SELECTRIGHT
+  MENUITEM SEPARATOR
+  MENUITEM "Insert &Before", CM_INSERTBEFORE
+  MENUITEM "Insert &After", CM_INSERTAFTER
+ }
+
+ MENUITEM SEPARATOR
+ POPUP "&View"
+ {
+  MENUITEM "&Editor", CM_EDITORVIEW
+  MENUITEM "&Shear Diagram", CM_SHEARDIAGRAM
+  MENUITEM "&Moment Diagram", CM_MOMENTDIAGRAM
+  MENUITEM "&Tabular Results", CM_TABULARRESULTS
+  MENUITEM "&Report", CM_REPORT
+  MENUITEM SEPARATOR
+  MENUITEM "Select &Loading...", CM_SELECTLOADING
+  MENUITEM "Select T&able...", CM_SELECTTABLE
+  MENUITEM SEPARATOR
+  MENUITEM "&Tool Bar", IDW_TOOLBAR
+  MENUITEM "&Status Bar", IDW_STATUSBAR
+ }
+
+ MENUITEM SEPARATOR
+ POPUP "&Window"
+ {
+  MENUITEM "&Cascade", CM_CASCADECHILDREN
+  MENUITEM "&Tile Vertical", CM_TILECHILDREN
+  MENUITEM "Tile &Horizontal", CM_TILECHILDRENHORIZ
+  MENUITEM "Arrange &Icons", CM_ARRANGEICONS
+  MENUITEM "C&lose All", CM_CLOSECHILDREN
+ }
+
+ MENUITEM SEPARATOR
+ POPUP "&Help"
+ {
+  MENUITEM "&Help Topics...", CM_HELPTOPICS
+  MENUITEM SEPARATOR
+  MENUITEM "&Legal Notice...",CM_LEGALNOTICE
+  MENUITEM "&About...", CM_HELPABOUT
+ }
+
+}
+
+
+// Accelerator table for short-cut to menu commands. (include\owl\editfile.rc)
+MDI_MENU ACCELERATORS
+{
+ VK_DELETE, CM_EDITDELETE, VIRTKEY
+ "X", CM_EDITCUT, CONTROL, VIRTKEY
+ "C", CM_EDITCOPY, CONTROL, VIRTKEY
+ "V", CM_PASTEINSERT, CONTROL, VIRTKEY
+ VK_INSERT, CM_EDITPASTE, VIRTKEY, SHIFT
+ VK_DELETE, CM_EDITCLEAR, VIRTKEY, CONTROL
+ VK_BACK, CM_EDITUNDO, VIRTKEY, ALT
+ VK_F3, CM_EDITFINDNEXT, VIRTKEY
+}
+
+
+// Context sensitive help cursor.
+IDC_HELPCURSOR CURSOR "help.cur"
+
+
+// Menu merged in when TEditView is active, notice the extra MENUITEM SEPARATORs which are
+// for menu negotation.  These separators are used as group markers by OWL.
+IDM_EDITVIEW MENU LOADONCALL MOVEABLE PURE DISCARDABLE
+BEGIN
+    MENUITEM SEPARATOR
+
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\aCtrl+Z", CM_EDITUNDO
+        MENUITEM SEPARATOR
+        MENUITEM "&Cut\aCtrl+X", CM_EDITCUT
+        MENUITEM "C&opy\aCtrl+C", CM_EDITCOPY
+        MENUITEM "&Paste\aCtrl+V", CM_EDITPASTE
+        MENUITEM "&Delete\aDel", CM_EDITDELETE
+        MENUITEM "C&lear All\aCtrl+Del", CM_EDITCLEAR
+    END
+
+    POPUP "&Search"
+    BEGIN
+        MENUITEM "&Find...", CM_EDITFIND
+        MENUITEM "&Replace...", CM_EDITREPLACE
+        MENUITEM "&Next\aF3", CM_EDITFINDNEXT
+    END
+
+	MENUITEM SEPARATOR
+
+	MENUITEM SEPARATOR
+
+	MENUITEM SEPARATOR
+
+	MENUITEM SEPARATOR
+END
+
+
+// Menu merged in when TListView is active, notice the extra MENUITEM SEPARATORs which are
+// for menu negotation.  These separators are used as group markers by OWL.
+IDM_LISTVIEW MENU LOADONCALL MOVEABLE PURE DISCARDABLE
+BEGIN
+    MENUITEM SEPARATOR
+
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\aCtrl+Z", CM_EDITUNDO
+        MENUITEM SEPARATOR
+        MENUITEM "&Cut\aCtrl+X", CM_EDITCUT
+        MENUITEM "C&opy\aCtrl+C", CM_EDITCOPY
+        MENUITEM "&Paste\aCtrl+V", CM_EDITPASTE
+        MENUITEM "&Delete\aDel", CM_EDITDELETE
+        MENUITEM "&Add Item\aIns", CM_EDITADD
+        MENUITEM "&Edit Item\aEnter", CM_EDITEDIT
+        MENUITEM "C&lear All\aCtrl+Del", CM_EDITCLEAR
+    END
+
+    MENUITEM SEPARATOR
+
+    MENUITEM SEPARATOR
+
+	MENUITEM SEPARATOR
+
+	MENUITEM SEPARATOR
+END
+
+IDM_DOCMANAGERFILE MENU
+{
+ MENUITEM "&New...", CM_FILENEW
+ MENUITEM "&Open...", CM_MDIFILEOPEN
+ MENUITEM "&Close", CM_FILECLOSE
+ MENUITEM SEPARATOR
+ MENUITEM "&Save", CM_FILESAVE, GRAYED
+ MENUITEM "Save &As...", CM_FILESAVEAS, GRAYED
+ MENUITEM SEPARATOR
+ MENUITEM "Sen&d...", CM_FILESEND, GRAYED
+ MENUITEM SEPARATOR
+ MENUITEM "&Export...", CM_EXPORT, GRAYED
+ MENUITEM SEPARATOR
+ MENUITEM "&Print...", CM_PRINT, GRAYED
+ MENUITEM "P&rinter Setup...", CM_PRINTERSETUP, GRAYED
+ MENUITEM SEPARATOR
+ MENUITEM "E&xit\tAlt+F4", CM_EXIT
+}
+
+//
+// Table of help hints displayed in the status bar.
+//
+STRINGTABLE
+{
+ -1, "File/document operations"
+ CM_MDIFILENEW,   "Creates a new bridge model\nNew"
+ CM_FILENEW,      "Creates a new bridge model using the Bridge Contractor"
+ CM_FASTNEW,      "Creates a new document\nNew"
+ CM_MDIFILEOPEN,  "Opens an existing document\nOpen"
+ CM_VIEWCREATE,   "Create a new view for this document"
+ CM_FILEREVERT,   "Reverts changes to last document save"
+ CM_FILECLOSE,    "Close this document"
+ CM_FILESAVE,     "Saves this document\nSave"
+ CM_FILESAVEAS,   "Saves this document with a new name"
+ CM_REPORT,       "View report file\nReport File"
+ CM_EXPORT,       "Export tabular results to ASCII file"
+ CM_PRINT,        "Print the contents of the active window\nPrint"
+ CM_FASTPRINT,    "Print the contents of the active window\nPrint"
+ CM_PRINTERSETUP, "Select and setup a printer"
+ CM_EXIT,         "Quits the application and prompts to save the documents"
+ CM_EDITUNDO -1,  "Edit operations"
+ CM_EDITUNDO,     "Reverses the last operation"
+ CM_EDITCUT,      "Cuts the selection and puts it on the Clipboard\nCut"
+ CM_EDITCOPY,     "Copies the selection and puts it on the Clipboard\nCopy"
+ CM_EDITPASTE,    "Inserts the clipboard contents at the insertion point"
+ CM_EDITDELETE,   "Deletes the selection"
+ CM_EDITCLEAR,    "Clear the document"
+ CM_EDITADD,      "Insert a new line"
+ CM_EDITEDIT,     "Edit the current line"
+ CM_EDITFIND -1,  "Search/replace operations"
+ CM_EDITFIND,     "Finds the specified text"
+ CM_EDITREPLACE,  "Finds the specified text and changes it"
+ CM_EDITFINDNEXT, "Finds the next match"
+ CM_HELPCONTENTS -1, "Access online help"
+ CM_HELPCONTENTS, "Help table of contents\nHelp"
+ CM_HELPUSING,    "Help on using online Help"
+ CM_HELPABOUT,    "Information about QConBridge"
+ CM_HELPTOPICS,   "Displays Help Topics\nHelp"
+ CM_UNITS,        "Select the active system of units"
+ CM_DISPLAYOPTIONS, "Edit display options"
+ CM_INSERTAFTER,  "Sets insertion mode to Insert After\nInsert After Mode"
+ CM_INSERTBEFORE, "Sets insertion mode to Insert Before\nInsert Before Mode"
+ CM_SELECTLEFT,   "Sets selection mode to Left Support\nLeft Support Mode"
+ CM_SELECTRIGHT,  "Sets selection mode to Right Support\nRight Support Mode"
+ CM_ADDSPAN,      "Add a span and support to the bridge\nAdd Span/Support"
+ CM_EDITSPAN,     "Edit the selected span"
+ CM_EDITSUPPORT,  "Edit the selected support"
+ CM_PASTEINSERT,  "Inserts the item on the clipboard into the bridge model\nPaste Insert"
+ CM_PASTEREPLACE, "Replaces the current selection with the item on the clipboard\nPaste Replace"
+ CM_PASTESPECIAL, "Pastes the item on the clipboard using special options\nPaste Special"
+ CM_MAKECANTILEVER, "Cantilever the selected span"
+ CM_SUPPORTCANTILEVER, "Add support to cantilevered span"
+ CM_CONCENTRATED_LOAD, "Add a concentrated load\nAdd Conc. Load"
+ CM_UNIFORM_LOAD, "Add a uniform load\nAdd Unif. Load"
+ CM_EDITLOAD,     "Edit the selected load"
+ CM_ANALYZE,      "Analyze the bridge\nAnalyze"
+ CM_FASTANALYZE,      "Analyze the bridge\nAnalyze"
+ CM_IMPACT,       "Edit Dynamic Load Allowance Factors"
+ CM_RESET_TO_DEFAULTS, "Reset to default parameters"
+ CM_LLGENERATION, "Modify live load generation parameters"
+ CM_LOADFACTORS, "Edit Load Factors"
+ CM_PEDESTRIAN, "Edit Pedestrian Live Load"
+ CM_EDITORVIEW, "Open a view for editing"
+ CM_SHEARDIAGRAM, "Open a shear diagram view\nShear Diagram"
+ CM_MOMENTDIAGRAM, "Open a moment diagram view\nMoment Diagram"
+ CM_TABULARRESULTS, "Open a tabular results view\nTabular Results"
+ CM_SELECTLOADING, "Select loadings for the current view"
+ CM_SELECTTABLE, "Select table for current view"
+ CM_LEGALNOTICE,"Display License Agreement and Disclaimer"
+ IDW_TOOLBAR, "Show/hide the tool bar"
+ IDW_STATUSBAR, "Show/hide the status bar"
+}
+
+//
+// OWL string table
+//
+
+// EditFile (include\owl\editfile.rc and include\owl\editsear.rc)
+STRINGTABLE LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    IDS_CANNOTFIND,             "Cannot find ""%s""."
+    IDS_UNABLEREAD,             "Unable to read file %s from disk."
+    IDS_UNABLEWRITE,            "Unable to write file %s to disk."
+    IDS_FILECHANGED,            "The text in the %s file has changed.\n\nDo you want to save the changes?"
+    IDS_FILEFILTER,             "Text files (*.TXT)|*.TXT|AllFiles (*.*)|*.*|"
+END
+
+
+// ListView (include\owl\listview.rc)
+STRINGTABLE LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+  IDS_LISTNUM,  "Line number %d"
+END
+
+
+// Doc/View (include\owl\docview.rc)
+STRINGTABLE LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    IDS_DOCMANAGERFILE,         "&File"
+    IDS_DOCLIST,                "--Document Type--"
+    IDS_VIEWLIST,               "--View Type--"
+    IDS_UNTITLED,               "Document"
+    IDS_UNABLEOPEN,             "Unable to open document."
+    IDS_UNABLECLOSE,            "Unable to close document."
+    IDS_READERROR,              "Document read error."
+    IDS_WRITEERROR,             "Document write error."
+    IDS_DOCCHANGED,             "The document has been changed.\n\nDo you want to save the changes?"
+    IDS_NOTCHANGED,             "The document has not been changed."
+    IDS_NODOCMANAGER,           "Document Manager not present."
+    IDS_NOMEMORYFORVIEW,        "Insufficient memory for view."
+    IDS_DUPLICATEDOC,           "Document already loaded."
+END
+
+
+// Printer (include\owl\printer.rc)
+STRINGTABLE LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    IDS_PRNON,                  " on "
+    IDS_PRNERRORTEMPLATE,       "'%s' not printed. %s."
+    IDS_PRNOUTOFMEMORY,         "Out of memory"
+    IDS_PRNOUTOFDISK,           "Out of disk space"
+    IDS_PRNCANCEL,              "Printing canceled"
+    IDS_PRNMGRABORT,            "Printing aborted in Print Manager"
+    IDS_PRNGENERROR,            "Error encountered during print"
+    IDS_PRNERRORCAPTION,        "Print Error"
+END
+
+// Exception string resources (include\owl\except.rc)
+STRINGTABLE LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    IDS_OWLEXCEPTION,           "ObjectWindows Exception"
+    IDS_UNHANDLEDXMSG,          "Unhandled Exception"
+    IDS_OKTORESUME,             "OK to resume?"
+    IDS_UNKNOWNEXCEPTION,       "Unknown exception"
+
+    IDS_UNKNOWNERROR,           "Unknown error"
+    IDS_NOAPP,                  "No application object"
+    IDS_OUTOFMEMORY,            "Out of memory"
+    IDS_INVALIDMODULE,          "Invalid module specified for window"
+    IDS_INVALIDMAINWINDOW,      "Invalid MainWindow"
+    IDS_VBXLIBRARYFAIL,         "VBX Library init failure"
+
+    IDS_INVALIDWINDOW,          "Invalid window %s"
+    IDS_INVALIDCHILDWINDOW,     "Invalid child window %s"
+    IDS_INVALIDCLIENTWINDOW,    "Invalid client window %s"
+
+    IDS_CLASSREGISTERFAIL,      "Class registration fail for window %s"
+    IDS_CHILDREGISTERFAIL,      "Child class registration fail for window %s"
+    IDS_WINDOWCREATEFAIL,       "Create fail for window %s"
+    IDS_WINDOWEXECUTEFAIL,      "Execute fail for window %s"
+    IDS_CHILDCREATEFAIL,        "Child create fail for window %s"
+
+    IDS_MENUFAILURE,            "Menu creation failure"
+    IDS_VALIDATORSYNTAX,        "Validator syntax error"
+    IDS_PRINTERERROR,           "Printer error"
+
+    IDS_LAYOUTINCOMPLETE,       "Incomplete layout constraints specified in window %s"
+    IDS_LAYOUTBADRELWIN,        "Invalid relative window specified in layout constraint in window %s"
+
+    IDS_GDIFAILURE,             "GDI failure"
+    IDS_GDIALLOCFAIL,           "GDI allocate failure"
+    IDS_GDICREATEFAIL,          "GDI creation failure"
+    IDS_GDIRESLOADFAIL,         "GDI resource load failure"
+    IDS_GDIFILEREADFAIL,        "GDI file read failure"
+    IDS_GDIDELETEFAIL,          "GDI object %X delete failure"
+    IDS_GDIDESTROYFAIL,         "GDI object %X destroy failure"
+    IDS_INVALIDDIBHANDLE,       "Invalid DIB handle %X"
+END
+
+
+// General Window's status bar messages. (include\owl\statusba.rc)
+STRINGTABLE
+BEGIN
+    IDS_MODES                   "EXT|CAPS|NUM|SCRL|OVR|REC"
+    IDS_MODESOFF                "   |    |   |    |   |   "
+    SC_SIZE,                    "Changes the size of the window"
+    SC_MOVE,                    "Moves the window to another position"
+    SC_MINIMIZE,                "Reduces the window to an icon"
+    SC_MAXIMIZE,                "Enlarges the window to it maximum size"
+    SC_RESTORE,                 "Restores the window to its previous size"
+    SC_CLOSE,                   "Closes the window"
+    SC_TASKLIST,                "Opens task list"
+    SC_NEXTWINDOW,              "Switches to next window"
+END
+
+
+// Validator messages (include\owl\validate.rc)
+STRINGTABLE LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    IDS_VALPXPCONFORM          "Input does not conform to picture:\n""%s"""
+    IDS_VALINVALIDCHAR         "Invalid character in input"
+    IDS_VALNOTINRANGE          "Value is not in the range %ld to %ld."
+    IDS_VALNOTINLIST           "Input is not in valid-list"
+END
+
+STRINGTABLE LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+  IDS_DC               "DC Dead Load"
+  IDS_DW               "DW Dead Load"
+  IDS_LL_ENV           "Live Load Envelope"
+  IDS_TANDEM_ENV       "Design Tandem + Lane Envelope"
+  IDS_TRUCK_ENV        "Design Truck + Lane Envelope"
+  IDS_TRKTRAIN_ENV     "Dual Truck Train + Lane Envelope"
+  IDS_TANDEMTRAIN_ENV  "Dual Tandem Train + Lane Envelope"
+  IDS_FATIGUETRK_ENV   "Fatigue Truck Envelope"
+  IDS_PEDESTRIAN_ENV   "Pedestrian Envelope"
+  IDS_STRENGTH_I_ENV   "Strength I Envelope"
+  IDS_SERVICE_I_ENV    "Service I Envelope"
+  IDS_SERVICE_II_ENV   "Service II Envelope"
+  IDS_SERVICE_III_ENV  "Service III Envelope"
+  IDS_FATIGUE_ENV      "Fatigue Envelope"
+END
+
+STRINGTABLE LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+   IDS_TABLEEXPORTFILTER  "Export File (*.EXP)|*.exp|Text File (*.TXT)|*.txt|All Files (*.*)|*.*|"
+   IDS_REPORTEXPORTFILTER "Report File (*.RPT)|*.rpt|Text File (*.TXT)|*.txt|All Files (*.*)|*.*|"
+   IDS_METAFILEFILTER     "Windows Metafile (*.WMF)|*.WMF|"
+END
+
+//
+// Bitmaps used by the speedbar.  Each bitmap is associated with a
+// particular menu command.
+//
+CM_FASTNEW      BITMAP "new.bmp"
+CM_MDIFILEOPEN  BITMAP "open.bmp"
+CM_FILESAVE     BITMAP "save.bmp"
+
+CM_EDITUNDO     BITMAP "undo.bmp"
+CM_EDITPASTE    BITMAP "paste.bmp"
+
+CM_EDITFIND     BITMAP "find.bmp"
+CM_EDITFINDNEXT BITMAP "findnext.bmp"
+
+CM_HELPTOPICS BITMAP "help.bmp"
+
+CM_FASTPRINT    BITMAP "print.bmp"
+
+
+// Mode Bitmaps
+CM_SELECTLEFT BITMAP "selleft.bmp"
+CM_SELECTRIGHT BITMAP "selright.bmp"
+CM_INSERTBEFORE BITMAP "before.bmp"
+CM_INSERTAFTER BITMAP "after.bmp"
+
+// Editing Bitmaps
+CM_EDITCUT           BITMAP "cut.bmp"
+CM_EDITCOPY          BITMAP "copy.bmp"
+CM_PASTEINSERT       BITMAP "pastei.bmp"
+CM_PASTEREPLACE      BITMAP "paster.bmp"
+CM_PASTESPECIAL      BITMAP "pastes.bmp"
+CM_ADDSPAN               BITMAP "addspan.bmp"
+CM_CONCENTRATED_LOAD     BITMAP "addpld.bmp"
+CM_UNIFORM_LOAD          BITMAP "addwld.bmp"
+CM_MOMENTDIAGRAM         BITMAP "moment.bmp"
+CM_SHEARDIAGRAM          BITMAP "shear.bmp"
+CM_TABULARRESULTS        BITMAP "table.bmp"
+CM_REPORT BITMAP "report.bmp"
+CM_FASTANALYZE           BITMAP "analyze.bmp"
+
+BMP_LOGO BITMAP "logo.bmp"
+BMP_SPLASH BITMAP "splash.bmp"
+BMP_BKGROUND BITMAP "wsdot.bmp"
+
+//
+// Misc application definitions
+//
+
+// MDI document ICON
+
+
+
+// Printer abort box.
+IDD_ABORTDIALOG DIALOG 84, 51, 130, 60
+EXSTYLE WS_EX_DLGMODALFRAME
+STYLE DS_MODALFRAME | 0x4L | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Printing"
+{
+ CONTROL "Cancel", IDCANCEL, "BUTTON", BS_PUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 46, 40, 40, 14
+ CONTROL "Now printing Page %d of", ID_PAGE, "STATIC", SS_CENTER | WS_CHILD | NOT WS_VISIBLE | WS_GROUP, 0, 8, 130, 8
+ CONTROL "Now printing", -1, "STATIC", SS_CENTER | WS_CHILD | WS_VISIBLE | WS_GROUP, 0, 8, 130, 8
+ CONTROL "'%s' on the", ID_TITLE, "STATIC", SS_CENTER | WS_CHILD | WS_VISIBLE | WS_GROUP, 0, 16, 130, 8
+ CONTROL "", ID_PORT, "STATIC", SS_CENTER | WS_CHILD | NOT WS_VISIBLE | WS_GROUP, 0, 24, 130, 8
+ CONTROL "%s on %s", ID_DEVICE, "STATIC", SS_CENTER | WS_CHILD | WS_VISIBLE | WS_GROUP, 0, 24, 130, 8
+}
+
+
+// About box.
+IDD_ABOUT DIALOG 18, 25, 193, 128
+EXSTYLE WS_EX_DLGMODALFRAME
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About QConBridge"
+FONT 8, "MS Sans Serif"
+{
+ CONTROL IDI_MDIAPPLICATION, -1, "STATIC", SS_ICON | WS_CHILD | WS_VISIBLE, 147, 12, 16, 16
+ CONTROL "Product", IDC_PRODUCT, "STATIC", SS_CENTER | WS_CHILD | WS_VISIBLE | WS_GROUP, 52, 5, 89, 8
+ CONTROL "Version", IDC_VERSION, "STATIC", SS_CENTER | WS_CHILD | WS_VISIBLE | WS_GROUP, 52, 15, 89, 8
+ CONTROL "Release Date", IDC_RELEASEDATE, "static", SS_CENTER | WS_CHILD | WS_VISIBLE | WS_GROUP, 52, 25, 89, 8
+ CONTROL "Company", IDC_COMPANY, "STATIC", SS_CENTER | WS_CHILD | WS_VISIBLE | WS_GROUP, 16, 41, 161, 8
+ CONTROL "Division", IDC_DIVISION, "STATIC", SS_CENTER | WS_CHILD | WS_VISIBLE | WS_GROUP, 16, 50, 161, 8
+ CONTROL "Copyright", IDC_COPYRIGHT, "STATIC", SS_CENTER | WS_CHILD | WS_VISIBLE | WS_GROUP, 16, 64, 161, 8
+ CONTROL "Author", IDC_AUTHOR, "STATIC", SS_CENTER | WS_CHILD | WS_VISIBLE | WS_GROUP, 16, 74, 161, 8
+ CONTROL "OK", IDOK, "BUTTON", BS_DEFPUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 76, 101, 40, 14
+ CONTROL IDI_WSDOT, -1, "static", SS_ICON | WS_CHILD | WS_VISIBLE, 31, 12, 16, 16, 0
+ CONTROL "Documentation", IDC_WRITER, "static", SS_CENTER | WS_CHILD | WS_VISIBLE | WS_GROUP, 1, 84, 192, 8, 0
+}
+
+// TInputDialog class dialog box.
+IDD_INPUTDIALOG DIALOG 20, 24, 180, 64
+STYLE WS_POPUP | WS_CAPTION | DS_SETFONT
+FONT 8, "Helv"
+BEGIN
+    LTEXT "", ID_PROMPT, 10, 8, 160, 10, SS_NOPREFIX
+    CONTROL "", ID_INPUT, "EDIT", WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP | ES_AUTOHSCROLL, 10, 20, 160, 12
+    DEFPUSHBUTTON "&OK", IDOK, 47, 42, 40, 14
+    PUSHBUTTON "&Cancel", IDCANCEL, 93, 42, 40, 14
+END
+
+
+// Horizontal slider thumb bitmap for TSlider and VSlider (include\owl\slider.rc)
+IDB_HSLIDERTHUMB BITMAP PRELOAD MOVEABLE DISCARDABLE
+BEGIN
+    '42 4D 66 01 00 00 00 00 00 00 76 00 00 00 28 00'
+    '00 00 12 00 00 00 14 00 00 00 01 00 04 00 00 00'
+    '00 00 F0 00 00 00 00 00 00 00 00 00 00 00 00 00'
+    '00 00 10 00 00 00 00 00 00 00 00 00 C0 00 00 C0'
+    '00 00 00 C0 C0 00 C0 00 00 00 C0 00 C0 00 C0 C0'
+    '00 00 C0 C0 C0 00 80 80 80 00 00 00 FF 00 00 FF'
+    '00 00 00 FF FF 00 FF 00 00 00 FF 00 FF 00 FF FF'
+    '00 00 FF FF FF 00 BB BB 0B BB BB BB B0 BB BB 00'
+    '00 00 BB B0 80 BB BB BB 08 0B BB 00 00 00 BB 08'
+    'F8 0B BB B0 87 70 BB 00 00 00 B0 8F F8 80 BB 08'
+    '77 77 0B 00 00 00 08 F8 88 88 00 88 88 87 70 00'
+    '00 00 0F F7 77 88 00 88 77 77 70 00 00 00 0F F8'
+    '88 88 00 88 88 87 70 00 00 00 0F F7 77 88 00 88'
+    '77 77 70 00 00 00 0F F8 88 88 00 88 88 87 70 00'
+    '00 00 0F F7 77 88 00 88 77 77 70 00 00 00 0F F8'
+    '88 88 00 88 88 87 70 00 00 00 0F F7 77 88 00 88'
+    '77 77 70 00 00 00 0F F8 88 88 00 88 88 87 70 00'
+    '00 00 0F F7 77 88 00 88 77 77 70 00 00 00 0F F8'
+    '88 88 00 88 88 87 70 00 00 00 0F F7 77 88 00 88'
+    '77 77 70 00 00 00 0F F8 88 88 00 88 88 87 70 00'
+    '00 00 0F F7 77 78 00 88 77 77 70 00 00 00 0F FF'
+    'FF FF 00 88 88 88 80 00 00 00 B0 00 00 00 BB 00'
+    '00 00 0B 00 00 00'
+END
+
+
+// Vertical slider thumb bitmap for TSlider and HSlider (include\owl\slider.rc)
+IDB_VSLIDERTHUMB BITMAP PRELOAD MOVEABLE DISCARDABLE 
+BEGIN
+    '42 4D 2A 01 00 00 00 00 00 00 76 00 00 00 28 00'
+    '00 00 28 00 00 00 09 00 00 00 01 00 04 00 00 00'
+    '00 00 B4 00 00 00 00 00 00 00 00 00 00 00 00 00'
+    '00 00 10 00 00 00 00 00 00 00 00 00 C0 00 00 C0'
+    '00 00 00 C0 C0 00 C0 00 00 00 C0 00 C0 00 C0 C0'
+    '00 00 C0 C0 C0 00 80 80 80 00 00 00 FF 00 00 FF'
+    '00 00 00 FF FF 00 FF 00 00 00 FF 00 FF 00 FF FF'
+    '00 00 FF FF FF 00 B0 00 00 00 00 00 00 00 00 0B'
+    'B0 00 00 00 00 00 00 00 00 0B 0F 88 88 88 88 88'
+    '88 88 88 80 08 88 88 88 88 88 88 88 88 80 0F 77'
+    '77 77 77 77 77 77 77 80 08 77 77 77 77 77 77 77'
+    '77 80 0F 77 FF FF FF FF FF FF F7 80 08 77 FF FF'
+    'FF FF FF FF F7 80 0F 70 00 00 00 00 00 00 77 80'
+    '08 70 00 00 00 00 00 00 77 80 0F 77 77 77 77 77'
+    '77 77 77 80 08 77 77 77 77 77 77 77 77 80 0F 77'
+    '77 77 77 77 77 77 77 80 08 77 77 77 77 77 77 77'
+    '77 80 0F FF FF FF FF FF FF FF FF F0 08 88 88 88'
+    '88 88 88 88 88 80 B0 00 00 00 00 00 00 00 00 0B'
+    'B0 00 00 00 00 00 00 00 00 0B'
+END
+
+
+// Version info.
+//
+1 VERSIONINFO 
+FILEVERSION 1, 2, 0, 0
+PRODUCTVERSION 1, 2, 0, 0
+FILEFLAGSMASK 0
+FILEFLAGS VS_FFI_FILEFLAGSMASK
+FILEOS VOS__WINDOWS32
+FILETYPE VFT_APP
+{
+ BLOCK "StringFileInfo"
+ {
+  BLOCK "040904E4"
+  {
+   VALUE "CompanyName", "Washington State Department of Transportation\000"
+   VALUE "Division", "Bridge and Structures Office\000"
+   VALUE "Author", "Written By: Richard Brice, P.E. - WSDOT\000"
+   VALUE "Documentation", "Documentation By: Jana Sesonske - Western Data Corp.\000"
+   VALUE "ReleaseDate", "Release Date: 05-10-2005\000"
+   VALUE "FileDescription", "QConBridge for Windows\000"
+   VALUE "FileVersion", "1.3\000"
+   VALUE "InternalName", "QCB\000"
+   VALUE "LegalCopyright", "Copyright © 1996 - 2005. All Rights Reserved.\000"
+   VALUE "LegalTrademarks", "Windows (TM) is a trademark of Microsoft Corporation\000"
+   VALUE "OriginalFilename", "QCONBRDG.EXE\000"
+   VALUE "ProductName", "QConBridge\000"
+   VALUE "ProductVersion", "1.3\000"
+  }
+
+ }
+
+ BLOCK "VarFileInfo"
+ {
+  VALUE "Translation", 0x0409, 0x04e4
+ }
+
+}
+
+IDI_EDITORVIEW ICON
+{
+ '00 00 01 00 01 00 20 20 10 00 00 00 00 00 E8 02'
+ '00 00 16 00 00 00 28 00 00 00 20 00 00 00 40 00'
+ '00 00 01 00 04 00 00 00 00 00 80 02 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 80 00 00 80 00 00 00 80 80 00 80 00'
+ '00 00 80 00 80 00 80 80 00 00 C0 C0 C0 00 80 80'
+ '80 00 00 00 FF 00 00 FF 00 00 00 FF FF 00 FF 00'
+ '00 00 FF 00 FF 00 FF FF 00 00 FF FF FF 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 AA AA AA AA AA AA A0 00 00 00 00 00 00'
+ '00 00 00 AA AA AA AA AA AA A0 00 00 00 00 00 00'
+ '00 00 00 AA AA AA AA AA AA A0 00 00 00 00 00 00'
+ '00 00 00 AA A0 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 AA A0 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 AA A0 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 AA A0 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 AA AA AA AA AA 00 00 00 00 00 00 00 00'
+ '00 00 00 AA AA AA AA AA 00 00 00 00 00 00 00 00'
+ '00 00 00 AA AA AA AA AA 00 00 00 00 00 00 00 00'
+ '00 00 00 AA A0 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 AA A0 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 AA A0 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 AA AA AA AA AA AA A0 00 00 00 00 00 00'
+ '00 00 00 AA AA AA AA AA AA A0 00 00 00 00 00 00'
+ '00 00 00 AA AA AA AA AA AA A0 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 FF FF'
+ 'FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF'
+ 'FF FF FF FF FF FF FF FF FF FF FF 80 00 FF FF 80'
+ '00 FF FF 80 00 FF FF 80 00 FF FF 80 00 FF FF 83'
+ 'FF FF FF 83 FF FF FF 80 07 FF FF 80 07 FF FF 80'
+ '07 FF FF 80 07 FF FF 80 07 FF FF 83 FF FF FF 80'
+ '00 FF FF 80 00 FF FF 80 00 FF FF 80 00 FF FF 80'
+ '00 FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF'
+ 'FF FF FF FF FF FF FF FF FF FF FF FF FF FF'
+}
+
+
+IDI_SHEARVIEW ICON 
+{
+ '00 00 01 00 01 00 20 20 10 00 00 00 00 00 E8 02'
+ '00 00 16 00 00 00 28 00 00 00 20 00 00 00 40 00'
+ '00 00 01 00 04 00 00 00 00 00 80 02 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 80 00 00 80 00 00 00 80 80 00 80 00'
+ '00 00 80 00 80 00 80 80 00 00 C0 C0 C0 00 80 80'
+ '80 00 00 00 FF 00 00 FF 00 00 00 FF FF 00 FF 00'
+ '00 00 FF 00 FF 00 FF FF 00 00 FF FF FF 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 AA AA 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 AA AA 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 0A AA AA A0 00 00 00 00 00 00 00 00'
+ '00 00 00 00 0A AA AA A0 00 00 00 00 00 00 00 00'
+ '00 00 00 00 0A AA AA A0 00 00 00 00 00 00 00 00'
+ '00 00 00 00 AA A0 0A AA 00 00 00 00 00 00 00 00'
+ '00 00 00 00 AA A0 0A AA 00 00 00 00 00 00 00 00'
+ '00 00 00 00 AA A0 0A AA 00 00 00 00 00 00 00 00'
+ '00 00 00 0A AA 00 00 AA A0 00 00 00 00 00 00 00'
+ '00 00 00 0A AA 00 00 AA A0 00 00 00 00 00 00 00'
+ '00 00 00 0A AA 00 00 AA A0 00 00 00 00 00 00 00'
+ '00 00 00 AA A0 00 00 0A AA 00 00 00 00 00 00 00'
+ '00 00 00 AA A0 00 00 0A AA 00 00 00 00 00 00 00'
+ '00 00 00 AA A0 00 00 0A AA 00 00 00 00 00 00 00'
+ '00 00 0A AA 00 00 00 00 AA A0 00 00 00 00 00 00'
+ '00 00 0A AA 00 00 00 00 AA A0 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 FF FF'
+ 'FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF'
+ 'FF FF FF FF FF FF FF FF FF FF FF FC 3F FF FF F8'
+ '1F FF FF F8 1F FF FF F0 0F FF FF F0 0F FF FF F0'
+ '0F FF FF E0 07 FF FF E0 07 FF FF E0 07 FF FF C1'
+ '83 FF FF C1 83 FF FF C1 83 FF FF 83 C1 FF FF 83'
+ 'C1 FF FF 83 C1 FF FF 07 E0 FF FF 07 E0 FF FF 07'
+ 'E0 FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF'
+ 'FF FF FF FF FF FF FF FF FF FF FF FF FF FF'
+}
+
+
+IDI_MOMENTVIEW ICON 
+{
+ '00 00 01 00 01 00 20 20 10 00 00 00 00 00 E8 02'
+ '00 00 16 00 00 00 28 00 00 00 20 00 00 00 40 00'
+ '00 00 01 00 04 00 00 00 00 00 80 02 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 80 00 00 80 00 00 00 80 80 00 80 00'
+ '00 00 80 00 80 00 80 80 00 00 C0 C0 C0 00 80 80'
+ '80 00 00 00 FF 00 00 FF 00 00 00 FF FF 00 FF 00'
+ '00 00 FF 00 FF 00 FF FF 00 00 FF FF FF 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 AA A0 00 0A A0 00 0A AA 00 00 00 00 00 00'
+ '00 00 AA A0 00 AA AA 00 0A AA 00 00 00 00 00 00'
+ '00 00 AA A0 00 AA AA 00 0A AA 00 00 00 00 00 00'
+ '00 00 AA A0 00 AA AA 00 0A AA 00 00 00 00 00 00'
+ '00 00 AA A0 0A AA AA A0 0A AA 00 00 00 00 00 00'
+ '00 00 AA A0 0A AA AA A0 0A AA 00 00 00 00 00 00'
+ '00 00 AA A0 0A A0 0A A0 0A AA 00 00 00 00 00 00'
+ '00 00 AA A0 0A A0 0A A0 0A AA 00 00 00 00 00 00'
+ '00 00 AA A0 AA A0 0A AA 0A AA 00 00 00 00 00 00'
+ '00 00 AA A0 AA A0 0A AA 0A AA 00 00 00 00 00 00'
+ '00 00 AA A0 AA 00 00 AA 0A AA 00 00 00 00 00 00'
+ '00 00 AA A0 AA 00 00 AA 0A AA 00 00 00 00 00 00'
+ '00 00 AA A0 AA 00 00 AA 0A AA 00 00 00 00 00 00'
+ '00 00 AA AA A0 00 00 0A AA AA 00 00 00 00 00 00'
+ '00 00 AA AA A0 00 00 0A AA AA 00 00 00 00 00 00'
+ '00 00 AA AA A0 00 00 0A AA AA 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 FF FF'
+ 'FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF'
+ 'FF FF FF FF FF FF FF FF FF FF FE 0E 70 7F FE 0C'
+ '30 7F FE 08 10 7F FE 08 10 7F FE 08 10 7F FE 00'
+ '00 7F FE 00 00 7F FE 00 00 7F FE 00 00 7F FE 00'
+ '00 7F FE 00 00 7F FE 01 80 7F FE 01 80 7F FE 01'
+ '80 7F FE 03 C0 7F FE 03 C0 7F FE 03 C0 7F FE 03'
+ 'C0 7F FF FF FF FF FF FF FF FF FF FF FF FF FF FF'
+ 'FF FF FF FF FF FF FF FF FF FF FF FF FF FF'
+}
+
+
+
+IDI_TABLEVIEW ICON 
+{
+ '00 00 01 00 01 00 20 20 10 00 00 00 00 00 E8 02'
+ '00 00 16 00 00 00 28 00 00 00 20 00 00 00 40 00'
+ '00 00 01 00 04 00 00 00 00 00 80 02 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 80 00 00 80 00 00 00 80 80 00 80 00'
+ '00 00 80 00 80 00 80 80 00 00 C0 C0 C0 00 80 80'
+ '80 00 00 00 FF 00 00 FF 00 00 00 FF FF 00 FF 00'
+ '00 00 FF 00 FF 00 FF FF 00 00 FF FF FF 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 0A AA 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 0A AA 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 0A AA 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 0A AA 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 0A AA 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 0A AA 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 0A AA 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 0A AA 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 0A AA 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 0A AA 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 0A AA 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 0A AA 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 0A AA 00 00 00 00 00 00 00 00 00'
+ '00 00 00 AA AA AA AA AA AA A0 00 00 00 00 00 00'
+ '00 00 00 AA AA AA AA AA AA A0 00 00 00 00 00 00'
+ '00 00 00 AA AA AA AA AA AA A0 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 FF FF'
+ 'FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF'
+ 'FF FF FF FF FF FF FF FF FF FF FF FC 1F FF FF FC'
+ '1F FF FF FC 1F FF FF FC 1F FF FF FC 1F FF FF FC'
+ '1F FF FF FC 1F FF FF FC 1F FF FF FC 1F FF FF FC'
+ '1F FF FF FC 1F FF FF FC 1F FF FF FC 1F FF FF 80'
+ '00 FF FF 80 00 FF FF 80 00 FF FF 80 00 FF FF 80'
+ '00 FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF'
+ 'FF FF FF FF FF FF FF FF FF FF FF FF FF FF'
+}
+
+IDI_REPORTVIEW ICON 
+{
+ '00 00 01 00 01 00 20 20 10 00 00 00 00 00 E8 02'
+ '00 00 16 00 00 00 28 00 00 00 20 00 00 00 40 00'
+ '00 00 01 00 04 00 00 00 00 00 80 02 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 80 00 00 80 00 00 00 80 80 00 80 00'
+ '00 00 80 00 80 00 80 80 00 00 C0 C0 C0 00 80 80'
+ '80 00 00 00 FF 00 00 FF 00 00 00 FF FF 00 FF 00'
+ '00 00 FF 00 FF 00 FF FF 00 00 FF FF FF 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 AA A0 00 00 00 AA A0 00 00 00 00 00 00'
+ '00 00 00 AA A0 00 00 0A AA 00 00 00 00 00 00 00'
+ '00 00 00 AA A0 00 00 0A AA 00 00 00 00 00 00 00'
+ '00 00 00 AA A0 00 00 AA A0 00 00 00 00 00 00 00'
+ '00 00 00 AA A0 00 00 AA A0 00 00 00 00 00 00 00'
+ '00 00 00 AA A0 00 0A AA 00 00 00 00 00 00 00 00'
+ '00 00 00 AA A0 00 AA A0 00 00 00 00 00 00 00 00'
+ '00 00 00 AA AA AA AA 00 00 00 00 00 00 00 00 00'
+ '00 00 00 AA AA AA AA AA A0 00 00 00 00 00 00 00'
+ '00 00 00 AA A0 00 00 AA A0 00 00 00 00 00 00 00'
+ '00 00 00 AA A0 00 00 0A AA 00 00 00 00 00 00 00'
+ '00 00 00 AA A0 00 00 0A AA 00 00 00 00 00 00 00'
+ '00 00 00 AA A0 00 00 0A AA 00 00 00 00 00 00 00'
+ '00 00 00 AA A0 00 00 AA AA 00 00 00 00 00 00 00'
+ '00 00 00 AA AA AA AA AA A0 00 00 00 00 00 00 00'
+ '00 00 00 AA AA AA AA AA 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+ '00 00 00 00 00 00 00 00 00 00 00 00 00 00 FF FF'
+ 'FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF'
+ 'FF FF FF FF FF FF FF FF FF FF FF 83 E0 FF FF 83'
+ 'E0 FF FF 83 C1 FF FF 83 C1 FF FF 83 83 FF FF 83'
+ '83 FF FF 83 07 FF FF 80 0F FF FF 80 07 FF FF 80'
+ '03 FF FF 80 03 FF FF 83 C1 FF FF 83 C1 FF FF 83'
+ 'C1 FF FF 80 01 FF FF 80 03 FF FF 80 07 FF FF 80'
+ '0F FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF'
+ 'FF FF FF FF FF FF FF FF FF FF FF FF FF FF'
+}
+
+IDD_DISPLAYOPTIONS_PAGE1 DIALOG 6, 15, 160, 100
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+{
+ GROUPBOX "Options", -1, 10, 11, 112, 81, BS_GROUPBOX
+ CHECKBOX "&Label Spans and Supports", IDC_LABELS, 18, 26, 92, 10, BS_AUTOCHECKBOX | WS_TABSTOP
+ CHECKBOX "Show Segment &Ticks", IDC_TICKS, 18, 38, 92, 10, BS_AUTOCHECKBOX | WS_TABSTOP
+ CHECKBOX "Show Span &Dimensions", IDC_DIMENSIONS, 18, 50, 92, 10, BS_AUTOCHECKBOX | WS_TABSTOP
+ CHECKBOX "Show &Grid", IDC_GRID, 18, 62, 92, 10, BS_AUTOCHECKBOX | WS_TABSTOP
+ CHECKBOX "&Invert Moment Diagrams", IDC_INVERT, 18, 75, 92, 10, BS_AUTOCHECKBOX | WS_TABSTOP
+}
+
+
+IDD_DISPLAYOPTIONS_PAGE2 DIALOG 13, 9, 258, 246
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+{
+ LTEXT "Loading", -1, 4, 4, 44, 8
+ CTEXT "Color", -1, 87, 4, 64, 8
+ CTEXT "Pen", -1, 159, 4, 49, 8
+ CTEXT "Symbol", -1, 216, 4, 34, 8
+ LTEXT "DC", -1, 4, 20, 79, 8
+ COMBOBOX IDC_COLORBASE0, 87, 17, 64, 52, CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+ COMBOBOX IDC_PENBASE0, 159, 17, 49, 52, CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | WS_VSCROLL | WS_TABSTOP
+ COMBOBOX IDC_SYMBOLBASE0, 216, 17, 34, 52, CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | WS_VSCROLL | WS_TABSTOP
+ LTEXT "DW", -1, 4, 36, 79, 8
+ COMBOBOX IDC_COLORBASE1, 87, 33, 64, 52, CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+ COMBOBOX IDC_PENBASE1, 159, 33, 49, 52, CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | WS_VSCROLL | WS_TABSTOP
+ COMBOBOX IDC_SYMBOLBASE1, 216, 33, 34, 52, CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | WS_VSCROLL | WS_TABSTOP
+ LTEXT "LL Envelope", -1, 4, 52, 79, 8
+ COMBOBOX IDC_COLORBASE2, 87, 49, 64, 52, CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+ COMBOBOX IDC_PENBASE2, 159, 49, 49, 52, CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | WS_VSCROLL | WS_TABSTOP
+ COMBOBOX IDC_SYMBOLBASE2, 216, 49, 34, 52, CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | WS_VSCROLL | WS_TABSTOP
+ LTEXT "Tandem Envelope", -1, 4, 68, 79, 8
+ COMBOBOX IDC_COLORBASE3, 87, 65, 64, 52, CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+ COMBOBOX IDC_PENBASE3, 159, 65, 49, 52, CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | WS_VSCROLL | WS_TABSTOP
+ COMBOBOX IDC_SYMBOLBASE3, 216, 65, 34, 52, CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | WS_VSCROLL | WS_TABSTOP
+ LTEXT "Truck Envelope", -1, 4, 84, 79, 8
+ COMBOBOX IDC_COLORBASE4, 87, 81, 64, 52, CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+ COMBOBOX IDC_PENBASE4, 159, 81, 49, 52, CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | WS_VSCROLL | WS_TABSTOP
+ COMBOBOX IDC_SYMBOLBASE4, 216, 81, 34, 52, CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | WS_VSCROLL | WS_TABSTOP
+ LTEXT "Dual Truck Envelope", -1, 4, 100, 79, 8
+ COMBOBOX IDC_COLORBASE5, 87, 97, 64, 52, CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+ COMBOBOX IDC_PENBASE5, 159, 97, 49, 52, CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | WS_VSCROLL | WS_TABSTOP
+ COMBOBOX IDC_SYMBOLBASE5, 216, 97, 34, 52, CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | WS_VSCROLL | WS_TABSTOP
+ LTEXT "Dual Tandem Envelope", -1, 4, 117, 79, 8
+ COMBOBOX IDC_COLORBASE6, 87, 114, 64, 52, CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+ COMBOBOX IDC_PENBASE6, 159, 114, 49, 52, CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | WS_VSCROLL | WS_TABSTOP
+ COMBOBOX IDC_SYMBOLBASE6, 216, 114, 34, 52, CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | WS_VSCROLL | WS_TABSTOP
+ LTEXT "Pedestrian Envelope", -1, 4, 133, 79, 8
+ COMBOBOX IDC_COLORBASE7, 87, 130, 64, 52, CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+ COMBOBOX IDC_PENBASE7, 159, 130, 49, 52, CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | WS_VSCROLL | WS_TABSTOP
+ COMBOBOX IDC_SYMBOLBASE7, 216, 130, 34, 52, CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | WS_VSCROLL | WS_TABSTOP
+ LTEXT "Fatigue Trk Envelope", -1, 4, 149, 79, 8
+ COMBOBOX IDC_COLORBASE8, 87, 146, 64, 52, CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+ COMBOBOX IDC_PENBASE8, 159, 146, 49, 52, CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | WS_VSCROLL | WS_TABSTOP
+ COMBOBOX IDC_SYMBOLBASE8, 216, 146, 34, 52, CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | WS_VSCROLL | WS_TABSTOP
+ LTEXT "Strength I Envelope", -1, 4, 165, 79, 8
+ COMBOBOX IDC_COLORBASE9, 87, 162, 64, 52, CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+ COMBOBOX IDC_PENBASE9, 159, 162, 49, 52, CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | WS_VSCROLL | WS_TABSTOP
+ COMBOBOX IDC_SYMBOLBASE9, 216, 162, 34, 52, CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | WS_VSCROLL | WS_TABSTOP
+ LTEXT "Service I Envelope", -1, 4, 181, 79, 8
+ COMBOBOX IDC_COLORBASE10, 87, 178, 64, 52, CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+ COMBOBOX IDC_PENBASE10, 159, 178, 49, 52, CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | WS_VSCROLL | WS_TABSTOP
+ COMBOBOX IDC_SYMBOLBASE10, 216, 178, 34, 52, CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | WS_VSCROLL | WS_TABSTOP
+ LTEXT "Service II Envelope", -1, 4, 197, 79, 8
+ COMBOBOX IDC_COLORBASE11, 87, 194, 64, 52, CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+ COMBOBOX IDC_PENBASE11, 159, 194, 49, 52, CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | WS_VSCROLL | WS_TABSTOP
+ COMBOBOX IDC_SYMBOLBASE11, 216, 194, 34, 52, CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | WS_VSCROLL | WS_TABSTOP
+ LTEXT "Service III Envelope", -1, 4, 213, 79, 8
+ COMBOBOX IDC_COLORBASE12, 87, 210, 64, 52, CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+ COMBOBOX IDC_PENBASE12, 159, 210, 49, 52, CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | WS_VSCROLL | WS_TABSTOP
+ COMBOBOX IDC_SYMBOLBASE12, 216, 210, 34, 52, CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | WS_VSCROLL | WS_TABSTOP
+ LTEXT "Fatigue Envelope", -1, 4, 229, 79, 8
+ COMBOBOX IDC_COLORBASE13, 87, 226, 64, 52, CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+ COMBOBOX IDC_PENBASE13, 159, 226, 49, 52, CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | WS_VSCROLL | WS_TABSTOP
+ COMBOBOX IDC_SYMBOLBASE13, 216, 226, 34, 52, CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | WS_VSCROLL | WS_TABSTOP
+}
+
+IDD_SELLOADING DIALOG 8, 19, 188, 100
+STYLE DS_MODALFRAME | 0x4L | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Select Loadings"
+FONT 8, "MS Sans Serif"
+{
+ LISTBOX IDC_ACTIVE_DIAGRAMS, 9, 10, 109, 59, LBS_NOTIFY | WS_BORDER | LBS_MULTIPLESEL | WS_BORDER | WS_VSCROLL | WS_HSCROLL
+ PUSHBUTTON "&Mark All", IDC_MARKALL, 129, 22, 50, 14
+ PUSHBUTTON "&Clear All", IDC_CLEARALL, 129, 42, 50, 14
+ DEFPUSHBUTTON "OK", IDOK, 9, 78, 50, 14
+ PUSHBUTTON "Cancel", IDCANCEL, 69, 78, 50, 14
+ PUSHBUTTON "Help", IDHELP, 129, 78, 50, 14
+}
+
+IDD_SELTABLE DIALOG 8, 19, 188, 100
+STYLE DS_MODALFRAME | 0x4L | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Select Loadings"
+FONT 8, "MS Sans Serif"
+{
+ LISTBOX IDC_ACTIVE_DIAGRAMS, 9, 10, 109, 59, LBS_NOTIFY | WS_BORDER | WS_BORDER | WS_VSCROLL | WS_HSCROLL
+ DEFPUSHBUTTON "OK", IDOK, 9, 78, 50, 14
+ PUSHBUTTON "Cancel", IDCANCEL, 69, 78, 50, 14
+ PUSHBUTTON "Help", IDHELP, 129, 78, 50, 14
+}
+
+IDD_LOADFACTORS_PAGE1 DIALOG 23, 27, 145, 100
+STYLE DS_3DLOOK | WS_CHILD
+FONT 8, "MS Sans Serif"
+{
+ GROUPBOX "Permanent Loads", -1, 6, 4, 130, 54, BS_GROUPBOX
+ CTEXT "Min", -1, 86, 12, 16, 8
+ CTEXT "Max", -1, 109, 12, 16, 8
+ LTEXT "Components (DC)", -1, 10, 26, 71, 8
+ EDITTEXT IDC_DC_MIN, 86, 24, 21, 12
+ EDITTEXT IDC_DC_MAX, 109, 24, 21, 12
+ LTEXT "Wearing Surface (DW)", -1, 11, 40, 71, 8
+ EDITTEXT IDC_DW_MIN, 86, 38, 21, 12
+ EDITTEXT IDC_DW_MAX, 109, 38, 21, 12
+ GROUPBOX "Transient Loads", -1, 6, 63, 130, 32, BS_GROUPBOX
+ LTEXT "Live Load (LL and PL)", -1, 11, 78, 71, 8
+ EDITTEXT IDC_LL, 86, 76, 21, 12
+}
+
+IDD_LOADFACTORS_PAGE2 DIALOG 6, 16, 145, 100
+STYLE DS_3DLOOK | WS_CHILD
+FONT 8, "MS Sans Serif"
+{
+ GROUPBOX "Permanent Loads", -1, 6, 4, 130, 54, BS_GROUPBOX
+ LTEXT "Components (DC)", -1, 10, 26, 71, 8
+ EDITTEXT IDC_DC_MIN, 86, 24, 21, 12
+ LTEXT "Wearing Surface (DW)", -1, 11, 40, 71, 8
+ EDITTEXT IDC_DW_MIN, 86, 38, 21, 12
+ GROUPBOX "Transient Loads", -1, 6, 63, 130, 32, BS_GROUPBOX
+ LTEXT "Live Loads (LL and PL)", -1, 11, 78, 71, 8
+ EDITTEXT IDC_LL, 86, 76, 21, 12
+}
+
+IDD_SPAN_PROPERTIES DIALOG 2, 15, 230, 144
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+{
+ LTEXT "Length", -1, 8, 4, 23, 8
+ EDITTEXT IDC_LENGTH, 31, 2, 40, 12
+ LTEXT "Text", IDC_LENGTH_TAG, 74, 4, 20, 8
+ LTEXT "Segment Descriptions", -1, 8, 27, 84, 8
+ PUSHBUTTON "Sort", IDC_SORT, 8, 38, 40, 14
+ PUSHBUTTON "Calculator", IDC_CALCULATOR, 52, 38, 40, 14
+ EDITTEXT IDC_LOCATION, 10, 91, 40, 12
+ EDITTEXT IDC_AX, 53, 91, 40, 12
+ EDITTEXT IDC_IZ, 96, 91, 40, 12
+ EDITTEXT IDC_MODE, 139, 91, 40, 12
+ EDITTEXT IDC_UNITWEIGHT, 181, 91, 40, 12
+ EDITTEXT IDC_S_GMOMENT, 10, 106, 40, 12
+ EDITTEXT IDC_S_GSHEAR, 53, 106, 40, 12
+ EDITTEXT IDC_F_GMOMENT, 96, 106, 40, 12
+ EDITTEXT IDC_F_GSHEAR, 139, 106, 40, 12
+ CONTROL "Button", IDC_TABLE, "BUTTON", BS_OWNERDRAW | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 8, 56, 214, 64
+ LTEXT "Text", IDC_LOCATION_TAG, 103, 4, 56, 8
+ LTEXT "Text", IDC_AX_TAG, 103, 14, 56, 8
+ LTEXT "Text", IDC_IZ_TAG, 103, 24, 56, 8
+ LTEXT "Text", IDC_MODE_TAG, 103, 34, 56, 8
+ LTEXT "Text", IDC_UNITWEIGHT_TAG, 103, 44, 56, 8
+ LTEXT "Position the Mouse over the grid and press the Right Mouse Button to activate the Grid Menu", -1, 10, 124, 214, 17
+}
+
+
+IDD_SPAN_BC DIALOG 6, 15, 230, 144
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+{
+ GROUPBOX "Span Connectivity", -1, 4, 9, 109, 38, BS_GROUPBOX | NOT WS_VISIBLE
+ CHECKBOX "Left End Hinged", IDC_LEFTEND, 10, 21, 97, 10, BS_AUTOCHECKBOX | WS_TABSTOP
+ CHECKBOX "Right End Hinged", IDC_RIGHTEND, 10, 33, 97, 10, BS_AUTOCHECKBOX | WS_TABSTOP
+}
+
+
+IDD_SPAN_HINGE DIALOG 6, 15, 230, 144
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+{
+ GROUPBOX "Hinge Data", IDC_HINGEGRP, 4, 9, 109, 64, BS_GROUPBOX | NOT WS_VISIBLE
+ LTEXT "# of Hinges", -1, 10, 22, 23, 18
+ CONTROL "0", IDC_HINGE0, "BUTTON", BS_AUTORADIOBUTTON, 10, 40, 25, 10
+ CONTROL "1", IDC_HINGE1, "BUTTON", BS_AUTORADIOBUTTON, 10, 50, 25, 10
+ CONTROL "2", IDC_HINGE2, "BUTTON", BS_AUTORADIOBUTTON, 10, 60, 25, 10
+ LTEXT "Hinge 1 Location", -1, 39, 22, 54, 8
+ EDITTEXT IDC_HINGE1LOCATION, 39, 32, 52, 12
+ LTEXT "Text", IDC_HINGE1_TAG, 94, 34, 18, 8
+ LTEXT "Hinge 2 Location", -1, 39, 47, 54, 8
+ EDITTEXT IDC_HINGE2LOCATION, 39, 57, 52, 12
+ LTEXT "Text", IDC_HINGE2_TAG, 94, 59, 18, 8
+}
+
+
+IDD_SPAN_LIMSTATE DIALOG 6, 15, 230, 144
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+{
+ GROUPBOX "Strength Limit States", -1, 6, 6, 109, 62, BS_GROUPBOX
+ LTEXT "Ductility Factor", -1, 10, 17, 65, 8
+ EDITTEXT IDC_ND_STRENGTH, 78, 15, 30, 12
+ LTEXT "Redundancy Factor", -1, 10, 35, 65, 8
+ EDITTEXT IDC_NR_STRENGTH, 78, 33, 30, 12
+ LTEXT "Importance Factor", -1, 10, 53, 65, 8
+ EDITTEXT IDC_NI_STRENGTH, 78, 51, 30, 12
+ GROUPBOX "Service/Fatigue Limit States", -1, 6, 76, 109, 62, BS_GROUPBOX
+ LTEXT "Ductility Factor", -1, 10, 89, 65, 8
+ EDITTEXT IDC_ND_SERVICE, 78, 87, 30, 12
+ LTEXT "Redundancy Factor", -1, 10, 107, 65, 8
+ EDITTEXT IDC_NR_SERVICE, 78, 105, 30, 12
+ LTEXT "Importance Factor", -1, 10, 125, 65, 8
+ EDITTEXT IDC_NI_SERVICE, 78, 123, 30, 12
+}
+
+IDD_SPAN_INSERTIONPT DIALOG 6, 15, 230, 144
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+{
+ GROUPBOX "Insertion Point", IDC_LOCATIONGRP, 4, 9, 108, 55, BS_GROUPBOX | NOT WS_VISIBLE
+ CONTROL "Start of Bridge", IDC_START, "BUTTON", BS_AUTORADIOBUTTON, 8, 24, 97, 10
+ CONTROL "End of Bridge", IDC_END, "BUTTON", BS_AUTORADIOBUTTON, 8, 36, 97, 10
+ CONTROL "Insert At Current Location", IDC_CURRENT, "BUTTON", BS_AUTORADIOBUTTON, 8, 48, 97, 10
+}
+
+IDD_SPAN_SUPPORTDATA DIALOG 6, 15, 230, 144
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+{
+ CONTROL "Simple Support", IDC_SIMPLE, "BUTTON", BS_AUTOCHECKBOX | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 6, 6, 59, 10
+ CONTROL "Support Data", -1, "BUTTON", BS_GROUPBOX | WS_CHILD | WS_VISIBLE, 6, 26, 108, 106
+ CONTROL "Height", -1, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 10, 41, 33, 8
+ CONTROL "", IDC_HEIGHT, "EDIT", ES_LEFT | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP, 45, 39, 40, 12
+ CONTROL "Text", IDC_HEIGHT_TAG, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 88, 41, 20, 8
+ CONTROL "Offset", -1, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 10, 56, 33, 8
+ CONTROL "", IDC_OFFSET, "EDIT", ES_LEFT | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP, 45, 54, 40, 12
+ CONTROL "Text", IDC_OFFSET_TAG, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 88, 56, 20, 8
+ CONTROL "Ax", -1, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 10, 71, 33, 8
+ CONTROL "", IDC_AX, "EDIT", ES_LEFT | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP, 45, 69, 40, 12
+ CONTROL "Text", IDC_AX_TAG, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 88, 71, 20, 8
+ CONTROL "Iz", -1, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 10, 86, 33, 8
+ CONTROL "", IDC_IZ, "EDIT", ES_LEFT | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP, 45, 84, 40, 12
+ CONTROL "Text", IDC_IZ_TAG, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 88, 86, 20, 8
+ CONTROL "Mod. E", -1, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 10, 102, 33, 8
+ CONTROL "", IDC_MODE, "EDIT", ES_LEFT | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP, 45, 100, 40, 12
+ CONTROL "Text", IDC_MODE_TAG, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 88, 102, 20, 8
+ CONTROL "Unit Wgt", IDC_DENSITY_LABEL, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 10, 118, 33, 8
+ CONTROL "", IDC_DENSITY, "EDIT", ES_LEFT | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP, 45, 116, 40, 12
+ CONTROL "Text", IDC_DENSITY_TAG, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 88, 118, 20, 8
+ CONTROL "Boundary Conditions", IDC_BCGROUP, "BUTTON", BS_GROUPBOX | WS_CHILD | WS_VISIBLE, 119, 26, 84, 70
+ CONTROL "Pinned", IDC_PINNED, "BUTTON", BS_AUTORADIOBUTTON | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP, 122, 39, 32, 10
+ CONTROL "Roller", IDC_ROLLER, "BUTTON", BS_AUTORADIOBUTTON, 122, 51, 32, 10
+ CONTROL "Fixed", IDC_FIXED, "BUTTON", BS_AUTORADIOBUTTON, 122, 63, 32, 10
+ CONTROL "Top of Column Hinged", IDC_HINGED, "BUTTON", BS_AUTOCHECKBOX | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 122, 82, 78, 10
+}
+
+IDD_EDITSUPPORT DIALOG 23, 28, 209, 166
+STYLE DS_3DLOOK | WS_CHILD
+CAPTION "Edit Support"
+FONT 8, "MS Sans Serif"
+{
+ CHECKBOX "Simple Support", IDC_SIMPLE, 6, 6, 59, 10, BS_AUTOCHECKBOX | WS_TABSTOP
+ GROUPBOX "Support Data", -1, 6, 26, 108, 106, BS_GROUPBOX
+ LTEXT "Height", -1, 10, 41, 33, 8
+ EDITTEXT IDC_HEIGHT, 45, 39, 40, 12
+ LTEXT "Text", IDC_HEIGHT_TAG, 88, 41, 20, 8
+ LTEXT "Offset", -1, 10, 56, 33, 8
+ EDITTEXT IDC_OFFSET, 45, 54, 40, 12
+ LTEXT "Text", IDC_OFFSET_TAG, 88, 56, 20, 8
+ LTEXT "Ax", -1, 10, 71, 33, 8
+ EDITTEXT IDC_AX, 45, 69, 40, 12
+ LTEXT "Text", IDC_AX_TAG, 88, 71, 20, 8
+ LTEXT "Iz", -1, 10, 86, 33, 8
+ EDITTEXT IDC_IZ, 45, 84, 40, 12
+ LTEXT "Text", IDC_IZ_TAG, 88, 86, 20, 8
+ LTEXT "Mod. E", -1, 10, 102, 33, 8
+ EDITTEXT IDC_MODE, 45, 100, 40, 12
+ LTEXT "Text", IDC_MODE_TAG, 88, 102, 20, 8
+ LTEXT "Unit Wgt", IDC_DENSITY_LABEL, 10, 118, 33, 8
+ EDITTEXT IDC_DENSITY, 45, 116, 40, 12
+ LTEXT "Text", IDC_DENSITY_TAG, 88, 118, 20, 8
+ GROUPBOX "Boundary Conditions", IDC_BCGROUP, 119, 26, 84, 70, BS_GROUPBOX
+ CONTROL "Pinned", IDC_PINNED, "BUTTON", BS_AUTORADIOBUTTON, 122, 39, 32, 10
+ CONTROL "Roller", IDC_ROLLER, "BUTTON", BS_AUTORADIOBUTTON, 122, 51, 32, 10
+ CONTROL "Fixed", IDC_FIXED, "BUTTON", BS_AUTORADIOBUTTON, 122, 63, 32, 10
+ CHECKBOX "Top of Column Hinged", IDC_HINGED, 122, 82, 78, 10, BS_AUTOCHECKBOX
+}
+
+IDD_PASTESPECIAL DIALOG 11, 21, 189, 69
+STYLE DS_MODALFRAME | 0x4L | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Paste Special"
+FONT 8, "MS Sans Serif"
+{
+ GROUPBOX "Paste Options", IDC_PASTEOPTIONS, 10, 6, 114, 45, BS_GROUPBOX
+ CONTROL "Replace Span", IDC_REPLACESPAN, "BUTTON", BS_AUTORADIOBUTTON, 16, 22, 62, 10
+ CONTROL "Replace Support", IDC_REPLACESUPPORT, "BUTTON", BS_AUTORADIOBUTTON, 16, 34, 62, 10
+ CHECKBOX "Mirror", IDC_MIRRORSPAN, 85, 22, 34, 10, BS_AUTOCHECKBOX | WS_TABSTOP
+ DEFPUSHBUTTON "OK", IDOK, 133, 6, 50, 14
+ PUSHBUTTON "Cancel", IDCANCEL, 133, 24, 50, 14
+ PUSHBUTTON "Help", IDHELP, 133, 42, 50, 14
+}
+
+IDD_IMPACT DIALOG 55, 29, 179, 64
+STYLE DS_MODALFRAME | 0x4L | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Dynamic Load Allowance"
+FONT 8, "MS Sans Serif"
+{
+ GROUPBOX "", -1, 10, 2, 95, 57, BS_GROUPBOX
+ LTEXT "Truck", -1, 15, 14, 24, 8
+ EDITTEXT IDC_IMTRUCK, 45, 12, 33, 12
+ LTEXT "%", -1, 84, 14, 7, 8
+ LTEXT "Lane", -1, 15, 28, 24, 8
+ EDITTEXT IDC_IMLANE, 45, 26, 33, 12
+ LTEXT "%", -1, 84, 28, 7, 8
+ LTEXT "Fatigue", -1, 15, 42, 24, 8
+ EDITTEXT IDC_IMFATIGUE, 45, 40, 33, 12
+ LTEXT "%", -1, 84, 42, 7, 8
+ DEFPUSHBUTTON "OK", IDOK, 117, 6, 50, 14
+ PUSHBUTTON "Cancel", IDCANCEL, 117, 24, 50, 14
+ PUSHBUTTON "Help", IDHELP, 117, 42, 50, 14
+}
+
+IDD_PEDESTRIAN DIALOG 6, 15, 207, 65
+STYLE DS_MODALFRAME | 0x4L | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Pedestrian Live Load"
+FONT 8, "MS Sans Serif"
+{
+ GROUPBOX "Uniform Live Load", -1, 17, 13, 102, 39, BS_GROUPBOX
+ LTEXT "Load", -1, 24, 32, 18, 8
+ EDITTEXT IDC_PEDESTRIAN, 45, 30, 46, 12
+ LTEXT "Text", IDC_PEDESTRIAN_TAG, 94, 32, 16, 8
+ DEFPUSHBUTTON "OK", IDOK, 148, 6, 50, 14
+ PUSHBUTTON "Cancel", IDCANCEL, 148, 24, 50, 14
+ PUSHBUTTON "Help", IDHELP, 148, 42, 50, 14
+}
+
+IDD_LLGENERATION_PAGE1 DIALOG 6, 40, 225, 110
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+{
+ CHECKBOX "Disable Load Generation", IDC_DISABLE, 20, 13, 88, 12, BS_AUTOCHECKBOX | WS_TABSTOP
+}
+
+IDD_LLGENERATION_PAGE2 DIALOG 6, 40, 225, 110
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+{
+ LTEXT "Enter number of rear axle spacings to be used for live load generation", -1, 25, 49, 92, 26
+ EDITTEXT IDC_AXLE_INCREMENTS, 125, 56, 16, 12
+ CHECKBOX "Disable Load Generation", IDC_DISABLE, 25, 18, 88, 12, BS_AUTOCHECKBOX | WS_TABSTOP
+}
+
+IDD_LLGENERATION_PAGE3 DIALOG 6, 38, 225, 110
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+{
+ CHECKBOX "Disable Load Generation", IDC_DISABLE, 7, 5, 88, 12, BS_AUTOCHECKBOX | WS_TABSTOP
+ LTEXT "Variable Headway Spacing Parameters", IDC_LABEL, 27, 19, 185, 8
+ LTEXT "Range 1", IDC_ENABLE_RANGE1, 27, 33, 29, 8
+ EDITTEXT IDC_R1_FROM, 58, 31, 16, 12
+ LTEXT "Text", IDC_R1_FROM_TAG, 75, 33, 15, 8
+ LTEXT "To", IDC_MISC_TEXT1, 92, 33, 12, 8
+ EDITTEXT IDC_R1_TO, 104, 31, 16, 12
+ LTEXT "Text", IDC_R1_TO_TAG, 123, 33, 16, 8
+ LTEXT "Using", IDC_MISC_TEXT2, 141, 33, 20, 8
+ EDITTEXT IDC_R1_INC, 161, 31, 16, 12
+ LTEXT "Increments", IDC_MISC_TEXT3, 179, 33, 33, 8
+ CHECKBOX "Range 2", IDC_ENABLE_RANGE2, 18, 48, 38, 12, BS_AUTOCHECKBOX | WS_TABSTOP
+ EDITTEXT IDC_R2_FROM, 58, 48, 16, 12
+ LTEXT "Text", IDC_R2_FROM_TAG, 75, 50, 15, 8
+ LTEXT "To", IDC_MISC_TEXT4, 92, 50, 12, 8
+ EDITTEXT IDC_R2_TO, 104, 48, 16, 12
+ LTEXT "Text", IDC_R2_TO_TAG, 123, 50, 16, 8
+ LTEXT "Using", IDC_MISC_TEXT5, 141, 50, 20, 8
+ EDITTEXT IDC_R2_INC, 161, 48, 16, 12
+ LTEXT "Increments", IDC_MISC_TEXT6, 179, 50, 33, 8
+ CHECKBOX "Range 3", IDC_ENABLE_RANGE3, 18, 64, 38, 12, BS_AUTOCHECKBOX | WS_TABSTOP
+ EDITTEXT IDC_R3_FROM, 58, 64, 16, 12
+ LTEXT "Text", IDC_R3_FROM_TAG, 75, 66, 15, 8
+ LTEXT "To", IDC_MISC_TEXT7, 92, 66, 12, 8
+ EDITTEXT IDC_R3_TO, 104, 64, 16, 12
+ LTEXT "Text", IDC_R3_TO_TAG, 123, 66, 16, 8
+ LTEXT "Using", IDC_MISC_TEXT8, 141, 66, 20, 8
+ EDITTEXT IDC_R3_INC, 161, 64, 16, 12
+ LTEXT "Increments", IDC_MISC_TEXT9, 179, 66, 33, 8
+}
+
+
+IDD_STDDEADLOAD_DC DIALOG 17, 25, 219, 105
+STYLE DS_3DLOOK | WS_CHILD
+FONT 8, "MS Sans Serif"
+{
+ CONTROL "Generate Self Weight Dead Load", IDC_GENWEIGHT, "BUTTON", BS_AUTOCHECKBOX | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 40, 40, 134, 10
+ CONTROL "Traffic Barrier", IDC_TBARRIER_CHK, "BUTTON", BS_AUTOCHECKBOX | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 40, 55, 61, 10
+ CONTROL "", IDC_TBARRIER, "EDIT", ES_LEFT | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP, 101, 54, 55, 12
+ CONTROL "Text", IDC_TBARRIER_TAG, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 157, 56, 21, 8
+}
+
+IDD_STDDEADLOAD_DW DIALOG 17, 25, 219, 105
+STYLE DS_3DLOOK | WS_CHILD
+FONT 8, "MS Sans Serif"
+{
+ CONTROL "Utilities", IDC_UTILITY_CHK, "BUTTON", BS_AUTOCHECKBOX | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 40, 40, 66, 10
+ CONTROL "", IDC_UTILITY, "EDIT", ES_LEFT | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP, 104, 39, 55, 12
+ CONTROL "Text", IDC_UTILITY_TAG, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 160, 41, 21, 8
+ CONTROL "Overlay", IDC_WEARSURF_CHK, "BUTTON", BS_AUTOCHECKBOX | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 40, 56, 64, 10
+ CONTROL "", IDC_WEARSURF, "EDIT", ES_LEFT | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP, 104, 55, 55, 12
+ CONTROL "Text", IDC_WEARSURF_TAG, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 160, 57, 21, 8
+}
+
+IDD_CONCLOAD DIALOG 10, 21, 203, 109
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Concentrated Load"
+FONT 8, "MS Sans Serif"
+{
+ CONTROL "Load Parameters", -1, "BUTTON", BS_GROUPBOX | WS_CHILD | WS_VISIBLE, 4, 6, 127, 50
+ CONTROL "Loc", -1, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 9, 22, 15, 8
+ CONTROL "", IDC_STARTLOC, "EDIT", ES_LEFT | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP, 26, 20, 39, 12
+ CONTROL "", IDC_STARTLOC_FRACT, "EDIT", ES_LEFT | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP, 26, 20, 39, 12
+ CONTROL "Text", IDC_STARTLOC_TAG, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 66, 22, 16, 8
+ CONTROL "Fractional", IDC_FRACTIONAL, "BUTTON", BS_AUTOCHECKBOX | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 85, 20, 41, 12
+ CONTROL "Load", -1, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 8, 38, 16, 8
+ CONTROL "", IDC_LOAD, "EDIT", ES_LEFT | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP, 26, 36, 39, 12
+ CONTROL "Text", IDC_LOAD_TAG, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 66, 38, 16, 8
+ CONTROL "All Spans", IDC_ALLSPANS, "BUTTON", BS_AUTOCHECKBOX | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 85, 36, 39, 12
+ CONTROL "Load Case", IDC_LOADINGGRP, "BUTTON", BS_GROUPBOX | WS_CHILD | WS_VISIBLE, 4, 61, 127, 42
+ CONTROL "DC", IDC_DC, "BUTTON", BS_AUTORADIOBUTTON, 13, 73, 22, 12
+ CONTROL "DW", IDC_DW, "BUTTON", BS_AUTORADIOBUTTON, 13, 87, 22, 12
+ CONTROL "OK", IDOK, "BUTTON", BS_DEFPUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 143, 6, 50, 14
+ CONTROL "Cancel", IDCANCEL, "BUTTON", BS_PUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 143, 24, 50, 14
+ CONTROL "Help", IDHELP, "BUTTON", BS_PUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 143, 42, 50, 14
+}
+
+
+IDD_UNIFLOAD DIALOG 9, 25, 207, 123
+STYLE DS_MODALFRAME | 0x4L | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Uniform Load"
+FONT 8, "MS Sans Serif"
+{
+ GROUPBOX "Load Parameters", -1, 4, 6, 127, 65, BS_GROUPBOX
+ GROUPBOX "Load Case", IDC_LOADINGGRP, 4, 75, 127, 42, BS_GROUPBOX
+ LTEXT "Start", -1, 9, 22, 15, 8
+ EDITTEXT IDC_STARTLOC, 26, 20, 39, 12
+ EDITTEXT IDC_STARTLOC_FRACT, 26, 20, 39, 12
+ LTEXT "Text", IDC_STARTLOC_TAG, 66, 22, 16, 8
+ CHECKBOX "Fractional", IDC_FRACTIONAL, 85, 20, 41, 12, BS_AUTOCHECKBOX | WS_TABSTOP
+ LTEXT "End", -1, 9, 38, 15, 8
+ EDITTEXT IDC_ENDLOC, 26, 36, 39, 12
+ EDITTEXT IDC_ENDLOC_FRACT, 26, 36, 39, 12
+ LTEXT "Text", IDC_ENDLOC_TAG, 66, 38, 16, 8
+ LTEXT "Load", -1, 8, 53, 16, 8
+ EDITTEXT IDC_LOAD, 26, 51, 39, 12
+ LTEXT "Text", IDC_LOAD_TAG, 66, 53, 16, 8
+ CHECKBOX "All Spans", IDC_ALLSPANS, 85, 51, 39, 12, BS_AUTOCHECKBOX | WS_TABSTOP
+ CONTROL "DC", IDC_DC, "BUTTON", BS_AUTORADIOBUTTON, 13, 87, 22, 12
+ CONTROL "DW", IDC_DW, "BUTTON", BS_AUTORADIOBUTTON, 13, 101, 22, 12
+ DEFPUSHBUTTON "OK", IDOK, 148, 6, 50, 14
+ PUSHBUTTON "Cancel", IDCANCEL, 148, 24, 50, 14
+ PUSHBUTTON "Help", IDHELP, 148, 42, 50, 14
+}
+
+IDD_UNITSDLG DIALOG 11, 22, 193, 65
+STYLE DS_MODALFRAME | 0x4L | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Units"
+FONT 8, "MS Sans Serif"
+{
+ GROUPBOX "Select System Of Units", IDC_UNITSGRP, 8, 6, 101, 47, BS_GROUPBOX
+ CONTROL "SI Units", IDC_SI, "BUTTON", BS_AUTORADIOBUTTON, 13, 21, 79, 10
+ CONTROL "Traditional U.S. Units", IDC_ENGLISH, "BUTTON", BS_AUTORADIOBUTTON, 13, 34, 79, 10
+ DEFPUSHBUTTON "OK", IDOK, 132, 6, 50, 14
+ PUSHBUTTON "Cancel", IDCANCEL, 132, 24, 50, 14
+ PUSHBUTTON "Help", IDHELP, 132, 42, 50, 14
+}
+
+
+IDD_NEWBRIDGE_PAGE1 DIALOG 8, 30, 270, 145
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+{
+ LTEXT "Welcome\n\nThis step-by-step process which will create a modeling specification from which the Bridge Contractor will build a bridge model.", -1, 9, 23, 100, 60
+ LTEXT "Number Of Spans", -1, 116, 20, 60, 8
+ EDITTEXT IDC_NUMSPANS, 180, 18, 27, 12, ES_RIGHT | WS_BORDER | WS_TABSTOP
+ GROUPBOX "Span Continuity", IDC_CONTINUITY, 116, 39, 122, 44, BS_GROUPBOX
+ CONTROL "Continuously Supported Spans", IDC_CONTINUOUSSPANS, "BUTTON", BS_AUTORADIOBUTTON | WS_GROUP, 122, 52, 105, 12
+ CONTROL "Simply Supported Spans", IDC_SIMPLESPANS, "BUTTON", BS_AUTORADIOBUTTON, 122, 66, 105, 12
+ GROUPBOX "Select System Of Units", IDC_UNITSGRP, 116, 90, 122, 47, BS_GROUPBOX
+ CONTROL "SI Units", IDC_SI, "BUTTON", BS_AUTORADIOBUTTON | WS_GROUP, 122, 106, 79, 10
+ CONTROL "Traditional U.S. Units", IDC_ENGLISH, "BUTTON", BS_AUTORADIOBUTTON, 122, 119, 79, 10
+}
+
+
+IDD_NEWBRIDGE_PAGE2 DIALOG 8, 30, 270, 145
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+{
+ GROUPBOX "Span Geometry", -1, 72, 15, 191, 49, BS_GROUPBOX
+ LTEXT "Interior Span Length", IDC_LENGTH1_LABEL, 82, 30, 72, 8
+ EDITTEXT IDC_LENGTH1, 82, 42, 35, 12
+ LTEXT "Text", IDC_LENGTH1_TAG, 119, 44, 20, 8
+ LTEXT "Exterior Span Length", IDC_LENGTH2_LABEL, 158, 30, 72, 8
+ EDITTEXT IDC_LENGTH2, 158, 42, 35, 12
+ LTEXT "Text", IDC_LENGTH2_TAG, 195, 44, 20, 8
+ GROUPBOX "Boundary Conditions", -1, 72, 74, 191, 66, BS_GROUPBOX
+ GROUPBOX "Left Support", IDC_LEFTSUPPORT, 74, 84, 60, 52, BS_GROUPBOX
+ CONTROL "Pinned", IDC_LS_PINNED, "BUTTON", BS_AUTORADIOBUTTON | WS_GROUP, 79, 95, 38, 12
+ CONTROL "Roller", IDC_LS_ROLLER, "BUTTON", BS_AUTORADIOBUTTON, 79, 108, 38, 12
+ GROUPBOX "Interior Supports", IDC_INTERIORSUPPORT, 137, 84, 60, 52, BS_GROUPBOX
+ CONTROL "Pinned", IDC_IS_PINNED, "BUTTON", BS_AUTORADIOBUTTON | WS_GROUP, 144, 95, 38, 12
+ CONTROL "Roller", IDC_IS_ROLLER, "BUTTON", BS_AUTORADIOBUTTON, 144, 108, 38, 12
+ CONTROL "Column", IDC_IS_COLUMN, "BUTTON", BS_AUTORADIOBUTTON, 144, 121, 38, 12
+ GROUPBOX "Right Support", IDC_RIGHTSUPPORT, 200, 84, 60, 52, BS_GROUPBOX
+ CONTROL "Pinned", IDC_RS_PINNED, "BUTTON", BS_AUTORADIOBUTTON | WS_GROUP, 205, 95, 38, 12
+ CONTROL "Roller", IDC_RS_ROLLER, "BUTTON", BS_AUTORADIOBUTTON, 205, 108, 38, 12
+}
+
+
+IDD_NEWBRIDGE_PAGE3 DIALOG 8, 30, 270, 145
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+{
+ LTEXT "Text", IDC_SPANTYPE_LABEL, 6, 20, 60, 100
+ GROUPBOX "Section/Material Properties", -1, 72, 15, 191, 43, BS_GROUPBOX
+ LTEXT "Ax", -1, 80, 29, 9, 8
+ EDITTEXT IDC_AX, 92, 27, 33, 12
+ LTEXT "Text", IDC_AX_TAG, 128, 29, 20, 8
+ LTEXT "Iz", -1, 80, 43, 9, 8
+ EDITTEXT IDC_IZ, 92, 41, 33, 12
+ LTEXT "Text", IDC_IZ_TAG, 128, 43, 20, 8
+ LTEXT "Mod. E", -1, 172, 28, 28, 9
+ EDITTEXT IDC_MODE, 201, 27, 35, 12
+ LTEXT "Text", IDC_MODE_TAG, 239, 29, 20, 8
+ LTEXT "Unit Wgt", IDC_UNITWEIGHT_LABEL, 172, 42, 28, 9
+ EDITTEXT IDC_DENSITY, 201, 41, 35, 12
+ LTEXT "Text", IDC_DENSITY_TAG, 239, 43, 20, 8
+ EDITTEXT IDC_UNITWEIGHT, 201, 41, 35, 12
+ LTEXT "Text", IDC_UNITWEIGHT_TAG, 239, 43, 20, 8
+ GROUPBOX "Live Load Distribution Factors", -1, 72, 61, 191, 61, BS_GROUPBOX
+ GROUPBOX "Str/Serv Limit States", -1, 82, 73, 74, 44, BS_GROUPBOX
+ LTEXT "Moment", -1, 85, 86, 29, 8
+ EDITTEXT IDC_S_GMOMENT, 116, 84, 33, 12
+ LTEXT "Shear", -1, 86, 100, 29, 8
+ EDITTEXT IDC_S_GSHEAR, 116, 98, 33, 12
+ GROUPBOX "Fatigue Limit State", -1, 178, 73, 74, 44, BS_GROUPBOX
+ LTEXT "Moment", -1, 184, 86, 29, 8
+ EDITTEXT IDC_F_GMOMENT, 214, 84, 33, 12
+ LTEXT "Shear", -1, 184, 100, 29, 8
+ EDITTEXT IDC_F_GSHEAR, 214, 98, 33, 12
+ PUSHBUTTON "Calculator", IDC_SPCALC, 214, 129, 50, 14
+}
+
+IDD_NEWBRIDGE_PAGE4 DIALOG 8, 30, 270, 145
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+{
+ GROUPBOX "Support Geometry", -1, 72, 15, 191, 36, BS_GROUPBOX
+ LTEXT "Height", -1, 76, 31, 22, 8
+ EDITTEXT IDC_HEIGHT, 100, 29, 35, 12
+ LTEXT "Text", IDC_HEIGHT_TAG, 138, 31, 20, 8
+ GROUPBOX "Section/Material Properties", -1, 72, 56, 191, 43, BS_GROUPBOX
+ LTEXT "Ax", -1, 80, 70, 9, 8
+ EDITTEXT IDC_AX, 92, 68, 33, 12
+ LTEXT "Text", IDC_AX_TAG, 128, 70, 20, 8
+ LTEXT "Iz", -1, 80, 84, 9, 8
+ EDITTEXT IDC_IZ, 92, 82, 33, 12
+ LTEXT "Text", IDC_IZ_TAG, 128, 84, 20, 8
+ LTEXT "Mod. E", -1, 170, 69, 30, 9
+ EDITTEXT IDC_MODE, 201, 68, 35, 12
+ LTEXT "Text", IDC_MODE_TAG, 239, 70, 20, 8
+ LTEXT "Unit Wgt", IDC_UNITWEIGHT_LABEL, 170, 83, 30, 9
+ EDITTEXT IDC_DENSITY, 201, 82, 35, 12
+ LTEXT "Text", IDC_DENSITY_TAG, 239, 84, 20, 8
+ EDITTEXT IDC_UNITWEIGHT, 201, 82, 35, 12
+ LTEXT "Text", IDC_UNITWEIGHT_TAG, 239, 84, 20, 8
+ GROUPBOX "Boundary Conditions", IDC_INTERIORSUPPORT, 72, 102, 191, 41, BS_GROUPBOX
+ CONTROL "Pinned", IDC_IS_PINNED, "BUTTON", BS_AUTORADIOBUTTON, 80, 115, 38, 12
+ CONTROL "Roller", IDC_IS_ROLLER, "BUTTON", BS_AUTORADIOBUTTON, 80, 128, 38, 12
+ CONTROL "Fixed", IDC_IS_COLUMN, "BUTTON", BS_AUTORADIOBUTTON, 132, 115, 38, 12
+ CHECKBOX "Top Of Column Hinged", IDC_HINGED, 132, 129, 86, 10, BS_AUTOCHECKBOX | WS_TABSTOP
+}
+
+IDD_NEWBRIDGE_PAGE5 DIALOG 8, 30, 270, 145
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+{
+ LTEXT "The Bridge Contractor now has all the information needed to build your bridge.", -1, 14, 9, 119, 42
+}
+
+
+IDD_PROGRESSDIALOG DIALOG 8, 24, 194, 84
+STYLE DS_MODALFRAME | 0x4L | WS_POPUP | WS_VISIBLE | WS_CAPTION
+CAPTION "Progress"
+FONT 8, "MS Sans Serif"
+{
+ CTEXT "Analysis In Progress", IDC_PROGRESSMSG, 0, 16, 194, 8
+ EDITTEXT IDC_PROGRESSGAUGE, 20, 30, 153, 12
+ DEFPUSHBUTTON "&OK", IDC_PROGRESSBTN, 77, 58, 40, 16
+}
+
+
+IDD_ANALYZEDIALOG DIALOG 20, 24, 180, 64
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Analysis Parameters"
+FONT 8, "Helv"
+{
+ CONTROL "Minimum Number of Analysis Points", -1, "STATIC", SS_LEFT | SS_NOPREFIX | WS_CHILD | WS_VISIBLE | WS_GROUP, 14, 8, 116, 10
+ CONTROL "", IDC_MINANALYSISPNTS, "EDIT", ES_LEFT | ES_AUTOHSCROLL | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP, 134, 7, 25, 12
+ CONTROL "&OK", IDOK, "BUTTON", BS_DEFPUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 12, 43, 50, 14
+ CONTROL "&Cancel", IDCANCEL, "BUTTON", BS_PUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 65, 43, 50, 14
+ CONTROL "Help", IDHELP, "BUTTON", BS_PUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 118, 43, 50, 14
+}
+
+
+IDD_SECTPRPWIZARD_PAGE1 DIALOG 6, 15, 280, 187
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+{
+ GROUPBOX "Supporting Components", IDC_GIRDERGRP, 54, 4, 222, 179, BS_GROUPBOX
+ AUTORADIOBUTTON "Steel Beam", IDC_STEELBEAM, 59, 15, 212, 12
+ AUTORADIOBUTTON "Closed Steel or Precast Concrete Box", IDC_CLOSEDBOX, 59, 27, 212, 12
+ AUTORADIOBUTTON "Open Steel or Precast Concrete Box", IDC_OPENBOX, 59, 39, 212, 12
+ AUTORADIOBUTTON "Cast-in-Place Concrete Multi-cell Box", IDC_CIPBOX, 59, 51, 212, 12
+ AUTORADIOBUTTON "Cast-in-Place Concrete Tee Beam", IDC_CIPTEE, 59, 63, 212, 12
+ AUTORADIOBUTTON "Precast Solid, Voided or Cellular Concrete Boxes with Shear Keys", IDC_PRECASTSLAB_COMP, 59, 75, 212, 12
+ AUTORADIOBUTTON "", IDC_PRECASTSLAB_INTG, 59, 91, 8, 12
+ AUTORADIOBUTTON "Precast Concrete Channel Sections with Shear Keys", IDC_PRECASTCHANNEL, 59, 106, 212, 12
+ AUTORADIOBUTTON "", IDC_PRECASTDOUBLETEE, 59, 122, 8, 12
+ AUTORADIOBUTTON "", IDC_PRECASTTEE, 59, 140, 8, 12
+ AUTORADIOBUTTON "Precast Concrete I or Bulb-Tee Sections", IDC_PRECASTIBEAM, 59, 154, 212, 12
+ AUTORADIOBUTTON "Wood Beams", IDC_WOOD, 59, 166, 212, 12
+ LTEXT "Precast Solid, Voided or Cellular Concrete Boxes with Shear Keys and with or without Transverse Post-Tensioning", IDC_PRECASTSLAB_INTG_TAG, 68, 88, 205, 19
+ LTEXT "Precast Concrete Double Tee Section with Shear Keys and with or without Transverse Post-Tensioning", IDC_PRECASTDOUBLETEE_TAG, 68, 119, 205, 19
+ LTEXT "Precast Concrete Tee Section ith Shear Keys and with or without Transverse Post-Tensioning", IDC_PRECASTTEE_TAG, 67, 137, 205, 19
+}
+
+IDD_SECTPRPWIZARD_PAGE2 DIALOG 6, 15, 280, 187
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+{
+ GROUPBOX "Deck Types", IDC_DECKTYPES, 54, 4, 222, 179, BS_GROUPBOX
+ AUTORADIOBUTTON "CIP/Precast Concrete Slab", IDC_CONCRETE, 59, 15, 92, 12
+ AUTORADIOBUTTON "Steel Grid", IDC_STEEL_GRID, 59, 28, 92, 12
+ AUTORADIOBUTTON "Filled/Partially Filled Grid", IDC_FILLED_GRID, 59, 41, 92, 12
+ AUTORADIOBUTTON "Wood Plank", IDC_WOOD_PLANK, 59, 54, 92, 12
+ AUTORADIOBUTTON "Stressed Laminated Wood", IDC_STRESS_LAMINATED, 59, 67, 92, 12
+ AUTORADIOBUTTON "Spike Laminated Wood", IDC_SPIKE_LAMINATED, 59, 80, 92, 12
+ AUTORADIOBUTTON "Glue Laminated Wood", IDC_GLUE_LAMINATED, 59, 93, 92, 12
+}
+
+
+IDD_SECTPRPWIZARD_PAGE3A DIALOG 6, 16, 280, 187
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+{
+ GROUPBOX "Wood Beam Description", -1, 54, 4, 110, 43, BS_GROUPBOX
+ LTEXT "Depth", -1, 58, 17, 37, 8
+ EDITTEXT IDC_DEPTH, 96, 15, 44, 12, WS_BORDER | WS_TABSTOP
+ LTEXT "unit", IDC_DEPTH_TAG, 142, 17, 21, 8
+ LTEXT "Width", -1, 58, 33, 37, 8
+ EDITTEXT IDC_WIDTH, 96, 31, 44, 12, WS_BORDER | WS_TABSTOP
+ LTEXT "unit", IDC_WIDTH_TAG, 142, 33, 21, 8
+ GROUPBOX "Material Properties", -1, 54, 53, 110, 43, BS_GROUPBOX
+ LTEXT "Unit Wgt", IDC_UNITWGT_LABEL, 58, 66, 37, 8
+ EDITTEXT IDC_UNITWGT, 96, 64, 44, 12, WS_BORDER | WS_TABSTOP
+ LTEXT "unit", IDC_UNITWGT_TAG, 142, 66, 21, 8
+ LTEXT "Mod. E", -1, 58, 82, 37, 8
+ EDITTEXT IDC_MODE, 96, 80, 44, 12, WS_BORDER | WS_TABSTOP
+ LTEXT "unit", IDC_MODE_TAG, 142, 82, 21, 8
+ GROUPBOX "Girder Location", IDC_LOCATIONGRP, 54, 101, 110, 35, BS_GROUPBOX
+ AUTORADIOBUTTON "Interior Girder", IDC_INTGIRDER, 58, 110, 60, 12, BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP
+ AUTORADIOBUTTON "Exterior Girder", IDC_EXTGIRDER, 58, 122, 60, 12
+ GROUPBOX "Beam/Girder Layout", -1, 170, 4, 106, 43, BS_GROUPBOX
+ LTEXT "Girder Spacing", -1, 174, 21, 28, 16
+ EDITTEXT IDC_SPACING, 206, 23, 41, 12, WS_BORDER | WS_TABSTOP
+ LTEXT "Text", IDC_SPACING_TAG, 251, 25, 21, 8
+}
+
+
+IDD_SECTPRPWIZARD_PAGE3B DIALOG 6, 15, 280, 187
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+{
+ GROUPBOX "Beam/Girder Description", -1, 11, 8, 256, 84, BS_GROUPBOX
+ AUTOCHECKBOX "Rolled Shape", IDC_BEAMCHECK, 14, 16, 60, 12
+ COMBOBOX IDC_BEAMCOMBOBOX, 14, 31, 80, 60, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+ GROUPBOX "Top Flange", IDC_TF_GROUP, 14, 47, 80, 41, BS_GROUPBOX
+ LTEXT "t", IDC_TF_THICK_LABEL, 19, 59, 5, 8
+ EDITTEXT IDC_TF_THICK, 28, 57, 44, 12, WS_BORDER | WS_TABSTOP
+ LTEXT "unit", IDC_TF_THICK_TAG, 76, 59, 13, 8
+ LTEXT "w", IDC_TF_WIDTH_LABEL, 19, 75, 5, 8
+ EDITTEXT IDC_TF_WIDTH, 28, 73, 44, 12, WS_BORDER | WS_TABSTOP
+ LTEXT "unit", IDC_TF_WIDTH_TAG, 76, 75, 13, 8
+ GROUPBOX "Web", IDC_WEB_GROUP, 98, 47, 80, 41, BS_GROUPBOX
+ LTEXT "t", IDC_WEB_THICK_LABEL, 103, 59, 5, 8
+ EDITTEXT IDC_WEB_THICK, 112, 57, 44, 12, WS_BORDER | WS_TABSTOP
+ LTEXT "unit", IDC_WEB_THICK_TAG, 160, 59, 13, 8
+ LTEXT "h", IDC_WEB_HEIGHT_LABEL, 103, 75, 5, 8
+ EDITTEXT IDC_WEB_HEIGHT, 112, 73, 44, 12, WS_BORDER | WS_TABSTOP
+ LTEXT "unit", IDC_WEB_HEIGHT_TAG, 160, 75, 13, 8
+ GROUPBOX "Bottom Flange", IDC_BF_GROUP, 183, 47, 80, 41, BS_GROUPBOX
+ LTEXT "t", IDC_BF_THICK_LABEL, 188, 59, 5, 8
+ EDITTEXT IDC_BF_THICK, 197, 57, 44, 12, WS_BORDER | WS_TABSTOP
+ LTEXT "unit", IDC_BF_THICK_TAG, 245, 59, 13, 8
+ LTEXT "w", IDC_BF_WIDTH_LABEL, 188, 75, 5, 8
+ EDITTEXT IDC_BF_WIDTH, 197, 73, 44, 12, WS_BORDER | WS_TABSTOP
+ LTEXT "unit", IDC_BF_WIDTH_TAG, 245, 75, 13, 8
+ GROUPBOX "Material Properties", -1, 11, 97, 124, 41, BS_GROUPBOX
+ LTEXT "Unit Wgt", IDC_UNITWGT_LABEL, 16, 108, 35, 8
+ EDITTEXT IDC_UNITWGT, 54, 106, 44, 12, WS_BORDER | WS_TABSTOP
+ LTEXT "unit", IDC_UNITWGT_TAG, 103, 108, 19, 8
+ LTEXT "Mod. E", -1, 16, 124, 35, 8
+ EDITTEXT IDC_MODE, 54, 122, 44, 12, WS_BORDER | WS_TABSTOP
+ LTEXT "unit", IDC_MODE_TAG, 103, 124, 19, 8
+ GROUPBOX "Girder Location", IDC_LOCATIONGRP, 11, 144, 124, 35, BS_GROUPBOX
+ AUTORADIOBUTTON "Interior Girder", IDC_INTGIRDER, 16, 153, 60, 12, BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP
+ AUTORADIOBUTTON "Exterior Girder", IDC_EXTGIRDER, 16, 165, 60, 12
+ GROUPBOX "Beam/Girder Layout", -1, 139, 97, 129, 82, BS_GROUPBOX
+ AUTOCHECKBOX "Cross Frames", IDC_XFRAMES, 142, 108, 60, 12
+ LTEXT "Span Length", -1, 142, 123, 49, 8
+ EDITTEXT IDC_LENGTH, 193, 121, 41, 12, WS_BORDER | WS_TABSTOP
+ LTEXT "Text", IDC_LENGTH_TAG, 238, 123, 25, 8
+ LTEXT "Girder Spacing", IDC_LENGTH_LABEL, 142, 137, 49, 8
+ EDITTEXT IDC_SPACING, 193, 135, 41, 12, WS_BORDER | WS_TABSTOP
+ LTEXT "Text", IDC_SPACING_TAG, 238, 137, 25, 8
+ LTEXT "Num. Beams", IDC_NUMBEAMS_LABEL, 142, 151, 49, 8
+ EDITTEXT IDC_NUMBEAMS, 193, 149, 41, 12, WS_BORDER | WS_TABSTOP
+ LTEXT "Num. Lanes", IDC_NUMLANES_LABEL, 142, 165, 49, 8
+ EDITTEXT IDC_NUMLANES, 193, 163, 41, 12, WS_BORDER | WS_TABSTOP
+}
+
+
+IDD_SECTPRPWIZARD_PAGE3C DIALOG 6, 15, 280, 187
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+{
+ GROUPBOX "I-Beam/Bulb-Tee Description", -1, 11, 8, 256, 84, BS_GROUPBOX
+ AUTOCHECKBOX "Standard Shape", IDC_BEAMCHECK, 14, 16, 60, 12
+ COMBOBOX IDC_BEAMCOMBOBOX, 14, 31, 80, 60, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+ GROUPBOX "Non-composite Properties", IDC_PROPERTIES_GROUP, 100, 18, 163, 70, BS_GROUPBOX
+ LTEXT "Ax", IDC_AX_LABEL, 105, 32, 11, 8
+ EDITTEXT IDC_AX, 117, 29, 34, 12, WS_BORDER | WS_TABSTOP
+ LTEXT "unit", IDC_AX_TAG, 155, 32, 13, 8
+ LTEXT "Iz", IDC_IZ_LABEL, 105, 47, 11, 8
+ EDITTEXT IDC_IZ, 117, 45, 34, 12, WS_BORDER | WS_TABSTOP
+ LTEXT "unit", IDC_IZ_TAG, 155, 47, 13, 8
+ LTEXT "Yb", IDC_YB_LABEL, 105, 62, 11, 8
+ EDITTEXT IDC_YB, 117, 60, 34, 12, WS_BORDER | WS_TABSTOP
+ LTEXT "unit", IDC_YB_TAG, 155, 62, 13, 8
+ LTEXT "H", IDC_HEIGHT_LABEL, 105, 76, 11, 8
+ EDITTEXT IDC_HEIGHT, 117, 74, 34, 12, WS_BORDER | WS_TABSTOP
+ LTEXT "unit", IDC_HEIGHT_TAG, 155, 76, 13, 8
+ LTEXT "Top Flg Width", IDC_TOPFLGWIDTH_LABEL, 175, 39, 31, 15
+ EDITTEXT IDC_TOPFLGWIDTH, 212, 41, 34, 12, WS_BORDER | WS_TABSTOP
+ LTEXT "unit", IDC_TOPFLGWIDTH_TAG, 248, 43, 13, 8
+ LTEXT "Web Width", IDC_WEBWIDTH_LABEL, 175, 62, 35, 8
+ EDITTEXT IDC_WEBWIDTH, 212, 60, 34, 12, WS_BORDER | WS_TABSTOP
+ LTEXT "unit", IDC_WEBWIDTH_TAG, 248, 62, 13, 8
+ GROUPBOX "Material Properties", -1, 11, 97, 124, 43, BS_GROUPBOX
+ LTEXT "Unit Wgt", IDC_UNITWGT_LABEL, 16, 112, 35, 8
+ EDITTEXT IDC_UNITWGT, 54, 110, 44, 12, WS_BORDER | WS_TABSTOP
+ LTEXT "unit", IDC_UNITWGT_TAG, 103, 112, 19, 8
+ LTEXT "f'c", -1, 16, 126, 35, 8
+ EDITTEXT IDC_FC, 54, 124, 44, 12, WS_BORDER | WS_TABSTOP
+ LTEXT "unit", IDC_FC_TAG, 103, 126, 19, 8
+ GROUPBOX "Girder Location", IDC_LOCATIONGRP, 11, 142, 124, 37, BS_GROUPBOX
+ AUTORADIOBUTTON "Interior Girder", IDC_INTGIRDER, 16, 153, 60, 12, BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP
+ AUTORADIOBUTTON "Exterior Girder", IDC_EXTGIRDER, 16, 165, 60, 12
+ GROUPBOX "I-Beam/Bulb-Tee Layout", -1, 139, 97, 129, 82, BS_GROUPBOX
+ AUTOCHECKBOX "Diaphragms", IDC_XFRAMES, 142, 108, 60, 12
+ LTEXT "Span Length", IDC_LENGTH_LABEL, 142, 123, 49, 8
+ EDITTEXT IDC_LENGTH, 193, 121, 41, 12, WS_BORDER | WS_TABSTOP
+ LTEXT "Text", IDC_LENGTH_TAG, 238, 123, 25, 8
+ LTEXT "Girder Spacing", -1, 142, 137, 49, 8
+ EDITTEXT IDC_SPACING, 193, 135, 41, 12, WS_BORDER | WS_TABSTOP
+ LTEXT "Text", IDC_SPACING_TAG, 238, 137, 25, 8
+ LTEXT "Num. Beams", IDC_NUMBEAMS_LABEL, 142, 151, 49, 8
+ EDITTEXT IDC_NUMBEAMS, 193, 149, 41, 12, WS_BORDER | WS_TABSTOP
+ LTEXT "Num. Lanes", IDC_NUMLANES_LABEL, 142, 165, 49, 8
+ EDITTEXT IDC_NUMLANES, 193, 163, 41, 12, WS_BORDER | WS_TABSTOP
+}
+
+
+IDD_SECTPRPWIZARD_PAGE4A DIALOG 6, 15, 280, 187
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+{
+ GROUPBOX "Wood/Concrete Deck Description", -1, 54, 4, 121, 79, BS_GROUPBOX
+ LTEXT "Deck Type", IDC_DECKTYPE, 59, 16, 112, 8
+ LTEXT "Tributary Width", -1, 59, 30, 36, 16
+ EDITTEXT IDC_WIDTH, 98, 33, 44, 12, WS_BORDER | WS_TABSTOP
+ LTEXT "unit", IDC_WIDTH_TAG, 145, 35, 24, 8
+ LTEXT "Depth", -1, 59, 51, 36, 8
+ EDITTEXT IDC_DEPTH, 98, 49, 44, 12, WS_BORDER | WS_TABSTOP
+ LTEXT "unit", IDC_DEPTH_TAG, 145, 51, 24, 8
+ LTEXT "de", IDC_DE_LABEL, 59, 67, 36, 8
+ EDITTEXT IDC_DE, 98, 65, 44, 12, WS_BORDER | WS_TABSTOP
+ LTEXT "unit", IDC_DE_TAG, 145, 67, 24, 8
+ GROUPBOX "Material Properties", -1, 54, 88, 121, 44, BS_GROUPBOX
+ LTEXT "Unit Wgt", IDC_UNITWGT_LABEL, 59, 110, 36, 8
+ EDITTEXT IDC_UNITWGT, 98, 108, 44, 12, WS_BORDER | WS_TABSTOP
+ LTEXT "unit", IDC_UNITWGT_TAG, 145, 110, 24, 8
+ GROUPBOX "Design Lane", -1, 54, 137, 121, 44, BS_GROUPBOX
+ LTEXT "Lane Width", IDC_DESIGNLANE_LABEL, 59, 158, 36, 8
+ EDITTEXT IDC_DESIGNLANE, 98, 156, 44, 12, WS_BORDER | WS_TABSTOP
+ LTEXT "unit", IDC_DESIGNLANE_TAG, 145, 158, 24, 8
+}
+
+
+IDD_SECTPRPWIZARD_PAGE4B DIALOG 6, 15, 280, 187
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+{
+ GROUPBOX "Steel Grid Deck Description", -1, 54, 4, 127, 43, BS_GROUPBOX
+ LTEXT "tg", -1, 59, 17, 44, 8
+ EDITTEXT IDC_TG, 104, 15, 44, 12, WS_BORDER | WS_TABSTOP
+ LTEXT "unit", IDC_TG_TAG, 153, 17, 21, 8
+ LTEXT "de", IDC_DE_LABEL, 59, 32, 44, 8
+ EDITTEXT IDC_DE, 104, 30, 44, 12, WS_BORDER | WS_TABSTOP
+ LTEXT "unit", IDC_DE_TAG, 153, 32, 21, 8
+ GROUPBOX "Material Properties", -1, 54, 52, 127, 33, BS_GROUPBOX
+ LTEXT "Weight", -1, 59, 67, 44, 8
+ EDITTEXT IDC_WEIGHT, 104, 65, 44, 12, WS_BORDER | WS_TABSTOP
+ LTEXT "unit", IDC_WEIGHT_TAG, 153, 67, 21, 8
+ GROUPBOX "Design Lane", -1, 54, 91, 127, 44, BS_GROUPBOX
+ LTEXT "Lane Width", IDC_DESIGNLANE_LABEL, 59, 112, 36, 8
+ EDITTEXT IDC_DESIGNLANE, 104, 110, 44, 12, WS_BORDER | WS_TABSTOP
+ LTEXT "unit", IDC_DESIGNLANE_TAG, 153, 112, 24, 8
+}
+
+IDD_SECTPRPWIZARD_PAGE4C DIALOG 6, 15, 280, 187
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+{
+ GROUPBOX "Concrete Slab Description", -1, 20, 16, 117, 105, BS_GROUPBOX
+ LTEXT "Slab Depth", -1, 25, 31, 37, 8
+ EDITTEXT IDC_DEPTH, 64, 29, 44, 12, WS_BORDER | WS_TABSTOP
+ LTEXT "Text", IDC_DEPTH_TAG, 112, 31, 22, 8
+ LTEXT "Pad Depth", -1, 25, 49, 37, 8
+ EDITTEXT IDC_PAD, 64, 47, 44, 12, WS_BORDER | WS_TABSTOP
+ LTEXT "Text", IDC_PAD_TAG, 112, 49, 22, 8
+ LTEXT "Sacraficial Depth", -1, 25, 63, 34, 16
+ EDITTEXT IDC_SACDEPTH, 64, 65, 44, 12, WS_BORDER | WS_TABSTOP
+ LTEXT "Text", IDC_SACDEPTH_TAG, 112, 67, 22, 8
+ LTEXT "Slab Overhang", IDC_OVERHANG_LABEL, 25, 83, 32, 17
+ EDITTEXT IDC_OVERHANG, 64, 85, 44, 12, WS_BORDER | WS_TABSTOP
+ LTEXT "Text", IDC_OVERHANG_TAG, 112, 87, 19, 8
+ LTEXT "de", IDC_DE_LABEL, 25, 106, 32, 8
+ EDITTEXT IDC_DE, 64, 104, 44, 12, WS_BORDER | WS_TABSTOP
+ LTEXT "Text", IDC_DE_TAG, 112, 106, 19, 8
+ GROUPBOX "Material Properties", -1, 20, 125, 117, 46, BS_GROUPBOX
+ LTEXT "Unit Wgt", IDC_UNITWGT_LABEL, 25, 140, 30, 8
+ EDITTEXT IDC_UNITWGT, 64, 138, 44, 12, WS_BORDER | WS_TABSTOP
+ LTEXT "Text", IDC_UNITWGT_TAG, 112, 140, 22, 8
+ LTEXT "f'c", -1, 25, 156, 28, 8
+ EDITTEXT IDC_FC, 64, 154, 44, 12, WS_BORDER | WS_TABSTOP
+ LTEXT "Text", IDC_FC_TAG, 112, 156, 22, 8
+ GROUPBOX "Effective Flange Width Parameters", -1, 142, 16, 117, 105, BS_GROUPBOX
+ LTEXT "Eff. Span Length", IDC_LENGTH_LABEL, 147, 27, 28, 17
+ EDITTEXT IDC_LENGTH, 184, 29, 44, 12, WS_BORDER | WS_TABSTOP
+ LTEXT "Text", IDC_LENGTH_TAG, 230, 31, 22, 8
+ GROUPBOX "Design Lane", -1, 142, 125, 117, 46, BS_GROUPBOX
+ LTEXT "Lane Width", IDC_DESIGNLANE_LABEL, 147, 140, 36, 8
+ EDITTEXT IDC_DESIGNLANE, 184, 138, 44, 12, WS_BORDER | WS_TABSTOP
+ LTEXT "unit", IDC_DESIGNLANE_TAG, 230, 140, 24, 8
+}
+
+IDD_SECTPRPWIZARD_PAGE5 DIALOG 6, 15, 280, 187
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+{
+ GROUPBOX "Skew Corrections", -1, 54, 4, 131, 63, BS_GROUPBOX
+ AUTOCHECKBOX "Correct Moment for Skew Effects", IDC_CORRECTMOMENT, 60, 14, 118, 12
+ AUTOCHECKBOX "Correct Shear for Skew Effects", IDC_CORRECTSHEAR, 60, 31, 118, 12
+ LTEXT "Skew Angle", IDC_SKEWANGLE_LABEL, 60, 50, 49, 8
+ EDITTEXT IDC_SKEWANGLE, 109, 48, 41, 12, WS_BORDER | WS_TABSTOP
+ LTEXT "Deg", IDC_SKEWANGLE_TAG, 154, 50, 19, 8
+}
+
+
+
+IDD_SECTPRPWIZARD_PAGE6A DIALOG 6, 15, 280, 187
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+{
+ GROUPBOX "Girder Properties", -1, 5, 5, 121, 76, BS_GROUPBOX
+ LTEXT "Ax", IDC_GIRDER_AX, 11, 18, 109, 8
+ LTEXT "Iz", IDC_GIRDER_IZ, 11, 30, 109, 8
+ LTEXT "CG", IDC_GIRDER_CG, 11, 42, 109, 8
+ LTEXT "Eff Unit Wgt", IDC_UNITWEIGHT_RESULT, 11, 55, 109, 8
+ LTEXT "Mod. E", IDC_MODE_RESULT, 11, 66, 109, 8
+ GROUPBOX "Distribution Factors", -1, 133, 5, 138, 145, BS_GROUPBOX
+ GROUPBOX "Strength/Service Limit States", -1, 139, 17, 126, 83, BS_GROUPBOX
+ LTEXT "Moment", -1, 144, 29, 116, 8
+ LTEXT "1 Loaded Lane", IDC_S_GMOMENT_1_RESULT, 144, 39, 116, 8
+ LTEXT "2+ Loaded Lanes", IDC_S_GMOMENT_2_RESULT, 144, 49, 116, 8
+ LTEXT "Shear", -1, 144, 65, 116, 8
+ LTEXT "1 Loaded Lane", IDC_S_GSHEAR_1_RESULT, 144, 76, 116, 8
+ LTEXT "2+ Loaded Lanes", IDC_S_GSHEAR_2_RESULT, 144, 87, 116, 8
+ GROUPBOX "Fatigue Limit State", -1, 139, 106, 126, 37, BS_GROUPBOX
+ LTEXT "gMoment", IDC_F_GMOMENT_RESULT, 144, 119, 116, 8
+ LTEXT "gShear", IDC_F_GSHEAR_RESULT, 144, 130, 116, 8
+ PUSHBUTTON "&Print", IDC_PRINT, 231, 165, 40, 14
+}
+
+IDD_SECTPRPWIZARD_PAGE6B DIALOG 6, 15, 280, 187
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+{
+ GROUPBOX "Girder Properties", -1, 5, 5, 121, 50, BS_GROUPBOX
+ LTEXT "Ax", IDC_GIRDER_AX, 11, 18, 109, 8
+ LTEXT "Iz", IDC_GIRDER_IZ, 11, 30, 109, 8
+ LTEXT "CG", IDC_GIRDER_CG, 11, 42, 109, 8
+ GROUPBOX "Slab Properties", -1, 5, 57, 121, 33, BS_GROUPBOX
+ LTEXT "Eff. Flange Width", IDC_EFFWIDTH, 11, 67, 109, 8
+ LTEXT "Mod E.", IDC_ESLAB, 11, 79, 109, 8
+ GROUPBOX "Composite Properties", -1, 5, 92, 121, 80, BS_GROUPBOX
+ LTEXT "Ax", IDC_AX_RESULT, 11, 104, 109, 8
+ LTEXT "Iz", IDC_IZ_RESULT, 11, 115, 109, 8
+ LTEXT "CG", IDC_CG_RESULT, 11, 126, 109, 8
+ LTEXT "Eff Unit Wgt", IDC_UNITWEIGHT_RESULT, 11, 137, 109, 8
+ LTEXT "Mod. E", IDC_MODE_RESULT, 11, 148, 109, 8
+ LTEXT "n", IDC_N, 11, 159, 109, 8
+ GROUPBOX "Distribution Factors", -1, 133, 5, 138, 167, BS_GROUPBOX
+ LTEXT "eg", IDC_EG, 144, 18, 116, 8
+ LTEXT "Kg", IDC_KG, 144, 30, 116, 8
+ GROUPBOX "Strength/Service Limit States", -1, 139, 43, 126, 83, BS_GROUPBOX
+ LTEXT "Moment", -1, 144, 55, 116, 8
+ LTEXT "1 Loaded Lane", IDC_S_GMOMENT_1_RESULT, 144, 65, 116, 8
+ LTEXT "2+ Loaded Lanes", IDC_S_GMOMENT_2_RESULT, 144, 75, 116, 8
+ LTEXT "Shear", -1, 144, 91, 116, 8
+ LTEXT "1 Loaded Lane", IDC_S_GSHEAR_1_RESULT, 144, 102, 116, 8
+ LTEXT "2+ Loaded Lanes", IDC_S_GSHEAR_2_RESULT, 144, 113, 116, 8
+ GROUPBOX "Fatigue Limit State", -1, 139, 132, 126, 37, BS_GROUPBOX
+ LTEXT "gMoment", IDC_F_GMOMENT_RESULT, 144, 145, 116, 8
+ LTEXT "gShear", IDC_F_GSHEAR_RESULT, 144, 156, 116, 8
+ PUSHBUTTON "&Print", IDC_PRINT, 231, 174, 40, 14
+}
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXT
+//
+
+IDR_LEGAL               TEXT    DISCARDABLE     "license.txt"
+IDR_DISCLAIMER          TEXT    DISCARDABLE     "Disclaimer.txt"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_LICENSEWIZ_1 DIALOG DISCARDABLE  0, 0, 298, 144
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_LIC_TEXT,7,7,284,130,ES_MULTILINE | ES_AUTOVSCROLL |
+                    ES_READONLY | ES_WANTRETURN | WS_VSCROLL | NOT
+                    WS_TABSTOP
+END
+
+IDD_LICENSEWIZ_2 DIALOG DISCARDABLE  0, 0, 298, 144
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_DISCLAIMER,7,7,280,115,ES_MULTILINE | ES_AUTOVSCROLL |
+                    ES_READONLY | WS_VSCROLL | NOT WS_TABSTOP
+    CONTROL         "Don't show me this again.",IDC_CHECK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,126,280,8
+END
+
+IDI_WSDOT ICON "Wsdot.ico"
+
+

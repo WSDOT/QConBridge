@@ -1,0 +1,160 @@
+#include <qconbrdg\common.rh>
+
+#if !defined(IDHELP)
+#define IDHELP                  998
+#endif
+
+// Common ID's
+#define IDC_DEPTH                   5006
+#define IDC_DEPTH_TAG               5007
+#define IDC_WIDTH                   5008
+#define IDC_WIDTH_TAG               5009
+#define IDC_BEAMCHECK               5013
+#define IDC_BEAMCOMBOBOX            5014
+#define IDC_LOCATIONGRP             5015
+#define IDC_INTGIRDER               5016
+#define IDC_EXTGIRDER               5017
+#define IDC_XFRAMES                 5018
+#define IDC_SPACING                 5021
+#define IDC_SPACING_TAG             5022
+#define IDC_NUMBEAMS_LABEL          5023
+#define IDC_NUMBEAMS                5024
+#define IDC_NUMLANES_LABEL          5025
+#define IDC_NUMLANES                5026
+#define IDC_DE_LABEL                5027
+#define IDC_DE                      5028
+#define IDC_DE_TAG                  5029
+#define IDC_FC	                     5030
+#define IDC_FC_TAG	               5031
+#define IDC_DESIGNLANE_LABEL        5032
+#define IDC_DESIGNLANE              5033
+#define IDC_DESIGNLANE_TAG          5034
+//#define IDC_HELP                    5035
+
+// Section Property Wizard Pages
+#define IDD_SECTPRPWIZARD           6000
+#define IDD_SECTPRPWIZARD_PAGE1	   6100
+#define IDD_SECTPRPWIZARD_PAGE2     6200
+#define IDD_SECTPRPWIZARD_PAGE3A    6300
+#define IDD_SECTPRPWIZARD_PAGE3B    6400
+#define IDD_SECTPRPWIZARD_PAGE3C    6500
+#define IDD_SECTPRPWIZARD_PAGE4A	   6600
+#define IDD_SECTPRPWIZARD_PAGE4B	   6700
+#define IDD_SECTPRPWIZARD_PAGE4C	   6800
+#define IDD_SECTPRPWIZARD_PAGE5	   6900
+#define IDD_SECTPRPWIZARD_PAGE6A    7000
+#define IDD_SECTPRPWIZARD_PAGE6B    7100
+
+// Girder Type Selection
+#define IDC_GIRDERGRP               2101
+#define IDC_STEELBEAM               2102
+#define IDC_CLOSEDBOX               2103
+#define IDC_OPENBOX                 2104
+#define IDC_CIPBOX                  2105
+#define IDC_CIPTEE                  2106
+#define IDC_PRECASTSLAB_COMP        2107
+#define IDC_PRECASTSLAB_INTG        2108
+#define IDC_PRECASTCHANNEL          2109
+#define IDC_PRECASTDOUBLETEE        2110
+#define IDC_PRECASTTEE              2111
+#define IDC_PRECASTIBEAM            2112
+#define IDC_WOOD                    2113
+#define IDC_PRECASTSLAB_INTG_TAG    2114
+#define IDC_PRECASTDOUBLETEE_TAG    2115
+#define IDC_PRECASTTEE_TAG          2116
+
+// Deck Types
+#define IDC_DECKTYPES               2201
+#define IDC_CONCRETE                2202
+#define IDC_STEEL_GRID              2203
+#define IDC_FILLED_GRID             2204
+#define IDC_WOOD_PLANK              2205
+#define IDC_STRESS_LAMINATED        2206
+#define IDC_SPIKE_LAMINATED         2207
+#define IDC_GLUE_LAMINATED          2208
+
+// Wood Beams
+// Uses all common ID's
+
+// Wood Deck Description
+#define IDC_DECKTYPE                2601
+
+// Steel Grid Deck
+#define IDC_TG                      2700
+#define IDC_TG_TAG                  2701
+#define IDC_WEIGHT                  2702
+#define IDC_WEIGHT_TAG              2703
+
+// Steel Beam
+#define IDC_TF_GROUP                2401
+#define IDC_TF_THICK_LABEL          2402
+#define IDC_TF_THICK                2403
+#define IDC_TF_THICK_TAG            2404
+#define IDC_TF_WIDTH_LABEL          2405
+#define IDC_TF_WIDTH                2406
+#define IDC_TF_WIDTH_TAG            2407
+#define IDC_WEB_GROUP               2408
+#define IDC_WEB_THICK_LABEL         2409
+#define IDC_WEB_THICK               2410
+#define IDC_WEB_THICK_TAG           2411
+#define IDC_WEB_HEIGHT_LABEL        2412
+#define IDC_WEB_HEIGHT              2413
+#define IDC_WEB_HEIGHT_TAG          2414
+#define IDC_BF_GROUP                2415
+#define IDC_BF_THICK_LABEL          2416
+#define IDC_BF_THICK                2417
+#define IDC_BF_THICK_TAG            2418
+#define IDC_BF_WIDTH_LABEL          2419
+#define IDC_BF_WIDTH                2420
+#define IDC_BF_WIDTH_TAG            2421
+
+// Precast Concrete I or Bulb-Tee Sections
+#define IDC_PROPERTIES_GROUP        2501
+#define IDC_YB_LABEL                2508
+#define IDC_YB                      2509
+#define IDC_YB_TAG                  2510
+#define IDC_TOPFLGWIDTH_LABEL       2511
+#define IDC_TOPFLGWIDTH             2512
+#define IDC_TOPFLGWIDTH_TAG         2513
+#define IDC_WEBWIDTH_LABEL          2514
+#define IDC_WEBWIDTH                2515
+#define IDC_WEBWIDTH_TAG            2516
+
+// Cross Section Description
+#define IDC_PAD                     2801
+#define IDC_PAD_TAG                 2802
+#define IDC_SACDEPTH	               2803
+#define IDC_SACDEPTH_TAG	         2804
+#define IDC_OVERHANG_LABEL          2805
+#define IDC_OVERHANG                2806
+#define IDC_OVERHANG_TAG            2807
+
+// Skew
+#define IDC_CORRECTMOMENT	         2901
+#define IDC_CORRECTSHEAR	         2902
+#define IDC_SKEWANGLE_LABEL	      2903
+#define IDC_SKEWANGLE	            2904
+#define IDC_SKEWANGLE_TAG	         2905
+
+// Results
+#define IDC_GIRDER_AX               3001
+#define IDC_GIRDER_IZ               3002
+#define IDC_GIRDER_CG               3003
+#define IDC_EFFWIDTH                3004
+#define IDC_AX_RESULT               3006
+#define IDC_IZ_RESULT               3007
+#define IDC_CG_RESULT               3008
+#define IDC_UNITWEIGHT_RESULT       3009
+#define IDC_MODE_RESULT             3010
+#define IDC_N                       3011
+#define IDC_EG                      3012
+#define IDC_KG                      3013
+#define IDC_S_GMOMENT_1_RESULT      3014
+#define IDC_S_GMOMENT_2_RESULT      3015
+#define IDC_S_GSHEAR_1_RESULT       3016
+#define IDC_S_GSHEAR_2_RESULT       3017
+#define IDC_F_GMOMENT_RESULT        3018
+#define IDC_F_GSHEAR_RESULT         3019
+#define IDC_PRINT	5035
+#define IDC_ESLAB	3005
+

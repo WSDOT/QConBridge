@@ -1,0 +1,51 @@
+///////////////////////////////////////////////////////////////////////
+// OWLTools - Extension Library for the Borland OWL Framework
+// Copyright (C) 1999  Washington State Department of Transportation
+//                     Bridge and Structures Office
+//
+// This library was developed as part of the Alternate Route Project
+//
+// This library is free software; you can redistribute it and/or modify it under
+// the terms of the Alternate Route Library Open Source License as published by 
+// the Washington State Department of Transportation, Bridge and Structures Office.
+//
+// This program is distributed in the hope that it will be useful, but is distributed 
+// AS IS, WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY 
+// or FITNESS FOR A PARTICULAR PURPOSE. See the Alternate Route Library Open Source 
+// License for more details.
+//
+// You should have received a copy of the Alternate Route Library Open Source License 
+// along with this program; if not, write to the Washington State Department of 
+// Transportation, Bridge and Structures Office, 4500 3rd Ave SE - P.O. Box  47340, 
+// Olympia, WA 98503, USA or e-mail Bridge_Support@wsdot.wa.gov
+///////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////
+// Revision Log
+// ============
+// May 1997 - Created, Richard Brice
+// Oct 1999 - Released as open source
+
+#if !defined OWLTOOLS_TIPCHECK_H_
+#define OWLTOOLS_TIPCHECK_H_
+
+#include <owltools\owltldll.h>
+#include <owl/checkbox.h>
+#include <owltools/ctrltip.h>
+
+class _OWLTOOLSCLASS TTipCheckBox : public TCheckBox, public TControlTipMixin
+{
+public:
+   TTipCheckBox(TWindow* parent, int id, const char far* title, int x, int y, int w, int h, const char* tip, TGroupBox* group = 0, TModule* module = 0);
+   TTipCheckBox(TWindow* parent, int id, const char far* title, int x, int y, int w, int h, int msgResourceId, TGroupBox* group = 0, TModule* module = 0);
+   TTipCheckBox(TWindow* parent, int resourceId,const char* tip,TGroupBox* group = 0,TModule* module = 0);
+   TTipCheckBox(TWindow* parent, int resourceId,int msgResourceId = -1,TGroupBox* group = 0,TModule* module = 0);
+   virtual ~TTipCheckBox();
+
+   virtual bool PreProcessMsg(MSG& msg);
+   virtual void SetupWindow();
+
+DECLARE_RESPONSE_TABLE(TTipCheckBox);
+};
+
+#endif

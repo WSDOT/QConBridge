@@ -1,0 +1,89 @@
+NOTES
+===============================================================================
+Members do not own their materials or sections and thus do not delete them
+in the destructor. At present, the program using this library is responsible
+for owning and destroying materials and sections. It might be useful to allow
+the fem model to have a container of materials and a container of sections.
+The fem model could own and destroy these objects. With this new feature,
+users would have to take care with material and section ownership.
+
+Modular Architecture
+   In future versions of this library, it might be better to seperate the
+   responsibilities of results management and fem analysis. As TFemModel
+   is currently designed, it must manage all loads, results, combinations,
+   and envelopes, as well as perform its main responsibility of finite element
+   analysis.
+
+   Storing the loading description for each load case is really no concern
+   of the solver, yet the solver currently has this responsibility.
+
+   Performing loading combinations, envelopes and creating pseudo-loadings from
+   envelopes are simply operations on results. The fem model is currently
+   responsible for all the results and the operations upon them when in fact
+   the management of results and the operations upon then have nothing to do
+   with the solver.
+
+   A desirable architecture would be to hide the fem solver and data managers
+   within a module and to seperate concerns of fem solving and database
+   management within the module.
+
+Adding Elements Types
+   As more and more elements are added to the capabilities of this library,
+   the TPlnFrameMbr class must be modified by moving general functionalities
+   to higher level abstract classes.
+
+Computing Point Of Interest (POI) Results
+   Explore the possiblity of giving the POIs pointers to the members on which
+   the occur. This way, a POI can compute it's own results instead of relying
+   on TFemModel to do it. Members compute their own results, POIs should too.
+
+Results Storage
+   I am not pleased with the method used to store joint, member, and poi results.
+   A more safisticated database could be developed to provide very clean storage
+   and retreival of results.
+
+Linear Loads
+   At the time of this writing, linear loads were not deemed important to the
+   delivery of the product. It would be very benificial to this library if
+   linear loads where added to round-out its functionality.
+
+Uniform Loads
+   Uniformly applied moments may be applied to the model, but have no effect.
+   The generalized load input mechanism allows for this loading, but the fem
+   model is incapable of handling it. As a result, the effect of uniformly
+   distributed moments is ignored. Uniformly applied moments where not included
+   to the original version of this library because it was deemed a non-important
+   loading condition. It would be very benificial to this library if linear loads
+   where added to round-out its functionality.
+
+TMatrix Class
+   It will be benifical to the fem model if TMatrix was enhanced to handle
+   symetric matricies, sparse matricies, and symetric banded matricies. This
+   would do two things for the library. 1) The storage requirements would be
+   reduced, and 2) The global stiffness matrix and force vector would be
+   consistant with the other matricies. The global system of equations could
+   solve itself instead of relying of TFemModel to solve the equations.
+
+Exception and Error Handling
+   In the first release of this library, exception handling is not implemented.
+   An exception class heirarchy must be developed for this library. Exceptions
+   must be thrown for fatal errors. Returning error codes will be used for
+   simple i/o errors such as adding a joint or member.
+
+Multiple Analysis
+   It would be benificial if the model could be created, analyzed, edited, and
+   analyzed again. Each analysis would be for active loads. Results could be
+   combined from each analysis. This way, simple and continuous span bridge
+   results could be combined using only one fem model.
+
+Generating Input for Commercial Applications
+   The GTStrudl method is used to dump the fem model to an ascii flat file.
+   The dump is in the form of GTStrudl input commands. For this first cut,
+   the GTStrudl method is part of the FemModel class. This is a poor design
+   decision. A better choice would be to create a family of friend classes
+   that have the responsibility of generating input dump files.
+
+Envelopes
+   Envelopes are not currently being used and they are causing some problems.
+   For this reason, there source has been commented out. When envelopes are
+   really needed, put the code back in and test it completely.

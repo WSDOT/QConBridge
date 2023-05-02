@@ -1,0 +1,17 @@
+;------------------------------------------------
+;   Project OWLTOOLS
+;
+;   Copyright © 1995. All Rights Reserved.
+;
+;   SUBSYSTEM:    OWLTOOLS Module Defintion File
+;   FILE:         owltools.def
+;   AUTHOR:       Richard A. Brice
+;
+;------------------------------------------------
+
+LIBRARY        OWLTLS16
+DESCRIPTION    'OWLTOOLS Library'
+EXETYPE        WINDOWS
+CODE           PRELOAD MOVEABLE DISCARDABLE
+DATA           PRELOAD MOVEABLE SINGLE
+HEAPSIZE       1024

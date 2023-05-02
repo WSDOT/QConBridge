@@ -1,0 +1,234 @@
+.MCAD 304010000 1 91 230 0
+.CMD PLOTFORMAT
+0 0 1 1 1 0 0 1 1 
+0 0 1 1 1 0 0 1 1 
+0 1 0 0 1 1 NO-TRACE-STRING
+0 2 1 0 1 1 NO-TRACE-STRING
+0 3 2 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 NO-TRACE-STRING
+0 1 1 21 15 0 0 3 
+.CMD FORMAT  rd=d ct=10 im=i et=3 zt=15 pr=3 mass length time charge temperature tr=0 vm=0
+.CMD SET ORIGIN 0
+.CMD SET TOL 0.001000000000000
+.CMD SET PRNCOLWIDTH 8
+.CMD SET PRNPRECISION 4
+.CMD PRINT_SETUP 0.500000 0.500000 0.500000 0.500000 1
+.CMD HEADER_FOOTER 1 1 *empty* *empty* *empty* 0 1 *empty* *empty* *empty*
+.CMD HEADER_FOOTER_FONT fontID=14 family=Arial points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD HEADER_FOOTER_FONT fontID=15 family=Arial points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFAULT_TEXT_PARPROPS 0 0 0
+.CMD DEFINE_FONTSTYLE_NAME fontID=0 name=Variables
+.CMD DEFINE_FONTSTYLE_NAME fontID=1 name=Constants
+.CMD DEFINE_FONTSTYLE_NAME fontID=2 name=Text
+.CMD DEFINE_FONTSTYLE_NAME fontID=4 name=User^1
+.CMD DEFINE_FONTSTYLE_NAME fontID=5 name=User^2
+.CMD DEFINE_FONTSTYLE_NAME fontID=6 name=User^3
+.CMD DEFINE_FONTSTYLE_NAME fontID=7 name=User^4
+.CMD DEFINE_FONTSTYLE_NAME fontID=8 name=User^5
+.CMD DEFINE_FONTSTYLE_NAME fontID=9 name=User^6
+.CMD DEFINE_FONTSTYLE_NAME fontID=10 name=User^7
+.CMD DEFINE_FONTSTYLE fontID=0 family=Times^New^Roman points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=1 family=Times^New^Roman points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=2 family=Arial points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=4 family=Arial points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=5 family=Courier^New points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=6 family=System points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=7 family=Script points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=8 family=Roman points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=9 family=Modern points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD DEFINE_FONTSTYLE fontID=10 family=Times^New^Roman points=10 bold=0 italic=0 underline=0 colrid=-1
+.CMD UNITS U=1
+.CMD DIMENSIONS_ANALYSIS 0 0
+.CMD COLORTAB_ENTRY 0 0 0
+.CMD COLORTAB_ENTRY 128 0 0
+.CMD COLORTAB_ENTRY 0 128 0
+.CMD COLORTAB_ENTRY 128 128 0
+.CMD COLORTAB_ENTRY 0 0 128
+.CMD COLORTAB_ENTRY 128 0 128
+.CMD COLORTAB_ENTRY 0 128 128
+.CMD COLORTAB_ENTRY 128 128 128
+.CMD COLORTAB_ENTRY 192 192 192
+.CMD COLORTAB_ENTRY 255 0 0
+.CMD COLORTAB_ENTRY 0 255 0
+.CMD COLORTAB_ENTRY 255 255 0
+.CMD COLORTAB_ENTRY 0 0 255
+.CMD COLORTAB_ENTRY 255 0 255
+.CMD COLORTAB_ENTRY 0 255 255
+.CMD COLORTAB_ENTRY 255 255 255
+.TXT 2 1 1 0 0
+Cg a73.000000,73.000000,5
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Guess}
+.EQN 0 8 2 0 0
+{0:x}NAME:30
+.TXT 3 -8 90 0 0
+Cg a73.000000,73.000000,23
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Looking for neg. moment}
+.EQN 0 19 91 0 0
+{0:\x}NAME:-1
+.TXT 4 -19 92 0 0
+Cg a73.000000,73.000000,23
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Influence Line Equation}
+.EQN 4 0 93 0 0
+{0:f}NAME({0:x}NAME):{0:if}NAME({0:x}NAME<0,0,{0:if}NAME({0:x}NAME<40,-9.379164112*(10)^(-13)-0.1*{0:x}NAME-5.3290705182*(10)^(-15)*({0:x}NAME)^(2)+6.25*(10)^(-5)*({0:x}NAME)^(3),{0:if}NAME({0:x}NAME<60,3.9999984205-.399999911*{0:x}NAME+0.007499985*(
+{0:x}NAME)^(2)+1.4551915228*(10)^(-11)*({0:x}NAME)^(3)-6.3948846218*(10)^(-14)*({0:x}NAME)^(4),{0:if}NAME({0:x}NAME<80,63.999821186-1.3999988288*{0:x}NAME+0.0074999759*({0:x}NAME)^(2)+2.037268132*(10)^(-10)*({0:x}NAME)^(3)-7.8159700934*(10)^(-13)*(
+{0:x}NAME)^(4),{0:if}NAME({0:x}NAME<120,95.9999992475-2.5999999866*{0:x}NAME+0.0224999999*({0:x}NAME)^(2)-6.2499999302*(10)^(-5)*({0:x}NAME)^(3)-1.8873791419*(10)^(-15)*({0:x}NAME)^(4),0)))))
+.TXT 3 0 94 0 0
+Cg a73.000000,73.000000,37
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Derivative of Influence 
+Line Equation}
+.EQN 4 0 140 0 0
+{0:g}NAME({0:x}NAME):{0:x}NAME"{0:f}NAME({0:x}NAME)
+.TXT 4 0 98 0 0
+Cg a73.000000,73.000000,53
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Force Effect at Point 
+Under Consideration, for axle P}
+.EQN 3 0 137 0 0
+{0:e}NAME({0:x}NAME,{0:P}NAME):{0:\F}NAME({0:\x}NAME*{0:f}NAME({0:x}NAME))*{0:P}NAME*{0:f}NAME({0:x}NAME)
+.TXT 9 0 108 0 0
+Cg a73.000000,73.000000,22
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Truck Train Definition}
+.EQN 4 28 112 0 0
+{0:hw}NAME:({2,1}ö60ö0)
+.EQN 1 -28 113 0 0
+{0:P}NAME:({3,2}ö0ö0ö35ö0ö0ö35)
+.EQN 0 15 114 0 0
+{0:d}NAME:({3,2}ö0ö0ö0ö0ö0ö0)
+.TXT 6 -15 115 0 0
+Cg a73.000000,73.000000,28
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Force Effect for Truck Train}
+.EQN 5 0 119 0 0
+{0:E}NAME({0:x}NAME):((0,1,{0:i}NAME,((0,2,{0:j}NAME,{0:e}NAME({0:x}NAME+((0,{0:\F}NAME({0:i}NAME-1)*({0:i}NAME-1),{0:k}NAME,((0,2,{0:m}NAME,({0:d}NAME)[({0:m}NAME,{0:k}NAME)){64})){64})+((0,{0:j}NAME,{0:p}NAME,({0:d}NAME)[({0:p}NAME,{0:i}NAME)){64})+(
+(0,{0:i}NAME,{0:q}NAME,({0:hw}NAME)[({0:q}NAME)){64}),({0:P}NAME)[({0:j}NAME,{0:i}NAME))){64})){64})
+.TXT 6 0 120 0 0
+Cg a73.000000,73.000000,42
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Derivative of Force 
+Effect for Truck Train}
+.EQN 6 0 224 0 0
+{0:H}NAME({0:x}NAME):{0:x}NAME"{0:E}NAME({0:x}NAME)
+.EQN 6 0 202 0 0
+{0:X}NAME:{0:root}NAME({0:H}NAME({0:x}NAME),{0:x}NAME)
+.EQN 4 0 201 0 0
+{0:X}NAME={0}?_n_u_l_l_
+.TXT 0 17 197 0 0
+Cg a56.000000,56.000000,39
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Truck Train position for 
+extreme effect}
+.EQN 4 -17 200 0 0
+{0:H}NAME({0:X}NAME)={0}?_n_u_l_l_
+.TXT 0 17 196 0 0
+Cg a56.000000,56.000000,15
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Derivative at X}
+.EQN 4 -17 199 0 0
+{0:E}NAME({0:X}NAME)={0}?_n_u_l_l_
+.TXT 0 17 195 0 0
+Cg a56.000000,56.000000,20
+{\rtf\ansi \deff0{\colortbl;\red0\green0\blue128;}{\fonttbl{\f0
+\fcharset0\fnil Arial;}}\plain\cf1\fs20 \pard Extreme Force Effect}
+.EQN 7 -17 198 0 0
+{0:xx}NAME:(((0,1,{0:i}NAME,((0,2,{0:j}NAME,({0:d}NAME)[({0:j}NAME,{0:i}NAME)){64})){64})+((0,1,{0:i}NAME,({0:hw}NAME)[({0:i}NAME)){64}))*-1;120
+.EQN 32 1 221 0 0
+&&(_n_u_l_l_&_n_u_l_l_)&{0:E}NAME({0:xx}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:xx}NAME
+0 1 1 0 1 0 1 1 1 
+0 1 1 1 1 0 1 1 1 
+0 1 0 0 1 1 NO-TRACE-STRING
+0 2 1 0 1 1 NO-TRACE-STRING
+0 3 2 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 NO-TRACE-STRING
+0 1 1 77 110 12 0 3 
+.EQN 91 90 212 0 0
+&&(_n_u_l_l_&_n_u_l_l_)&{0:f}NAME({0:xx}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:xx}NAME
+0 0 1 0 1 0 0 1 1 
+0 0 1 1 1 0 0 1 1 
+0 1 0 0 1 1 NO-TRACE-STRING
+0 2 1 0 1 1 NO-TRACE-STRING
+0 3 2 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 NO-TRACE-STRING
+0 1 1 64 15 12 0 3 
+.EQN 22 -2 213 0 0
+&&(_n_u_l_l_&_n_u_l_l_)&{0:g}NAME({0:xx}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:xx}NAME
+0 0 1 0 1 0 0 1 1 
+0 1 1 1 1 0 0 1 1 
+0 1 0 0 1 1 NO-TRACE-STRING
+0 2 1 0 1 1 NO-TRACE-STRING
+0 3 2 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 NO-TRACE-STRING
+0 1 1 67 15 12 0 3 
+.EQN 7 -89 227 0 0
+&&(_n_u_l_l_&_n_u_l_l_)&{0:H}NAME({0:xx}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:xx}NAME
+0 1 1 0 1 0 0 1 1 
+0 1 1 1 1 0 0 1 1 
+0 1 0 0 1 1 NO-TRACE-STRING
+0 2 1 0 1 1 NO-TRACE-STRING
+0 3 2 0 1 1 NO-TRACE-STRING
+0 4 3 0 1 1 NO-TRACE-STRING
+0 1 4 0 1 1 NO-TRACE-STRING
+0 2 5 0 1 1 NO-TRACE-STRING
+0 3 6 0 1 1 NO-TRACE-STRING
+0 4 0 0 1 1 NO-TRACE-STRING
+0 1 1 0 1 1 NO-TRACE-STRING
+0 2 2 0 1 1 NO-TRACE-STRING
+0 3 3 0 1 1 NO-TRACE-STRING
+0 4 4 0 1 1 NO-TRACE-STRING
+0 1 5 0 1 1 NO-TRACE-STRING
+0 2 6 0 1 1 NO-TRACE-STRING
+0 3 0 0 1 1 NO-TRACE-STRING
+0 4 1 0 1 1 NO-TRACE-STRING
+0 1 1 78 110 12 0 3 

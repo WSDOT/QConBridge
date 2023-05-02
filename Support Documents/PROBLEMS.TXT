@@ -1,0 +1,58 @@
+
+Know Problems With QConBridge Version 1.x
+
+Installing over 16bit Beta-test versions
+-----------------------------------------------
+All Versions
+If you had a 16Bit Beta-test version of QConBridge and you installed
+the 32Bit production version into the
+same directories, you may be encountering some strange problems.  To
+resolve these problems, delete the
+QConBridge directory and re-install it.
+
+CTRL3D32.DLL is missing
+---------------------------------
+Version 1.0
+Some of the very first version of QConBridge that were downloaded
+didn't contain the file CTRL3D32.DLL in the
+distribution package. The problems associated with this can be
+resolved by downloading and installing the
+latest version.
+
+Section Properties Calculator - Kg is incorrect
+--------------------------------------------------------
+Version 1.0
+The Section Properties Calculator computes the parameter Kg
+incorrectly. Composite girder properties were used
+instead of non-composite propertes. This problem has been corrected
+in Version 1.0a
+
+Section Properties Calculator - User defined girders aren't available
+--------------------------------------------------------------------------------
+---
+Version 1.0a
+In version 1.0a, I-beam and Bulb-Tee sections can be defined by the
+user. Due to a bug in the installation
+software, the location of the girder library file (GIRDER.TBL) is not
+setup correctly if QConBridge was
+install on any disk other than C. To correct the problem check the
+QCONBRDG.INI file for the following
+section 
+
+[UserTables]
+GirderTable=c:\qconbrdg\girder.tbl
+
+Change the path to the location where GIRDER.TBL resides
+
+Section Properties Calculator - gMoment 2+ Loaded Lanes
+------------------------------------------------------------------------
+Version 1.0a
+The live load distribution factor for moment for 2 or more loaded
+lanes for an interior girder is computed
+incorrectly. The gross slab thickness is used for <I>ts</I> in the
+distribution factor equation. The net slab
+thickness should have been used (gross slab thickness - sacrafical
+depth). This will be corrected shortly, and
+a new version made available for download. In the mean time, using a
+sacrifical depth of zero will result in
+the correct distribution factor being calculated.

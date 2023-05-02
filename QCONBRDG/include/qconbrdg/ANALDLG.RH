@@ -1,0 +1,9 @@
+// AnalyzeDlg
+
+#if !defined(IDHELP)
+#define IDHELP                  998
+#endif
+
+#define IDD_ANALYZEDIALOG     2500
+#define IDC_MINANALYSISPNTS   101
+

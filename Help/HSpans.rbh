@@ -1,0 +1,14 @@
+[File Properties]
+HasProperties=1
+BrowseType=0
+AutoMapFile=1
+StartingWith=0
+IncrementBy=20
+NextTopicNumber=0
+StartingNumber=2001
+BrowseString=HSpans:0
+DefaultBuildTag=
+MapStartWith=1001
+
+[VERSION]
+RHFile=4.0

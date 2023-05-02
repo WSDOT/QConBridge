@@ -1,0 +1,17 @@
+#if !defined(IDHELP)
+#define IDHELP                  998
+#endif
+
+// Standard Dead Loads
+#define IDD_STDDEADLOAD_DC       1022
+#define IDD_STDDEADLOAD_DW       1023
+#define IDC_GENWEIGHT            101
+#define IDC_TBARRIER_CHK         102
+#define IDC_TBARRIER             103
+#define IDC_TBARRIER_TAG         104
+#define IDC_UTILITY_CHK          105
+#define IDC_UTILITY              106
+#define IDC_UTILITY_TAG          107
+#define IDC_WEARSURF_CHK         108
+#define IDC_WEARSURF             109
+#define IDC_WEARSURF_TAG         110

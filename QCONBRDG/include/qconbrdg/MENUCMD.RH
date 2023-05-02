@@ -1,0 +1,118 @@
+//
+// Menu commands
+//
+
+// Span/Support
+#define CM_ADDSPAN            101
+#define CM_EDITSPAN           102
+#define CM_EDITSUPPORT        103
+#define CM_MAKECANTILEVER     104
+#define CM_SUPPORTCANTILEVER  105
+
+// Loads
+#define CM_STANDARD_DEADLOAD  201
+#define CM_CONCENTRATED_LOAD  202
+#define CM_UNIFORM_LOAD       203
+#define CM_EDITLOAD           204
+#define CM_LLGENERATION       205
+#define CM_IMPACT             206
+#define CM_PEDESTRIAN         207
+
+// Code
+#define CM_LOADFACTORS        301
+#define CM_RESET_TO_DEFAULTS  302
+
+// Options
+#define CM_UNITS              401
+#define CM_DISPLAYOPTIONS     402
+#define CM_SELECTLOADING      403
+#define CM_SELECTTABLE        404
+#define CM_SELECTLEFT	      405
+#define CM_SELECTRIGHT	      406
+#define CM_INSERTBEFORE	      407
+#define CM_INSERTAFTER	      408
+
+// Bridge
+#define CM_ANALYZE            801
+#define CM_FASTANALYZE        802
+
+// View
+#define CM_EDITORVIEW         901
+#define CM_SHEARDIAGRAM       902
+#define CM_MOMENTDIAGRAM      903
+#define CM_TABULARRESULTS     904
+
+// Misc
+#define CM_INSERT             1001
+#define CM_DELETE             1002
+#define CM_DUPLICATE          1003
+#define CM_CLEARALL           1004
+#define CM_PASTEINSERT        1005
+#define CM_PASTEREPLACE       1006
+#define CM_PASTESPECIAL       1007
+
+//
+// CM_FILEnnnn commands (include\owl\editfile.rh except for CM_FILEPRINTPREVIEW)
+//
+#define CM_MDIFILENEW           24331
+#define CM_MDIFILEOPEN          24332
+#define CM_FILECLOSE            24339
+#define CM_FILESAVE             24333
+#define CM_FILESAVEAS           24334
+#define CM_FILEREVERT           24335
+#define CM_VIEWCREATE           24341
+#define CM_FILESEND             24345
+
+
+//
+// Window commands (include\owl\window.rh)
+//
+#define CM_FASTNEW               50
+#define CM_FILENEW               51
+#define CM_PRINT	               52
+#define CM_FASTPRINT             53
+#define CM_PRINTERSETUP	         54
+#define CM_EXPORT                55
+#define CM_REPORT                56
+#define CM_EXIT                  24310
+
+
+//
+// CM_EDITnnnn commands (include\owl\window.rh)
+//
+#define CM_EDITUNDO             24321
+#define CM_EDITCUT              24322
+#define CM_EDITCOPY             24323
+#define CM_EDITPASTE            24324
+#define CM_EDITDELETE           24325
+#define CM_EDITCLEAR            24326
+#define CM_EDITADD              24327
+#define CM_EDITEDIT             24328
+
+
+//
+// Search menu commands (include\owl\editsear.rh)
+//
+#define CM_EDITFIND             24351
+#define CM_EDITREPLACE          24352
+#define CM_EDITFINDNEXT         24353
+
+
+//
+// Windows menu commands (include\owl\mdi.rh)
+//
+#define CM_CASCADECHILDREN      24361
+#define CM_TILECHILDREN         24362
+#define CM_TILECHILDRENHORIZ    24363
+#define CM_ARRANGEICONS         24364
+#define CM_CLOSECHILDREN        24365
+
+
+//
+// Help menu commands.
+//
+#define CM_HELPCONTENTS         2001
+#define CM_HELPUSING            2002
+#define CM_HELPABOUT            2009
+#define CM_HELPTOPICS           2010
+#define CM_LEGALNOTICE          2011

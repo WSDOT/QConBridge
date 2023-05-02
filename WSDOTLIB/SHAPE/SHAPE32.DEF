@@ -1,0 +1,5 @@
+LIBRARY        SHAPE32
+DESCRIPTION    'Shape and Section Properties Library'
+EXETYPE        WINDOWS
+CODE           PRELOAD MOVEABLE DISCARDABLE
+DATA           PRELOAD MOVEABLE SINGLE

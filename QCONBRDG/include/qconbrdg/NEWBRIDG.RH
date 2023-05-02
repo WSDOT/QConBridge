@@ -1,0 +1,37 @@
+// newbridg.rh
+#include <qconbrdg\common.rh>
+
+// Bridge Contractor
+#define IDD_NEWBRIDGE            1029
+#define IDD_NEWBRIDGE_PAGE1      1030
+#define IDD_NEWBRIDGE_PAGE2      1031
+#define IDD_NEWBRIDGE_PAGE3      1032
+#define IDD_NEWBRIDGE_PAGE4      1033
+#define IDD_NEWBRIDGE_PAGE5      1034
+
+#define IDC_MANUAL_PIC           100
+#define IDC_NUMSPANS	            101
+#define IDC_CONTINUITY	         102
+#define IDC_CONTINUOUSSPANS	   103
+#define IDC_SIMPLESPANS	         104
+
+#define IDC_SPANTYPE_LABEL       100
+#define IDC_LENGTH1_LABEL        101
+#define IDC_LENGTH1              102
+#define IDC_LENGTH1_TAG          103
+#define IDC_LENGTH2_LABEL        104
+#define IDC_LENGTH2              105
+#define IDC_LENGTH2_TAG          106
+
+#define IDC_LEFTSUPPORT	         201
+#define IDC_LS_PINNED	         202
+#define IDC_LS_ROLLER	         203
+#define IDC_INTERIORSUPPORT	   204
+#define IDC_IS_PINNED	         205
+#define IDC_IS_ROLLER	         206
+#define IDC_IS_COLUMN	         207
+#define IDC_RIGHTSUPPORT	      208
+#define IDC_RS_PINNED	         209
+#define IDC_RS_ROLLER	         210
+
+#define IDC_SPCALC               300

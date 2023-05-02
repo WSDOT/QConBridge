@@ -1,0 +1,9870 @@
+[PackageForTheWeb]
+Version=2.0
+
+[Options]
+Title=PGSuperSourceCode
+Company=Washington State Department of Transportation, Bridge and Structures Office
+CompanyEMail=Bridge_Support@wsdot.wa.gov
+BasePath=C:\ARP_RELEASE\PGSuper\1.6.0\src
+ImportPath=
+UseRTF=1
+SaveFiles=0
+SubFolders=1
+ApplicationName=PGSuper Source Code
+Description=
+Comments=
+Notice=Copyright © 2000-2004
+Version=1.6.0
+OutputSpec=C:\ARP_INSTALLER\Install_PGSuper_Source_1.6.0.exe
+GUIDs=0
+Type=2
+Compress=1
+Sign=0
+Transfer=0
+Files=1625
+
+[Engine]
+Setup=setup.exe
+
+[Runtime]
+Welcome=
+License=C:\ARP_RELEASE\PGSuper\1.6.0\src\License.txt
+Prompt=
+Password=
+DefaultPath=C:\ARP\PGSuper
+Language=English
+WindowStyle=0
+Options=33
+Execute=
+CmdLine=
+AllowChangeTarget=1
+AllowDelete=0
+LaunchEXE=0
+
+[Extension]
+Server=
+Calls=0
+
+[Code Signing]
+CompanyURL=
+SpecFile=
+KeyFile=
+Method=0
+
+; ~~~~~~~~~~ File Section ~~~~~~~~~~~
+[SubFolders]
+Count=64
+Folder1=AnalysisAgent
+Folder2=Beams
+Folder3=Beams\Res
+Folder4=BridgeAgent
+Folder5=Convert
+Folder6=Convert\Old Versions
+Folder7=EngAgent
+Folder8=HtmlHelp\Adminstrator's Guide\Chapter 1
+Folder9=HtmlHelp\Adminstrator's Guide\Chapter 2
+Folder10=HtmlHelp\Adminstrator's Guide\Chapter 3
+Folder11=HtmlHelp\Adminstrator's Guide\Chapter 4
+Folder12=HtmlHelp\Adminstrator's Guide
+Folder13=HtmlHelp\Bridge Description
+Folder14=HtmlHelp\Bridge View
+Folder15=HtmlHelp
+Folder16=HtmlHelp\Dialogs
+Folder17=HtmlHelp\Girder Editing Wizard
+Folder18=HtmlHelp\Girder View
+Folder19=HtmlHelp\Program Settings
+Folder20=HtmlHelp\Theoretical Manual
+Folder21=HtmlHelp\Theoretical Manual\MomentCapacityExample
+Folder22=HtmlHelp\Tutorial
+Folder23=HtmlHelp\User's Guide\Analysis_Results
+Folder24=HtmlHelp\User's Guide\Appendix A - PGSuper Dialogs
+Folder25=HtmlHelp\User's Guide\Appendix B - PGSuper Library Dialogs
+Folder26=HtmlHelp\User's Guide\AutoCalc_Mode
+Folder27=HtmlHelp\User's Guide\Bridge_Model_Editing
+Folder28=HtmlHelp\User's Guide\Customizing_PGSuper
+Folder29=HtmlHelp\User's Guide\Design
+Folder30=HtmlHelp\User's Guide\Girder_Editing
+Folder31=HtmlHelp\User's Guide\Introduction
+Folder32=HtmlHelp\User's Guide
+Folder33=HtmlHelp\User's Guide\Projects
+Folder34=HtmlHelp\User's Guide\Project_Templates
+Folder35=HtmlHelp\User's Guide\StatusCenter
+Folder36=HtmlHelp\User's Guide\UserDefinedLoads
+Folder37=HtmlHelp\User's Guide\Working_With_Libraries
+Folder38=Include
+Folder39=Include\IFace
+Folder40=Include\PgsExt
+Folder41=Include\psgLib
+Folder42=installer
+Folder43=LibraryEditor
+Folder44=LibraryEditor\res
+Folder45=PgsExt
+Folder46=ProjectAgent
+Folder47=psgLib
+Folder48=psgLib\res
+Folder49=RegressionTest\1250_Diff
+Folder50=RegressionTest\Current
+Folder51=RegressionTest\Datum
+Folder52=RegressionTest
+Folder53=ReportAgent
+Folder54=res
+Folder55=SpecAgent
+Folder56=Supporting Documents
+Folder57=Supporting Documents\Procedures
+Folder58=Supporting Documents\UI Spec
+Folder59=Templates\I-Girders
+Folder60=Templates\U-Girders
+Folder61=Templates\WBT-Girders
+Folder62=Templates\WF-Girders
+Folder63=TestAgent
+Folder64=Visio Pics
+
+[File 1]
+Name=AnalysisAgent.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\AnalysisAgent\
+Flags=1
+Disk=0
+
+[File 2]
+Name=AnalysisAgent.def
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\AnalysisAgent\
+Flags=1
+Disk=0
+
+[File 3]
+Name=AnalysisAgent.dsp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\AnalysisAgent\
+Flags=1
+Disk=0
+
+[File 4]
+Name=AnalysisAgent.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\AnalysisAgent\
+Flags=1
+Disk=0
+
+[File 5]
+Name=AnalysisAgent.idl
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\AnalysisAgent\
+Flags=1
+Disk=0
+
+[File 6]
+Name=AnalysisAgent.rc
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\AnalysisAgent\
+Flags=1
+Disk=0
+
+[File 7]
+Name=AnalysisAgent.rgs
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\AnalysisAgent\
+Flags=1
+Disk=0
+
+[File 8]
+Name=AnalysisAgentImp.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\AnalysisAgent\
+Flags=1
+Disk=0
+
+[File 9]
+Name=AnalysisAgentImp.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\AnalysisAgent\
+Flags=1
+Disk=0
+
+[File 10]
+Name=PoiMap.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\AnalysisAgent\
+Flags=1
+Disk=0
+
+[File 11]
+Name=PoiMap.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\AnalysisAgent\
+Flags=1
+Disk=0
+
+[File 12]
+Name=resource.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\AnalysisAgent\
+Flags=1
+Disk=0
+
+[File 13]
+Name=StdAfx.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\AnalysisAgent\
+Flags=1
+Disk=0
+
+[File 14]
+Name=StdAfx.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\AnalysisAgent\
+Flags=1
+Disk=0
+
+[File 15]
+Name=AnalysisResultsChildFrame.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 16]
+Name=AnalysisResultsChildFrame.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 17]
+Name=AnalysisResultsView.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 18]
+Name=AnalysisResultsView.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 19]
+Name=ApproxLoss_LRFD_IBeam_LowRelax_SI.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 20]
+Name=ApproxLoss_LRFD_IBeam_LowRelax_US.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 21]
+Name=ApproxLoss_LRFD_IBeam_StressRel_SI.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 22]
+Name=ApproxLoss_LRFD_IBeam_StressRel_US.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 23]
+Name=ApproxLoss_LRFD_UBeam_LowRelax_SI.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 24]
+Name=ApproxLoss_LRFD_UBeam_LowRelax_US.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 25]
+Name=ApproxLoss_LRFD_UBeam_StressRel_SI.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 26]
+Name=ApproxLoss_LRFD_UBeam_StressRel_US.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 27]
+Name=ApproxLoss_WSDOT_IBeam_LowRelax_SI.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 28]
+Name=ApproxLoss_WSDOT_IBeam_LowRelax_US.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 29]
+Name=ApproxLoss_WSDOT_IBeam_StressRel_SI.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 30]
+Name=ApproxLoss_WSDOT_IBeam_StressRel_US.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 31]
+Name=ApproxLoss_WSDOT_UBeam_LowRelax_SI.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 32]
+Name=ApproxLoss_WSDOT_UBeam_LowRelax_US.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 33]
+Name=ApproxLoss_WSDOT_UBeam_StressRel_SI.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 34]
+Name=ApproxLoss_WSDOT_UBeam_StressRel_US.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 35]
+Name=AutoCalcDoc.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 36]
+Name=AutoCalcDoc.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 37]
+Name=AutoCalcView.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 38]
+Name=AutoCalcView.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 39]
+Name=Beams.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Beams\
+Flags=1
+Disk=0
+
+[File 40]
+Name=Beams.def
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Beams\
+Flags=1
+Disk=0
+
+[File 41]
+Name=Beams.dsp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Beams\
+Flags=1
+Disk=0
+
+[File 42]
+Name=Beams.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Beams\
+Flags=1
+Disk=0
+
+[File 43]
+Name=Beams.idl
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Beams\
+Flags=1
+Disk=0
+
+[File 44]
+Name=Beams.rc
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Beams\
+Flags=1
+Disk=0
+
+[File 45]
+Name=IBeamDistFactorEngineer.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Beams\
+Flags=1
+Disk=0
+
+[File 46]
+Name=IBeamDistFactorEngineer.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Beams\
+Flags=1
+Disk=0
+
+[File 47]
+Name=IBeamEffFlangeEngineer.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Beams\
+Flags=1
+Disk=0
+
+[File 48]
+Name=IBeamEffFlangeEngineer.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Beams\
+Flags=1
+Disk=0
+
+[File 49]
+Name=IBeamFactory.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Beams\
+Flags=1
+Disk=0
+
+[File 50]
+Name=IBeamFactory.rgs
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Beams\
+Flags=1
+Disk=0
+
+[File 51]
+Name=IBeamFactoryImp.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Beams\
+Flags=1
+Disk=0
+
+[File 52]
+Name=IBeamFactoryImp.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Beams\
+Flags=1
+Disk=0
+
+[File 53]
+Name=IBeamPsLossEngineer.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Beams\
+Flags=1
+Disk=0
+
+[File 54]
+Name=IBeamPsLossEngineer.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Beams\
+Flags=1
+Disk=0
+
+[File 55]
+Name=NUBeamFactory.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Beams\
+Flags=1
+Disk=0
+
+[File 56]
+Name=NUBeamFactory.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Beams\
+Flags=1
+Disk=0
+
+[File 57]
+Name=NUBeamFactory.rgs
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Beams\
+Flags=1
+Disk=0
+
+[File 58]
+Name=PsLossEngineer.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Beams\
+Flags=1
+Disk=0
+
+[File 59]
+Name=PsLossEngineer.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Beams\
+Flags=1
+Disk=0
+
+[File 60]
+Name=IBeam.emf
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Beams\Res\
+Flags=1
+Disk=0
+
+[File 61]
+Name=ico00001.ico
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Beams\Res\
+Flags=1
+Disk=0
+
+[File 62]
+Name=ico00002.ico
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Beams\Res\
+Flags=1
+Disk=0
+
+[File 63]
+Name=icon1.ico
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Beams\Res\
+Flags=1
+Disk=0
+
+[File 64]
+Name=NUbeam.emf
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Beams\Res\
+Flags=1
+Disk=0
+
+[File 65]
+Name=UBeam.emf
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Beams\Res\
+Flags=1
+Disk=0
+
+[File 66]
+Name=resource.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Beams\
+Flags=1
+Disk=0
+
+[File 67]
+Name=StdAfx.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Beams\
+Flags=1
+Disk=0
+
+[File 68]
+Name=StdAfx.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Beams\
+Flags=1
+Disk=0
+
+[File 69]
+Name=UBeamDistFactorEngineer.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Beams\
+Flags=1
+Disk=0
+
+[File 70]
+Name=UBeamDistFactorEngineer.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Beams\
+Flags=1
+Disk=0
+
+[File 71]
+Name=UBeamEffFlangeEngineer.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Beams\
+Flags=1
+Disk=0
+
+[File 72]
+Name=UBeamEffFlangeEngineer.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Beams\
+Flags=1
+Disk=0
+
+[File 73]
+Name=UBeamFactory.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Beams\
+Flags=1
+Disk=0
+
+[File 74]
+Name=UBeamFactory.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Beams\
+Flags=1
+Disk=0
+
+[File 75]
+Name=UBeamFactory.rgs
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Beams\
+Flags=1
+Disk=0
+
+[File 76]
+Name=UBeamPsLossEngineer.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Beams\
+Flags=1
+Disk=0
+
+[File 77]
+Name=UBeamPsLossEngineer.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Beams\
+Flags=1
+Disk=0
+
+[File 78]
+Name=BrgPointIdMgr.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\BridgeAgent\
+Flags=1
+Disk=0
+
+[File 79]
+Name=BrgPointIdMgr.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\BridgeAgent\
+Flags=1
+Disk=0
+
+[File 80]
+Name=BridgeAgent.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\BridgeAgent\
+Flags=1
+Disk=0
+
+[File 81]
+Name=BridgeAgent.def
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\BridgeAgent\
+Flags=1
+Disk=0
+
+[File 82]
+Name=BridgeAgent.dsp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\BridgeAgent\
+Flags=1
+Disk=0
+
+[File 83]
+Name=BridgeAgent.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\BridgeAgent\
+Flags=1
+Disk=0
+
+[File 84]
+Name=BridgeAgent.idl
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\BridgeAgent\
+Flags=1
+Disk=0
+
+[File 85]
+Name=BridgeAgent.rc
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\BridgeAgent\
+Flags=1
+Disk=0
+
+[File 86]
+Name=BridgeAgent.rgs
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\BridgeAgent\
+Flags=1
+Disk=0
+
+[File 87]
+Name=BridgeAgentImp.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\BridgeAgent\
+Flags=1
+Disk=0
+
+[File 88]
+Name=BridgeAgentImp.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\BridgeAgent\
+Flags=1
+Disk=0
+
+[File 89]
+Name=BridgeAgent_clsid.c
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\BridgeAgent\
+Flags=1
+Disk=0
+
+[File 90]
+Name=BridgeHelpers.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\BridgeAgent\
+Flags=1
+Disk=0
+
+[File 91]
+Name=BridgeHelpers.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\BridgeAgent\
+Flags=1
+Disk=0
+
+[File 92]
+Name=CapacityProblemBuilder.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\BridgeAgent\
+Flags=1
+Disk=0
+
+[File 93]
+Name=CapacityProblemBuilder.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\BridgeAgent\
+Flags=1
+Disk=0
+
+[File 94]
+Name=DrawGirderTool.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\BridgeAgent\
+Flags=1
+Disk=0
+
+[File 95]
+Name=DrawGirderTool.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\BridgeAgent\
+Flags=1
+Disk=0
+
+[File 96]
+Name=EffectiveFlangeWidthTool.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\BridgeAgent\
+Flags=1
+Disk=0
+
+[File 97]
+Name=EffectiveFlangeWidthTool.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\BridgeAgent\
+Flags=1
+Disk=0
+
+[File 98]
+Name=PoiKey.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\BridgeAgent\
+Flags=1
+Disk=0
+
+[File 99]
+Name=resource.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\BridgeAgent\
+Flags=1
+Disk=0
+
+[File 100]
+Name=StdAfx.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\BridgeAgent\
+Flags=1
+Disk=0
+
+[File 101]
+Name=StdAfx.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\BridgeAgent\
+Flags=1
+Disk=0
+
+[File 102]
+Name=BridgeDescDlg.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 103]
+Name=BridgeDescDlg.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 104]
+Name=BridgeDescEnvironmental.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 105]
+Name=BridgeDescEnvironmental.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 106]
+Name=BridgeDescGeneralPage.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 107]
+Name=BridgeDescGeneralPage.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 108]
+Name=BridgeDescLiftingPage.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 109]
+Name=BridgeDescLiftingPage.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 110]
+Name=BridgeDescMisc.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 111]
+Name=BridgeDescMisc.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 112]
+Name=BridgeDescPiersPage.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 113]
+Name=BridgeDescPiersPage.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 114]
+Name=BridgeDescPrestressPage.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 115]
+Name=BridgeDescPrestressPage.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 116]
+Name=BridgeDescShearGrid.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 117]
+Name=BridgeDescShearGrid.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 118]
+Name=BridgeDescShearPage.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 119]
+Name=BridgeDescShearPage.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 120]
+Name=BridgeDescXSectionpage.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 121]
+Name=BridgeDescXSectionpage.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 122]
+Name=BridgeEditorPlanSettingsPage.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 123]
+Name=BridgeEditorPlanSettingsPage.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 124]
+Name=BridgeEditorSectionPage.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 125]
+Name=BridgeEditorSectionPage.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 126]
+Name=BridgeEditorSettingsSheet.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 127]
+Name=BridgeEditorSettingsSheet.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 128]
+Name=BridgeModelViewChildFrame.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 129]
+Name=BridgeModelViewChildFrame.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 130]
+Name=BridgePlanView.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 131]
+Name=BridgePlanView.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 132]
+Name=BridgeSectionView.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 133]
+Name=BridgeSectionView.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 134]
+Name=BridgeViewPrintJob.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 135]
+Name=BridgeViewPrintJob.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 136]
+Name=Bursting Zone Equation.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 137]
+Name=CamberEqns.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 138]
+Name=CapacityReductionEquation.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 139]
+Name=ChildFrm.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 140]
+Name=ChildFrm.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 141]
+Name=Connection.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 142]
+Name=Convert.vbp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Convert\
+Flags=1
+Disk=0
+
+[File 143]
+Name=083 Version.pgs
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Convert\Old Versions\
+Flags=1
+Disk=0
+
+[File 144]
+Name=090 Version.pgs
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Convert\Old Versions\
+Flags=1
+Disk=0
+
+[File 145]
+Name=PgsFileConvert1.cls
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Convert\
+Flags=1
+Disk=0
+
+[File 146]
+Name=convert.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 147]
+Name=convert.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 148]
+Name=CopyConcreteEntry.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 149]
+Name=CopyConcreteEntry.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 150]
+Name=CopyGirderDlg.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 151]
+Name=CopyGirderDlg.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 152]
+Name=CountedMultiDocTemplate.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 153]
+Name=CountedMultiDocTemplate.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 154]
+Name=Cracking Moment Equation 2003.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 155]
+Name=Cracking Moment Equation.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 156]
+Name=Critical Section Picture 2004.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 157]
+Name=critical section picture.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 158]
+Name=custsite.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 159]
+Name=custsite.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 160]
+Name=CustSiteVars.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 161]
+Name=DealWithLoadDlg.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 162]
+Name=DealWithLoadDlg.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 163]
+Name=Delta Fcdp Equation.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 164]
+Name=Delta FpCR Equation.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 165]
+Name=Delta FpES Equation.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 166]
+Name=Delta FpI Equation.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 167]
+Name=Delta FpR1 Equation for Low Relax Strands.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 168]
+Name=Delta FpR1 Equation for Stress Rel Strands.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 169]
+Name=Delta FpR2 Equation for Low Relax Strands SI.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 170]
+Name=Delta FpR2 Equation for Low Relax Strands US.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 171]
+Name=Delta FpR2 Equation for Stress Rel Strands SI.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 172]
+Name=Delta FpR2 Equation for Stress Rel Strands US.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 173]
+Name=Delta FpSR Equation SI.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 174]
+Name=Delta FpSR Equation US.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 175]
+Name=Delta FpT Equation.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 176]
+Name=DesignGirderDlg.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 177]
+Name=DesignGirderDlg.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 178]
+Name=DesignOutcomeDlg.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 179]
+Name=DesignOutcomeDlg.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 180]
+Name=Diaphragm Pic.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 181]
+Name=DisplayObjectFactory.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 182]
+Name=DisplayObjectFactory.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 183]
+Name=DistributedLoadDrawStrategy.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 184]
+Name=DistributedLoadDrawStrategyImpl.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 185]
+Name=DistributedLoadDrawStrategyImpl.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 186]
+Name=DocProxyAgent.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 187]
+Name=DocProxyAgent.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 188]
+Name=dv Equation.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 189]
+Name=EditDistributedLoadDlg.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 190]
+Name=EditDistributedLoadDlg.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 191]
+Name=EditLoadsChildFrm.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 192]
+Name=EditLoadsChildFrm.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 193]
+Name=EditLoadsView.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 194]
+Name=EditLoadsView.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 195]
+Name=EditPointLoadDlg.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 196]
+Name=EditPointLoadDlg.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 197]
+Name=Effective Flange Width IBeam Exterior.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 198]
+Name=Effective Flange Width IBeam Interior.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 199]
+Name=Effective Flange Width UBeam Exterior.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 200]
+Name=Effective Flange Width UBeam Interior.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 201]
+Name=Effective Shear Depth Pic.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 202]
+Name=eg Equation.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 203]
+Name=eg Pic.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 204]
+Name=Designer2.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\EngAgent\
+Flags=1
+Disk=0
+
+[File 205]
+Name=Designer2.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\EngAgent\
+Flags=1
+Disk=0
+
+[File 206]
+Name=DistFactorEngineer.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\EngAgent\
+Flags=1
+Disk=0
+
+[File 207]
+Name=DistFactorEngineer.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\EngAgent\
+Flags=1
+Disk=0
+
+[File 208]
+Name=EngAgent.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\EngAgent\
+Flags=1
+Disk=0
+
+[File 209]
+Name=EngAgent.def
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\EngAgent\
+Flags=1
+Disk=0
+
+[File 210]
+Name=EngAgent.dsp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\EngAgent\
+Flags=1
+Disk=0
+
+[File 211]
+Name=EngAgent.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\EngAgent\
+Flags=1
+Disk=0
+
+[File 212]
+Name=EngAgent.idl
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\EngAgent\
+Flags=1
+Disk=0
+
+[File 213]
+Name=EngAgent.rc
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\EngAgent\
+Flags=1
+Disk=0
+
+[File 214]
+Name=EngAgent.rgs
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\EngAgent\
+Flags=1
+Disk=0
+
+[File 215]
+Name=EngAgentImp.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\EngAgent\
+Flags=1
+Disk=0
+
+[File 216]
+Name=EngAgentImp.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\EngAgent\
+Flags=1
+Disk=0
+
+[File 217]
+Name=EngAgentps.def
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\EngAgent\
+Flags=1
+Disk=0
+
+[File 218]
+Name=GirderHandlingChecker.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\EngAgent\
+Flags=1
+Disk=0
+
+[File 219]
+Name=GirderHandlingChecker.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\EngAgent\
+Flags=1
+Disk=0
+
+[File 220]
+Name=MomentCapacityEngineer.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\EngAgent\
+Flags=1
+Disk=0
+
+[File 221]
+Name=MomentCapacityEngineer.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\EngAgent\
+Flags=1
+Disk=0
+
+[File 222]
+Name=PsForceEng.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\EngAgent\
+Flags=1
+Disk=0
+
+[File 223]
+Name=PsForceEng.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\EngAgent\
+Flags=1
+Disk=0
+
+[File 224]
+Name=resource.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\EngAgent\
+Flags=1
+Disk=0
+
+[File 225]
+Name=ShearCapacityEngineer.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\EngAgent\
+Flags=1
+Disk=0
+
+[File 226]
+Name=ShearCapacityEngineer.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\EngAgent\
+Flags=1
+Disk=0
+
+[File 227]
+Name=StdAfx.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\EngAgent\
+Flags=1
+Disk=0
+
+[File 228]
+Name=StdAfx.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\EngAgent\
+Flags=1
+Disk=0
+
+[File 229]
+Name=EnvironmentDlg.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 230]
+Name=EnvironmentDlg.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 231]
+Name=EquilAngleEqn.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 232]
+Name=ex Equation 2000.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 233]
+Name=ex Equation 2003.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 234]
+Name=ex Equation WSDOT 2000.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 235]
+Name=ex Equation.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 236]
+Name=FactorOfSafetyChildFrame.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 237]
+Name=FactorOfSafetyChildFrame.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 238]
+Name=FactorOfSafetyView.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 239]
+Name=FactorOfSafetyView.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 240]
+Name=Fcgp Equation.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 241]
+Name=Fe Equation.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 242]
+Name=FileLocationPage.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 243]
+Name=FileLocationPage.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 244]
+Name=fpc Equation.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 245]
+Name=Fpc Pic.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 246]
+Name=fpj Equation.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 247]
+Name=fpo Equation 2000.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 248]
+Name=fpo Equation.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 249]
+Name=fr Equation (SI).jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 250]
+Name=fr Equation (US).jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 251]
+Name=FS Cracking - Hauling.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 252]
+Name=FS Cracking - Lifting.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 253]
+Name=FS Failure - Lifting.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 254]
+Name=FS Rollover - Hauling.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 255]
+Name=GevEditLoad.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 256]
+Name=Girder Dimensions.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 257]
+Name=girder.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 258]
+Name=GirderDescDlg.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 259]
+Name=GirderDescDlg.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 260]
+Name=GirderDescFirstPage.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 261]
+Name=GirderDescFirstPage.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 262]
+Name=GirderDropSite.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 263]
+Name=GirderDropSite.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 264]
+Name=GirderEditorElevationSettingsPage.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 265]
+Name=GirderEditorElevationSettingsPage.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 266]
+Name=GirderEditorSectionSettingsPage.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 267]
+Name=GirderEditorSectionSettingsPage.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 268]
+Name=GirderEditorSettingsSheet.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 269]
+Name=GirderEditorSettingsSheet.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 270]
+Name=GirderModelChildFrame.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 271]
+Name=GirderModelChildFrame.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 272]
+Name=GirderModelElevationView.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 273]
+Name=GirderModelElevationView.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 274]
+Name=GirderModelSectionView.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 275]
+Name=GirderModelSectionView.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 276]
+Name=GirderSchedule.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 277]
+Name=GirderStrandCoords.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 278]
+Name=GirderViewPrintJob.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 279]
+Name=GirderViewPrintJob.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 280]
+Name=GMDisplayMgrEventsImpl.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 281]
+Name=GMDisplayMgrEventsImpl.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 282]
+Name=Hints.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 283]
+Name=Automating_the_Installation_for_Network_Clients.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 1\
+Flags=1
+Disk=0
+
+[File 284]
+Name=Chapter_2.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 1\
+Flags=1
+Disk=0
+
+[File 285]
+Name=Introduction_to_Installation.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 1\
+Flags=1
+Disk=0
+
+[File 286]
+Name=OptionA1.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 1\
+Flags=1
+Disk=0
+
+[File 287]
+Name=OptionA2.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 1\
+Flags=1
+Disk=0
+
+[File 288]
+Name=OptionA3.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 1\
+Flags=1
+Disk=0
+
+[File 289]
+Name=OptionB1.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 1\
+Flags=1
+Disk=0
+
+[File 290]
+Name=OptionB2.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 1\
+Flags=1
+Disk=0
+
+[File 291]
+Name=OptionB3.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 1\
+Flags=1
+Disk=0
+
+[File 292]
+Name=OptionB4.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 1\
+Flags=1
+Disk=0
+
+[File 293]
+Name=OptionB5.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 1\
+Flags=1
+Disk=0
+
+[File 294]
+Name=OptionD1.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 1\
+Flags=1
+Disk=0
+
+[File 295]
+Name=OptionD2.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 1\
+Flags=1
+Disk=0
+
+[File 296]
+Name=OptionD3.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 1\
+Flags=1
+Disk=0
+
+[File 297]
+Name=OptionD4.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 1\
+Flags=1
+Disk=0
+
+[File 298]
+Name=OptionD5.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 1\
+Flags=1
+Disk=0
+
+[File 299]
+Name=Option_A.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 1\
+Flags=1
+Disk=0
+
+[File 300]
+Name=Option_B.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 1\
+Flags=1
+Disk=0
+
+[File 301]
+Name=Option_C.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 1\
+Flags=1
+Disk=0
+
+[File 302]
+Name=Option_D.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 1\
+Flags=1
+Disk=0
+
+[File 303]
+Name=Chapter_2.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 2\
+Flags=1
+Disk=0
+
+[File 304]
+Name=Creating_Library_Entries.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 2\
+Flags=1
+Disk=0
+
+[File 305]
+Name=Deploying_the_Master_Library.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 2\
+Flags=1
+Disk=0
+
+[File 306]
+Name=Introduction_to_Customizing_PGSuper.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 2\
+Flags=1
+Disk=0
+
+[File 307]
+Name=Chapter_3.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 3\
+Flags=1
+Disk=0
+
+[File 308]
+Name=Creating_Project_Templates.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 3\
+Flags=1
+Disk=0
+
+[File 309]
+Name=Deploying_Project_Templates.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 3\
+Flags=1
+Disk=0
+
+[File 310]
+Name=Introduction_to_Project_Templates.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 3\
+Flags=1
+Disk=0
+
+[File 311]
+Name=Chapter_4.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 312]
+Name=LIBRARYEDITOR00000000.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 313]
+Name=LIBRARYEDITOR00000001.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 314]
+Name=LIBRARYEDITOR00000003.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 315]
+Name=LIBRARYEDITOR00000004.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 316]
+Name=LIBRARYEDITOR00000005.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 317]
+Name=LIBRARYEDITOR00000006.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 318]
+Name=LIBRARYEDITOR00000007.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 319]
+Name=LIBRARYEDITOR00000008.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 320]
+Name=LIBRARYEDITOR00000009.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 321]
+Name=LIBRARYEDITOR00000010.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 322]
+Name=LIBRARYEDITOR00000011.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 323]
+Name=LIBRARYEDITOR00000012.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 324]
+Name=LIBRARYEDITOR00000013.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 325]
+Name=LIBRARYEDITOR00000014.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 326]
+Name=LIBRARYEDITOR00000015.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 327]
+Name=LIBRARYEDITOR00000016.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 328]
+Name=LIBRARYEDITOR00000017.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 329]
+Name=LIBRARYEDITOR00000018.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 330]
+Name=LIBRARYEDITOR00000019.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 331]
+Name=LIBRARYEDITOR00000020.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 332]
+Name=LIBRARYEDITOR00000021.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 333]
+Name=LIBRARYEDITOR00000022.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 334]
+Name=LIBRARYEDITOR00090000.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 335]
+Name=LIBRARYEDITOR00090001.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 336]
+Name=LIBRARYEDITORAdd_a_New_Entry_to_Library.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 337]
+Name=LIBRARYEDITORDelete_the_Selected_Entry_from_t.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 338]
+Name=LIBRARYEDITORDuplicate_the_Selected_Entry.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 339]
+Name=LIBRARYEDITOREdit_the_Selected_Library_Entry.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 340]
+Name=LIBRARYEDITORFile_Close_command.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 341]
+Name=LIBRARYEDITORFile_Exit_command.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 342]
+Name=LIBRARYEDITORFile_menu_commands.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 343]
+Name=LIBRARYEDITORFile_New_command.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 344]
+Name=LIBRARYEDITORFile_Open_command.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 345]
+Name=LIBRARYEDITORFile_Save_As_command.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 346]
+Name=LIBRARYEDITORFile_Save_command.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 347]
+Name=LIBRARYEDITORGetting_Started.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 348]
+Name=LIBRARYEDITORHelp_Using_Help_Command.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 349]
+Name=LIBRARYEDITORLibraryEditor_Main_Menu.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 350]
+Name=LIBRARYEDITORLibrary_Entry.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 351]
+Name=LIBRARYEDITORPGSuper_Project.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 352]
+Name=LIBRARYEDITORstatus_bar.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 353]
+Name=LIBRARYEDITORSystem_Minimize_Command.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 354]
+Name=LIBRARYEDITORtoolbar.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 355]
+Name=LIBRARYEDITORUnits_menu.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 356]
+Name=LIBRARYEDITORuntitled00000002.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 357]
+Name=LIBRARYEDITORuntitled00000003.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 358]
+Name=LIBRARYEDITORuntitled00000004.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 359]
+Name=LIBRARYEDITORuntitled00000005.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 360]
+Name=LIBRARYEDITORuntitled00000008.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 361]
+Name=LIBRARYEDITORuntitled00000012.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 362]
+Name=LIBRARYEDITORuntitled00000020.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 363]
+Name=LIBRARYEDITORuntitled00000021.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 364]
+Name=LIBRARYEDITORuntitled00000022.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 365]
+Name=LIBRARYEDITORuntitled00000023.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 366]
+Name=LIBRARYEDITORuntitled00000024.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 367]
+Name=LIBRARYEDITORuntitled00000025.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 368]
+Name=LIBRARYEDITORuntitled00000026.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 369]
+Name=LIBRARYEDITORuntitled00000027.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 370]
+Name=LIBRARYEDITORuntitled00000029.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 371]
+Name=LIBRARYEDITORuntitled00000030.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 372]
+Name=LIBRARYEDITORuntitled00000032.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 373]
+Name=LIBRARYEDITORuntitled00000034.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 374]
+Name=LIBRARYEDITORuntitled00000035.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 375]
+Name=LIBRARYEDITORuntitled00000036.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 376]
+Name=LIBRARYEDITORuntitled00000037.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 377]
+Name=LIBRARYEDITORuntitled00000038.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 378]
+Name=LIBRARYEDITORuntitled00000041.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 379]
+Name=LIBRARYEDITORuntitled00000042.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 380]
+Name=LIBRARYEDITORView_Status_Bar_Command.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 381]
+Name=LIBRARYEDITORView_Toolbar_command.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 382]
+Name=Rename_The_Selected_Entry.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 383]
+Name=splash.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\Chapter 4\
+Flags=1
+Disk=0
+
+[File 384]
+Name=Introduction_Admin_Guide.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Adminstrator's Guide\
+Flags=1
+Disk=0
+
+[File 385]
+Name=Alignment.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Bridge Description\
+Flags=1
+Disk=0
+
+[File 386]
+Name=Cross_Section.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Bridge Description\
+Flags=1
+Disk=0
+
+[File 387]
+Name=Crown Slopes.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Bridge Description\
+Flags=1
+Disk=0
+
+[File 388]
+Name=Horizontal Curve.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Bridge Description\
+Flags=1
+Disk=0
+
+[File 389]
+Name=Miscellaneous.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Bridge Description\
+Flags=1
+Disk=0
+
+[File 390]
+Name=Piers.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Bridge Description\
+Flags=1
+Disk=0
+
+[File 391]
+Name=Skew.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Bridge Description\
+Flags=1
+Disk=0
+
+[File 392]
+Name=Slab Geometry Pic.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Bridge Description\
+Flags=1
+Disk=0
+
+[File 393]
+Name=Straight Alignment.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Bridge Description\
+Flags=1
+Disk=0
+
+[File 394]
+Name=Straight Grade.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Bridge Description\
+Flags=1
+Disk=0
+
+[File 395]
+Name=Vertical Curve.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Bridge Description\
+Flags=1
+Disk=0
+
+[File 396]
+Name=Bridge_View_Plan.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Bridge View\
+Flags=1
+Disk=0
+
+[File 397]
+Name=Bridge_View_Section.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Bridge View\
+Flags=1
+Disk=0
+
+[File 398]
+Name=BSSCDHTM.js
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\
+Flags=1
+Disk=0
+
+[File 399]
+Name=default.css
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\
+Flags=1
+Disk=0
+
+[File 400]
+Name=Bridge_Editing_Dialog.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Dialogs\
+Flags=1
+Disk=0
+
+[File 401]
+Name=CopyConcrete.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Dialogs\
+Flags=1
+Disk=0
+
+[File 402]
+Name=Copy_Girder_Properties.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Dialogs\
+Flags=1
+Disk=0
+
+[File 403]
+Name=Design_Complete.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Dialogs\
+Flags=1
+Disk=0
+
+[File 404]
+Name=Design_Criteria.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Dialogs\
+Flags=1
+Disk=0
+
+[File 405]
+Name=Design_Girder.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Dialogs\
+Flags=1
+Disk=0
+
+[File 406]
+Name=Edit_Distributed_Load.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Dialogs\
+Flags=1
+Disk=0
+
+[File 407]
+Name=Edit_Point_Load.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Dialogs\
+Flags=1
+Disk=0
+
+[File 408]
+Name=Edit_User_Defined_Loads.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Dialogs\
+Flags=1
+Disk=0
+
+[File 409]
+Name=Environment.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Dialogs\
+Flags=1
+Disk=0
+
+[File 410]
+Name=Girder_Editing_Dialog.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Dialogs\
+Flags=1
+Disk=0
+
+[File 411]
+Name=Library_Entry_Conflict.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Dialogs\
+Flags=1
+Disk=0
+
+[File 412]
+Name=Library_Import_Entry_Conflict.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Dialogs\
+Flags=1
+Disk=0
+
+[File 413]
+Name=Live_Load_Distibution_Factors.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Dialogs\
+Flags=1
+Disk=0
+
+[File 414]
+Name=Load_Modifiers.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Dialogs\
+Flags=1
+Disk=0
+
+[File 415]
+Name=Project_Properties.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Dialogs\
+Flags=1
+Disk=0
+
+[File 416]
+Name=Reports.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Dialogs\
+Flags=1
+Disk=0
+
+[File 417]
+Name=Section_Cut.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Dialogs\
+Flags=1
+Disk=0
+
+[File 418]
+Name=Toolbars.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Dialogs\
+Flags=1
+Disk=0
+
+[File 419]
+Name=Units.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Dialogs\
+Flags=1
+Disk=0
+
+[File 420]
+Name=eHelp.xml
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\
+Flags=1
+Disk=0
+
+[File 421]
+Name=Harp Strand Pattern Offsets.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Girder Editing Wizard\
+Flags=1
+Disk=0
+
+[File 422]
+Name=Lifting Loops.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Girder Editing Wizard\
+Flags=1
+Disk=0
+
+[File 423]
+Name=Lifting_and_Shipping.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Girder Editing Wizard\
+Flags=1
+Disk=0
+
+[File 424]
+Name=Prestressing.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Girder Editing Wizard\
+Flags=1
+Disk=0
+
+[File 425]
+Name=Select_Girder_for_Editing.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Girder Editing Wizard\
+Flags=1
+Disk=0
+
+[File 426]
+Name=Transportation Supports.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Girder Editing Wizard\
+Flags=1
+Disk=0
+
+[File 427]
+Name=Transverse_Reinforcement.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Girder Editing Wizard\
+Flags=1
+Disk=0
+
+[File 428]
+Name=Girder_View_Elevation.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Girder View\
+Flags=1
+Disk=0
+
+[File 429]
+Name=Girder_View_Section.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Girder View\
+Flags=1
+Disk=0
+
+[File 430]
+Name=HelpTopics.hh
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\
+Flags=1
+Disk=0
+
+[File 431]
+Name=HtmlHelp.css
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\
+Flags=1
+Disk=0
+
+[File 432]
+Name=License_Agreement.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\
+Flags=1
+Disk=0
+
+[File 433]
+Name=MS_Help.css
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\
+Flags=1
+Disk=0
+
+[File 434]
+Name=Next.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\
+Flags=1
+Disk=0
+
+[File 435]
+Name=PGSuper.ali
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\
+Flags=1
+Disk=0
+
+[File 436]
+Name=PGSuper.hhc
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\
+Flags=1
+Disk=0
+
+[File 437]
+Name=PGSuper.hhk
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\
+Flags=1
+Disk=0
+
+[File 438]
+Name=PGSuper.mpj
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\
+Flags=1
+Disk=0
+
+[File 439]
+Name=Prev.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\
+Flags=1
+Disk=0
+
+[File 440]
+Name=File_Locations.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Program Settings\
+Flags=1
+Disk=0
+
+[File 441]
+Name=User_Info.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Program Settings\
+Flags=1
+Disk=0
+
+[File 442]
+Name=Support.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\
+Flags=1
+Disk=0
+
+[File 443]
+Name=adime002.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 444]
+Name=adime004.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 445]
+Name=adime006.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 446]
+Name=adime008.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 447]
+Name=adime010.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 448]
+Name=adime012.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 449]
+Name=adime014.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 450]
+Name=adime016.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 451]
+Name=adime018.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 452]
+Name=adime020.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 453]
+Name=ADimension.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 454]
+Name=AnalyticalModels.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 455]
+Name=A_Dimension.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 456]
+Name=A_Dimension.vsd
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 457]
+Name=A_Dim_Horiz_Curve.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 458]
+Name=A_Dim_Top_Flange.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 459]
+Name=A_Dim_Vert_Curve.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 460]
+Name=Beta1Equation.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 461]
+Name=Bursting_Zone_Checks.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 462]
+Name=Camber Calculations.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 463]
+Name=CamberEqns.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 464]
+Name=CapacityReductionEquation.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 465]
+Name=cccge002.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 466]
+Name=cccge004.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 467]
+Name=cccge006.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 468]
+Name=cccge008.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 469]
+Name=cccge010.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 470]
+Name=cccge012.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 471]
+Name=cccge014.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 472]
+Name=cccge016.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 473]
+Name=cccge018.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 474]
+Name=cccge020.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 475]
+Name=cccge022.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 476]
+Name=cccge024.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 477]
+Name=Composite Properties.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 478]
+Name=Composite Properties.vsd
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 479]
+Name=Composite_Section_Properties.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 480]
+Name=ConcreteStress.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 481]
+Name=ConcreteStressStrain.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 482]
+Name=CreepDeflection.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 483]
+Name=CreepEqn.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 484]
+Name=CriticalSection.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 485]
+Name=CriticalSectionGraph.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 486]
+Name=Equilibrium.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 487]
+Name=Equilibrium.vsd
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 488]
+Name=Equlibrium.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 489]
+Name=haule002.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 490]
+Name=haule004.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 491]
+Name=haule006.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 492]
+Name=haule008.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 493]
+Name=haule010.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 494]
+Name=haule012.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 495]
+Name=haule014.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 496]
+Name=haule016.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 497]
+Name=Hauling_of_Long_Prestressed_Girders.doc
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 498]
+Name=Hauling_of_Long_Prestressed_Girders.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 499]
+Name=image002.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 500]
+Name=image004.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 501]
+Name=image006.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 502]
+Name=image008.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 503]
+Name=image010.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 504]
+Name=image012.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 505]
+Name=image014.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 506]
+Name=image016.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 507]
+Name=image018.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 508]
+Name=image020.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 509]
+Name=image022.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 510]
+Name=image024.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 511]
+Name=image026.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 512]
+Name=image028.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 513]
+Name=image030.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 514]
+Name=image032.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 515]
+Name=image034.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 516]
+Name=image036.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 517]
+Name=image038.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 518]
+Name=image040.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 519]
+Name=image042.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 520]
+Name=image044.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 521]
+Name=image046.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 522]
+Name=image048.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 523]
+Name=image050.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 524]
+Name=image051.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 525]
+Name=image052.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 526]
+Name=Interface_Shear_Transfer.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 527]
+Name=Introduction_Theoretical_Manual.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 528]
+Name=Lifting Figures.vsd
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 529]
+Name=Lifting Schematic.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 530]
+Name=LiftingEqulibrium.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 531]
+Name=LiftingEqulibriumEquation.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 532]
+Name=LiftingFS.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 533]
+Name=LiftingFSCracking.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 534]
+Name=LiftingFSFailure.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 535]
+Name=LiftingFSFailureIntermediate.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 536]
+Name=LiftingRollEqulibrium.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 537]
+Name=LiftingThetaMax.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 538]
+Name=LiftingZEquation.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 539]
+Name=Lifting_of_Long_Prestressed_Girders.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 540]
+Name=Live_Load_Distribution_Factors.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 541]
+Name=Longitudinal Reinforcement Check Equation.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 542]
+Name=Longitudinal_Reinforcement_For_Shear.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 543]
+Name=Long_Girder_Stability_Analysis_for_Lifting_and_Hauling.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 544]
+Name=Losses_per_WSDOT_Method.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 545]
+Name=MaximumAllowableJackingForce.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 546]
+Name=MCStrandStress.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 547]
+Name=MJFGE002.GIF
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 548]
+Name=MJFGE004.GIF
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 549]
+Name=MJFGE006.GIF
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 550]
+Name=MJFGE008.GIF
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 551]
+Name=MJFGE010.GIF
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 552]
+Name=MJFGE012.GIF
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 553]
+Name=MJFGE014.GIF
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 554]
+Name=MJFGE016.GIF
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 555]
+Name=MJFGE018.GIF
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 556]
+Name=image001.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\MomentCapacityExample\
+Flags=1
+Disk=0
+
+[File 557]
+Name=image003.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\MomentCapacityExample\
+Flags=1
+Disk=0
+
+[File 558]
+Name=image006.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\MomentCapacityExample\
+Flags=1
+Disk=0
+
+[File 559]
+Name=image008.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\MomentCapacityExample\
+Flags=1
+Disk=0
+
+[File 560]
+Name=image010.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\MomentCapacityExample\
+Flags=1
+Disk=0
+
+[File 561]
+Name=image012.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\MomentCapacityExample\
+Flags=1
+Disk=0
+
+[File 562]
+Name=image013.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\MomentCapacityExample\
+Flags=1
+Disk=0
+
+[File 563]
+Name=image014.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\MomentCapacityExample\
+Flags=1
+Disk=0
+
+[File 564]
+Name=image015.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\MomentCapacityExample\
+Flags=1
+Disk=0
+
+[File 565]
+Name=image017.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\MomentCapacityExample\
+Flags=1
+Disk=0
+
+[File 566]
+Name=MomentCapacityExample.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\MomentCapacityExample\
+Flags=1
+Disk=0
+
+[File 567]
+Name=MomentCapacityFigures.vsd
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 568]
+Name=MomentCapacityFlowchart.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 569]
+Name=PrestressStress.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 570]
+Name=PsglibLateral_Stability_of_Long_Prestr.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 571]
+Name=ShearDesignAttachment.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 572]
+Name=Shear_Design_(Determination_of_Beta_and_Theta).htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 573]
+Name=Shear_Design_Attachment.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 574]
+Name=slab load.vsd
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 575]
+Name=SlabCantileverLoads.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 576]
+Name=SlabCantileverLoads.vsd
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 577]
+Name=SlabPadLoad.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 578]
+Name=SlabPadLoad.vsd
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 579]
+Name=SlabPadLoadEquation.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 580]
+Name=Theoretical_Manual.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 581]
+Name=Ultimate_Moment_Capacity_Analysis.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Theoretical Manual\
+Flags=1
+Disk=0
+
+[File 582]
+Name=Application_of_Special_Dead_Load.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Tutorial\
+Flags=1
+Disk=0
+
+[File 583]
+Name=AutoCalc.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Tutorial\
+Flags=1
+Disk=0
+
+[File 584]
+Name=AutoCalc_Mode.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Tutorial\
+Flags=1
+Disk=0
+
+[File 585]
+Name=Bridge Description - Misc.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Tutorial\
+Flags=1
+Disk=0
+
+[File 586]
+Name=Bridge Description - Misc.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Tutorial\
+Flags=1
+Disk=0
+
+[File 587]
+Name=Bridge Description - Piers.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Tutorial\
+Flags=1
+Disk=0
+
+[File 588]
+Name=Bridge Description - Piers.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Tutorial\
+Flags=1
+Disk=0
+
+[File 589]
+Name=Bridge Description - Roadway.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Tutorial\
+Flags=1
+Disk=0
+
+[File 590]
+Name=Bridge Description - Roadway.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Tutorial\
+Flags=1
+Disk=0
+
+[File 591]
+Name=Bridge Description - Superstructure.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Tutorial\
+Flags=1
+Disk=0
+
+[File 592]
+Name=Bridge Description - Superstructure.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Tutorial\
+Flags=1
+Disk=0
+
+[File 593]
+Name=Bridge Model View.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Tutorial\
+Flags=1
+Disk=0
+
+[File 594]
+Name=Concrete Properties.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Tutorial\
+Flags=1
+Disk=0
+
+[File 595]
+Name=Copy Girder Properties.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Tutorial\
+Flags=1
+Disk=0
+
+[File 596]
+Name=CopyConcrete.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Tutorial\
+Flags=1
+Disk=0
+
+[File 597]
+Name=Creating_a_New_Project.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Tutorial\
+Flags=1
+Disk=0
+
+[File 598]
+Name=Criteria.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Tutorial\
+Flags=1
+Disk=0
+
+[File 599]
+Name=Design Details.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Tutorial\
+Flags=1
+Disk=0
+
+[File 600]
+Name=Design Girder.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Tutorial\
+Flags=1
+Disk=0
+
+[File 601]
+Name=Design Girder.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Tutorial\
+Flags=1
+Disk=0
+
+[File 602]
+Name=Design Outcome.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Tutorial\
+Flags=1
+Disk=0
+
+[File 603]
+Name=Designing_Girders.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Tutorial\
+Flags=1
+Disk=0
+
+[File 604]
+Name=Editing_Girders.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Tutorial\
+Flags=1
+Disk=0
+
+[File 605]
+Name=Editing_the_Bridge_Model.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Tutorial\
+Flags=1
+Disk=0
+
+[File 606]
+Name=Getting_Help.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Tutorial\
+Flags=1
+Disk=0
+
+[File 607]
+Name=Girder Editing - Casting Yard.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Tutorial\
+Flags=1
+Disk=0
+
+[File 608]
+Name=Girder Editing - Casting Yard.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Tutorial\
+Flags=1
+Disk=0
+
+[File 609]
+Name=GirderStability.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Tutorial\
+Flags=1
+Disk=0
+
+[File 610]
+Name=GirderStability.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Tutorial\
+Flags=1
+Disk=0
+
+[File 611]
+Name=GirderView.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Tutorial\
+Flags=1
+Disk=0
+
+[File 612]
+Name=Girder_Stability.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Tutorial\
+Flags=1
+Disk=0
+
+[File 613]
+Name=Graphical Results.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Tutorial\
+Flags=1
+Disk=0
+
+[File 614]
+Name=Graphical Results.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Tutorial\
+Flags=1
+Disk=0
+
+[File 615]
+Name=GvIcon.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Tutorial\
+Flags=1
+Disk=0
+
+[File 616]
+Name=Introduction_Tutorial.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Tutorial\
+Flags=1
+Disk=0
+
+[File 617]
+Name=Library.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Tutorial\
+Flags=1
+Disk=0
+
+[File 618]
+Name=LPFrame.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Tutorial\
+Flags=1
+Disk=0
+
+[File 619]
+Name=LPFrame.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Tutorial\
+Flags=1
+Disk=0
+
+[File 620]
+Name=New Project.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Tutorial\
+Flags=1
+Disk=0
+
+[File 621]
+Name=PointLd.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Tutorial\
+Flags=1
+Disk=0
+
+[File 622]
+Name=PointLdDlg.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Tutorial\
+Flags=1
+Disk=0
+
+[File 623]
+Name=Project Properties.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Tutorial\
+Flags=1
+Disk=0
+
+[File 624]
+Name=Project_Settings.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Tutorial\
+Flags=1
+Disk=0
+
+[File 625]
+Name=Reports.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Tutorial\
+Flags=1
+Disk=0
+
+[File 626]
+Name=Reviewing_Results.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Tutorial\
+Flags=1
+Disk=0
+
+[File 627]
+Name=Tutorial.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Tutorial\
+Flags=1
+Disk=0
+
+[File 628]
+Name=Units.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Tutorial\
+Flags=1
+Disk=0
+
+[File 629]
+Name=Working_with_the_Library.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Tutorial\
+Flags=1
+Disk=0
+
+[File 630]
+Name=Wrapping_Up.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\Tutorial\
+Flags=1
+Disk=0
+
+[File 631]
+Name=analysisresultsview.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Analysis_Results\
+Flags=1
+Disk=0
+
+[File 632]
+Name=Analysis_Results_View.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Analysis_Results\
+Flags=1
+Disk=0
+
+[File 633]
+Name=Chapter_6.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Analysis_Results\
+Flags=1
+Disk=0
+
+[File 634]
+Name=Doing_the_Analysis.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Analysis_Results\
+Flags=1
+Disk=0
+
+[File 635]
+Name=Introduction_to_Analysis_Results.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Analysis_Results\
+Flags=1
+Disk=0
+
+[File 636]
+Name=Reports.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Analysis_Results\
+Flags=1
+Disk=0
+
+[File 637]
+Name=Report_View.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Analysis_Results\
+Flags=1
+Disk=0
+
+[File 638]
+Name=Understanding_Analysis_Results.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Analysis_Results\
+Flags=1
+Disk=0
+
+[File 639]
+Name=Appendix_A_-_PGSuper_Dialogs.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Appendix A - PGSuper Dialogs\
+Flags=1
+Disk=0
+
+[File 640]
+Name=Bridge_Site_1_Tab.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Appendix B - PGSuper Library Dialogs\
+Flags=1
+Disk=0
+
+[File 641]
+Name=Bridge_Site_2_Tab.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Appendix B - PGSuper Library Dialogs\
+Flags=1
+Disk=0
+
+[File 642]
+Name=CONCTION.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Appendix B - PGSuper Library Dialogs\
+Flags=1
+Disk=0
+
+[File 643]
+Name=Creep_Tab.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Appendix B - PGSuper Library Dialogs\
+Flags=1
+Disk=0
+
+[File 644]
+Name=GIRDEROR.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Appendix B - PGSuper Library Dialogs\
+Flags=1
+Disk=0
+
+[File 645]
+Name=Harped Strands Tab.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Appendix B - PGSuper Library Dialogs\
+Flags=1
+Disk=0
+
+[File 646]
+Name=Introduction.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Appendix B - PGSuper Library Dialogs\
+Flags=1
+Disk=0
+
+[File 647]
+Name=Lifting_Tab.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Appendix B - PGSuper Library Dialogs\
+Flags=1
+Disk=0
+
+[File 648]
+Name=Losses_Tab.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Appendix B - PGSuper Library Dialogs\
+Flags=1
+Disk=0
+
+[File 649]
+Name=Psglib00090000.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Appendix B - PGSuper Library Dialogs\
+Flags=1
+Disk=0
+
+[File 650]
+Name=Psglib00090001.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Appendix B - PGSuper Library Dialogs\
+Flags=1
+Disk=0
+
+[File 651]
+Name=PsglibBridge_Site_Tab.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Appendix B - PGSuper Library Dialogs\
+Flags=1
+Disk=0
+
+[File 652]
+Name=PsglibCasting_Yard_Tab.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Appendix B - PGSuper Library Dialogs\
+Flags=1
+Disk=0
+
+[File 653]
+Name=PsglibConcrete_Entry_Dialog.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Appendix B - PGSuper Library Dialogs\
+Flags=1
+Disk=0
+
+[File 654]
+Name=PsglibDiaphragm_Layout_Dialog.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Appendix B - PGSuper Library Dialogs\
+Flags=1
+Disk=0
+
+[File 655]
+Name=PsglibGirder_Connection_Dialog.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Appendix B - PGSuper Library Dialogs\
+Flags=1
+Disk=0
+
+[File 656]
+Name=PsglibGirder_Dimensions_Tab.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Appendix B - PGSuper Library Dialogs\
+Flags=1
+Disk=0
+
+[File 657]
+Name=PsglibGirder_Template_Editing_Dialog.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Appendix B - PGSuper Library Dialogs\
+Flags=1
+Disk=0
+
+[File 658]
+Name=PsglibHauling_and_Erection_Tab.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Appendix B - PGSuper Library Dialogs\
+Flags=1
+Disk=0
+
+[File 659]
+Name=PsglibLongitudinal_Reinforcement_Tab.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Appendix B - PGSuper Library Dialogs\
+Flags=1
+Disk=0
+
+[File 660]
+Name=PsglibMiscellaneous_Tab.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Appendix B - PGSuper Library Dialogs\
+Flags=1
+Disk=0
+
+[File 661]
+Name=PsglibPGSuper_Library_Dialogs.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Appendix B - PGSuper Library Dialogs\
+Flags=1
+Disk=0
+
+[File 662]
+Name=PsglibPGSuper_Project.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Appendix B - PGSuper Library Dialogs\
+Flags=1
+Disk=0
+
+[File 663]
+Name=PsglibSpecification_Description_Tab.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Appendix B - PGSuper Library Dialogs\
+Flags=1
+Disk=0
+
+[File 664]
+Name=PsglibSpecification_Entry_Dialog.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Appendix B - PGSuper Library Dialogs\
+Flags=1
+Disk=0
+
+[File 665]
+Name=PsglibStrands_Tab.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Appendix B - PGSuper Library Dialogs\
+Flags=1
+Disk=0
+
+[File 666]
+Name=PsglibTraffic_Barrier_Dialog.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Appendix B - PGSuper Library Dialogs\
+Flags=1
+Disk=0
+
+[File 667]
+Name=PsglibTransverse_Reinforcement_Tab.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Appendix B - PGSuper Library Dialogs\
+Flags=1
+Disk=0
+
+[File 668]
+Name=Using_the_Strand_Location_Grid_Controls.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Appendix B - PGSuper Library Dialogs\
+Flags=1
+Disk=0
+
+[File 669]
+Name=Chapter_7.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\AutoCalc_Mode\
+Flags=1
+Disk=0
+
+[File 670]
+Name=Introduction_to_AutoCalc_Mode.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\AutoCalc_Mode\
+Flags=1
+Disk=0
+
+[File 671]
+Name=Using_AutoCalc_Mode.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\AutoCalc_Mode\
+Flags=1
+Disk=0
+
+[File 672]
+Name=bridgemodelview.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Bridge_Model_Editing\
+Flags=1
+Disk=0
+
+[File 673]
+Name=Chapter_3.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Bridge_Model_Editing\
+Flags=1
+Disk=0
+
+[File 674]
+Name=curvedalignment.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Bridge_Model_Editing\
+Flags=1
+Disk=0
+
+[File 675]
+Name=Defining_the_Piers.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Bridge_Model_Editing\
+Flags=1
+Disk=0
+
+[File 676]
+Name=Defining_the_Roadway.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Bridge_Model_Editing\
+Flags=1
+Disk=0
+
+[File 677]
+Name=Defining_the_Superstructure.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Bridge_Model_Editing\
+Flags=1
+Disk=0
+
+[File 678]
+Name=diaphragmlayoutrules.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Bridge_Model_Editing\
+Flags=1
+Disk=0
+
+[File 679]
+Name=girders.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Bridge_Model_Editing\
+Flags=1
+Disk=0
+
+[File 680]
+Name=horizontalcurve.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Bridge_Model_Editing\
+Flags=1
+Disk=0
+
+[File 681]
+Name=Introduction_to_Bridge_Model_Editing.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Bridge_Model_Editing\
+Flags=1
+Disk=0
+
+[File 682]
+Name=mildsteel.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Bridge_Model_Editing\
+Flags=1
+Disk=0
+
+[File 683]
+Name=Miscellenous_Bridge_Description_Information.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Bridge_Model_Editing\
+Flags=1
+Disk=0
+
+[File 684]
+Name=profilegrade.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Bridge_Model_Editing\
+Flags=1
+Disk=0
+
+[File 685]
+Name=slab.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Bridge_Model_Editing\
+Flags=1
+Disk=0
+
+[File 686]
+Name=straightalignment.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Bridge_Model_Editing\
+Flags=1
+Disk=0
+
+[File 687]
+Name=straightgrade.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Bridge_Model_Editing\
+Flags=1
+Disk=0
+
+[File 688]
+Name=strandtype.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Bridge_Model_Editing\
+Flags=1
+Disk=0
+
+[File 689]
+Name=trafficbarrier.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Bridge_Model_Editing\
+Flags=1
+Disk=0
+
+[File 690]
+Name=Understanding_the_Bridge_View.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Bridge_Model_Editing\
+Flags=1
+Disk=0
+
+[File 691]
+Name=verticalcurve.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Bridge_Model_Editing\
+Flags=1
+Disk=0
+
+[File 692]
+Name=verticalcurve.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Bridge_Model_Editing\
+Flags=1
+Disk=0
+
+[File 693]
+Name=viewsettingsplan.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Bridge_Model_Editing\
+Flags=1
+Disk=0
+
+[File 694]
+Name=viewsettingssection.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Bridge_Model_Editing\
+Flags=1
+Disk=0
+
+[File 695]
+Name=Chapter_10.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Customizing_PGSuper\
+Flags=1
+Disk=0
+
+[File 696]
+Name=filelocations.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Customizing_PGSuper\
+Flags=1
+Disk=0
+
+[File 697]
+Name=Introduction_to_Customizing_PGSuper.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Customizing_PGSuper\
+Flags=1
+Disk=0
+
+[File 698]
+Name=Program_Settings.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Customizing_PGSuper\
+Flags=1
+Disk=0
+
+[File 699]
+Name=ToolbarDialog.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Customizing_PGSuper\
+Flags=1
+Disk=0
+
+[File 700]
+Name=Tool_Bars.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Customizing_PGSuper\
+Flags=1
+Disk=0
+
+[File 701]
+Name=userinfo.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Customizing_PGSuper\
+Flags=1
+Disk=0
+
+[File 702]
+Name=Chapter_5.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Design\
+Flags=1
+Disk=0
+
+[File 703]
+Name=design flowchart.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Design\
+Flags=1
+Disk=0
+
+[File 704]
+Name=Design Flowchart.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Design\
+Flags=1
+Disk=0
+
+[File 705]
+Name=Design Flowchart.vsd
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Design\
+Flags=1
+Disk=0
+
+[File 706]
+Name=designcomplete.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Design\
+Flags=1
+Disk=0
+
+[File 707]
+Name=Designing_a_Girder.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Design\
+Flags=1
+Disk=0
+
+[File 708]
+Name=Designing_Long_Girders_for_Stability.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Design\
+Flags=1
+Disk=0
+
+[File 709]
+Name=Design_Capabilities.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Design\
+Flags=1
+Disk=0
+
+[File 710]
+Name=girderstability.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Design\
+Flags=1
+Disk=0
+
+[File 711]
+Name=Introduction_to_Design.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Design\
+Flags=1
+Disk=0
+
+[File 712]
+Name=castingyard.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Girder_Editing\
+Flags=1
+Disk=0
+
+[File 713]
+Name=Casting_Yard_Parameters.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Girder_Editing\
+Flags=1
+Disk=0
+
+[File 714]
+Name=Chapter_4.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Girder_Editing\
+Flags=1
+Disk=0
+
+[File 715]
+Name=confinementzone.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Girder_Editing\
+Flags=1
+Disk=0
+
+[File 716]
+Name=copygirderproperties.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Girder_Editing\
+Flags=1
+Disk=0
+
+[File 717]
+Name=Copying_Girder_Properties.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Girder_Editing\
+Flags=1
+Disk=0
+
+[File 718]
+Name=elevationviewsettings.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Girder_Editing\
+Flags=1
+Disk=0
+
+[File 719]
+Name=Getting_Started_with_Girder_Editing.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Girder_Editing\
+Flags=1
+Disk=0
+
+[File 720]
+Name=GirderView.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Girder_Editing\
+Flags=1
+Disk=0
+
+[File 721]
+Name=harpedstrandoffsets.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Girder_Editing\
+Flags=1
+Disk=0
+
+[File 722]
+Name=Introduction_to_Girder_Editing.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Girder_Editing\
+Flags=1
+Disk=0
+
+[File 723]
+Name=liftingshipping.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Girder_Editing\
+Flags=1
+Disk=0
+
+[File 724]
+Name=Lifting_and_Shipping.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Girder_Editing\
+Flags=1
+Disk=0
+
+[File 725]
+Name=sectioncutlocation.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Girder_Editing\
+Flags=1
+Disk=0
+
+[File 726]
+Name=sectionviewsettings.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Girder_Editing\
+Flags=1
+Disk=0
+
+[File 727]
+Name=sectionviewsettings.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Girder_Editing\
+Flags=1
+Disk=0
+
+[File 728]
+Name=selectgirder.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Girder_Editing\
+Flags=1
+Disk=0
+
+[File 729]
+Name=selectiontool.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Girder_Editing\
+Flags=1
+Disk=0
+
+[File 730]
+Name=transversereinforcement.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Girder_Editing\
+Flags=1
+Disk=0
+
+[File 731]
+Name=Transverse_Reinforcement.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Girder_Editing\
+Flags=1
+Disk=0
+
+[File 732]
+Name=Understanding_the_Girder_View.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Girder_Editing\
+Flags=1
+Disk=0
+
+[File 733]
+Name=AnalysisResultsView.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Introduction\
+Flags=1
+Disk=0
+
+[File 734]
+Name=BridgeView.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Introduction\
+Flags=1
+Disk=0
+
+[File 735]
+Name=Chapter_1.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Introduction\
+Flags=1
+Disk=0
+
+[File 736]
+Name=Choosing_Commands.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Introduction\
+Flags=1
+Disk=0
+
+[File 737]
+Name=Context_Menus.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Introduction\
+Flags=1
+Disk=0
+
+[File 738]
+Name=CopyEntry.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Introduction\
+Flags=1
+Disk=0
+
+[File 739]
+Name=CopyGirderProperties.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Introduction\
+Flags=1
+Disk=0
+
+[File 740]
+Name=DeleteEntry.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Introduction\
+Flags=1
+Disk=0
+
+[File 741]
+Name=DesignGirder.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Introduction\
+Flags=1
+Disk=0
+
+[File 742]
+Name=EditBridge.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Introduction\
+Flags=1
+Disk=0
+
+[File 743]
+Name=EditEntry.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Introduction\
+Flags=1
+Disk=0
+
+[File 744]
+Name=EditGirder.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Introduction\
+Flags=1
+Disk=0
+
+[File 745]
+Name=EditLibraries.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Introduction\
+Flags=1
+Disk=0
+
+[File 746]
+Name=FileMenu.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Introduction\
+Flags=1
+Disk=0
+
+[File 747]
+Name=GirderView.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Introduction\
+Flags=1
+Disk=0
+
+[File 748]
+Name=HelpMenu.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Introduction\
+Flags=1
+Disk=0
+
+[File 749]
+Name=HelpToolbar.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Introduction\
+Flags=1
+Disk=0
+
+[File 750]
+Name=HelpTopics.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Introduction\
+Flags=1
+Disk=0
+
+[File 751]
+Name=Introduction_User_Guide.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Introduction\
+Flags=1
+Disk=0
+
+[File 752]
+Name=LargeIcons.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Introduction\
+Flags=1
+Disk=0
+
+[File 753]
+Name=LibraryMenu.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Introduction\
+Flags=1
+Disk=0
+
+[File 754]
+Name=LibraryToolbar.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Introduction\
+Flags=1
+Disk=0
+
+[File 755]
+Name=List.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Introduction\
+Flags=1
+Disk=0
+
+[File 756]
+Name=LoadsMenu.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Introduction\
+Flags=1
+Disk=0
+
+[File 757]
+Name=mainwindow.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Introduction\
+Flags=1
+Disk=0
+
+[File 758]
+Name=Menus.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Introduction\
+Flags=1
+Disk=0
+
+[File 759]
+Name=New.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Introduction\
+Flags=1
+Disk=0
+
+[File 760]
+Name=NewEntry.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Introduction\
+Flags=1
+Disk=0
+
+[File 761]
+Name=OnlineResources.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Introduction\
+Flags=1
+Disk=0
+
+[File 762]
+Name=Open.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Introduction\
+Flags=1
+Disk=0
+
+[File 763]
+Name=Print.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Introduction\
+Flags=1
+Disk=0
+
+[File 764]
+Name=projectmenu.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Introduction\
+Flags=1
+Disk=0
+
+[File 765]
+Name=ReportView.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Introduction\
+Flags=1
+Disk=0
+
+[File 766]
+Name=Save.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Introduction\
+Flags=1
+Disk=0
+
+[File 767]
+Name=SmallIcons.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Introduction\
+Flags=1
+Disk=0
+
+[File 768]
+Name=StabilityView.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Introduction\
+Flags=1
+Disk=0
+
+[File 769]
+Name=standardtoolbar.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Introduction\
+Flags=1
+Disk=0
+
+[File 770]
+Name=The_Toolbar.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Introduction\
+Flags=1
+Disk=0
+
+[File 771]
+Name=Units.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Introduction\
+Flags=1
+Disk=0
+
+[File 772]
+Name=UpdateNow.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Introduction\
+Flags=1
+Disk=0
+
+[File 773]
+Name=ViewMenu.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Introduction\
+Flags=1
+Disk=0
+
+[File 774]
+Name=WindowMenu.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Introduction\
+Flags=1
+Disk=0
+
+[File 775]
+Name=Introduction_User_Guide.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\
+Flags=1
+Disk=0
+
+[File 776]
+Name=Chapter_2.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Projects\
+Flags=1
+Disk=0
+
+[File 777]
+Name=Creating_a_New_Project.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Projects\
+Flags=1
+Disk=0
+
+[File 778]
+Name=Introduction_Projects.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Projects\
+Flags=1
+Disk=0
+
+[File 779]
+Name=libraryentryconflict.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Projects\
+Flags=1
+Disk=0
+
+[File 780]
+Name=Opening_an_Existing_Project.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Projects\
+Flags=1
+Disk=0
+
+[File 781]
+Name=Project_Properties.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Projects\
+Flags=1
+Disk=0
+
+[File 782]
+Name=Saving_Projects.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Projects\
+Flags=1
+Disk=0
+
+[File 783]
+Name=Chapter_9.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Project_Templates\
+Flags=1
+Disk=0
+
+[File 784]
+Name=Creating_Project_Templates.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Project_Templates\
+Flags=1
+Disk=0
+
+[File 785]
+Name=Introduction_to_Project_Templates.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Project_Templates\
+Flags=1
+Disk=0
+
+[File 786]
+Name=Managing_Project_Templates.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Project_Templates\
+Flags=1
+Disk=0
+
+[File 787]
+Name=templatemap.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Project_Templates\
+Flags=1
+Disk=0
+
+[File 788]
+Name=StatusCenter.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\StatusCenter\
+Flags=1
+Disk=0
+
+[File 789]
+Name=StatusCenterIndicators.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\StatusCenter\
+Flags=1
+Disk=0
+
+[File 790]
+Name=StatusError.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\StatusCenter\
+Flags=1
+Disk=0
+
+[File 791]
+Name=StatusOK.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\StatusCenter\
+Flags=1
+Disk=0
+
+[File 792]
+Name=StatusWarning.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\StatusCenter\
+Flags=1
+Disk=0
+
+[File 793]
+Name=Status_Center.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\StatusCenter\
+Flags=1
+Disk=0
+
+[File 794]
+Name=User's_Guide.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\
+Flags=1
+Disk=0
+
+[File 795]
+Name=EditLoadsDlg.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\UserDefinedLoads\
+Flags=1
+Disk=0
+
+[File 796]
+Name=Introduction.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\UserDefinedLoads\
+Flags=1
+Disk=0
+
+[File 797]
+Name=UDLToolBar.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\UserDefinedLoads\
+Flags=1
+Disk=0
+
+[File 798]
+Name=UserDefinedLoads.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\UserDefinedLoads\
+Flags=1
+Disk=0
+
+[File 799]
+Name=Chapter_8.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Working_With_Libraries\
+Flags=1
+Disk=0
+
+[File 800]
+Name=check.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Working_With_Libraries\
+Flags=1
+Disk=0
+
+[File 801]
+Name=Editing_Library_Entries.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Working_With_Libraries\
+Flags=1
+Disk=0
+
+[File 802]
+Name=Introduction_to_Working_with_Libraries.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Working_With_Libraries\
+Flags=1
+Disk=0
+
+[File 803]
+Name=libraryview.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Working_With_Libraries\
+Flags=1
+Disk=0
+
+[File 804]
+Name=Library_View.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Working_With_Libraries\
+Flags=1
+Disk=0
+
+[File 805]
+Name=lock.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Working_With_Libraries\
+Flags=1
+Disk=0
+
+[File 806]
+Name=Master_Library.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Working_With_Libraries\
+Flags=1
+Disk=0
+
+[File 807]
+Name=PGSuper_Libraries.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Working_With_Libraries\
+Flags=1
+Disk=0
+
+[File 808]
+Name=Project_Library.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\User's Guide\Working_With_Libraries\
+Flags=1
+Disk=0
+
+[File 809]
+Name=w95help.css
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\
+Flags=1
+Disk=0
+
+[File 810]
+Name=Welcome.htm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\HtmlHelp\
+Flags=1
+Disk=0
+
+[File 811]
+Name=IBeam.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 812]
+Name=Details.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\
+Flags=1
+Disk=0
+
+[File 813]
+Name=Alignment.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\IFace\
+Flags=1
+Disk=0
+
+[File 814]
+Name=Allowables.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\IFace\
+Flags=1
+Disk=0
+
+[File 815]
+Name=AnalysisResults.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\IFace\
+Flags=1
+Disk=0
+
+[File 816]
+Name=Artifact.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\IFace\
+Flags=1
+Disk=0
+
+[File 817]
+Name=BeamFactory.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\IFace\
+Flags=1
+Disk=0
+
+[File 818]
+Name=Bridge.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\IFace\
+Flags=1
+Disk=0
+
+[File 819]
+Name=Constructability.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\IFace\
+Flags=1
+Disk=0
+
+[File 820]
+Name=DisplayUnits.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\IFace\
+Flags=1
+Disk=0
+
+[File 821]
+Name=DistFactorEngineer.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\IFace\
+Flags=1
+Disk=0
+
+[File 822]
+Name=DistFactorMethod.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\IFace\
+Flags=1
+Disk=0
+
+[File 823]
+Name=DistributionFactors.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\IFace\
+Flags=1
+Disk=0
+
+[File 824]
+Name=DrawBridgeSettings.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\IFace\
+Flags=1
+Disk=0
+
+[File 825]
+Name=EffFlangeEngineer.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\IFace\
+Flags=1
+Disk=0
+
+[File 826]
+Name=File.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\IFace\
+Flags=1
+Disk=0
+
+[File 827]
+Name=GirderHandling.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\IFace\
+Flags=1
+Disk=0
+
+[File 828]
+Name=GirderHandlingPointOfInterest.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\IFace\
+Flags=1
+Disk=0
+
+[File 829]
+Name=GirderHandlingSpecCriteria.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\IFace\
+Flags=1
+Disk=0
+
+[File 830]
+Name=MomentCapacity.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\IFace\
+Flags=1
+Disk=0
+
+[File 831]
+Name=PrecastIGirderDetailsSpec.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\IFace\
+Flags=1
+Disk=0
+
+[File 832]
+Name=PrestressForce.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\IFace\
+Flags=1
+Disk=0
+
+[File 833]
+Name=Project.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\IFace\
+Flags=1
+Disk=0
+
+[File 834]
+Name=PsLossEngineer.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\IFace\
+Flags=1
+Disk=0
+
+[File 835]
+Name=Reporting.idl
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\IFace\
+Flags=1
+Disk=0
+
+[File 836]
+Name=ReportStyles.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\IFace\
+Flags=1
+Disk=0
+
+[File 837]
+Name=ShearCapacity.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\IFace\
+Flags=1
+Disk=0
+
+[File 838]
+Name=StatusCenter.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\IFace\
+Flags=1
+Disk=0
+
+[File 839]
+Name=Test1250.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\IFace\
+Flags=1
+Disk=0
+
+[File 840]
+Name=Tools.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\IFace\
+Flags=1
+Disk=0
+
+[File 841]
+Name=TransverseReinforcementSpec.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\IFace\
+Flags=1
+Disk=0
+
+[File 842]
+Name=VersionInfo.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\IFace\
+Flags=1
+Disk=0
+
+[File 843]
+Name=AutoLib.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\PgsExt\
+Flags=1
+Disk=0
+
+[File 844]
+Name=AutoProgress.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\PgsExt\
+Flags=1
+Disk=0
+
+[File 845]
+Name=ConstructabilityArtifact.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\PgsExt\
+Flags=1
+Disk=0
+
+[File 846]
+Name=DeflectionCheckArtifact.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\PgsExt\
+Flags=1
+Disk=0
+
+[File 847]
+Name=DesignArtifact.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\PgsExt\
+Flags=1
+Disk=0
+
+[File 848]
+Name=DistributedLoadData.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\PgsExt\
+Flags=1
+Disk=0
+
+[File 849]
+Name=FlexuralCapacityArtifact.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\PgsExt\
+Flags=1
+Disk=0
+
+[File 850]
+Name=FlexuralStressArtifact.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\PgsExt\
+Flags=1
+Disk=0
+
+[File 851]
+Name=GirderArtifact.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\PgsExt\
+Flags=1
+Disk=0
+
+[File 852]
+Name=GirderData.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\PgsExt\
+Flags=1
+Disk=0
+
+[File 853]
+Name=HaulingAnalysisArtifact.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\PgsExt\
+Flags=1
+Disk=0
+
+[File 854]
+Name=HaulingCheckArtifact.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\PgsExt\
+Flags=1
+Disk=0
+
+[File 855]
+Name=HoldDownForceArtifact.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\PgsExt\
+Flags=1
+Disk=0
+
+[File 856]
+Name=LiftHaulConstants.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\PgsExt\
+Flags=1
+Disk=0
+
+[File 857]
+Name=LiftingAnalysisArtifact.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\PgsExt\
+Flags=1
+Disk=0
+
+[File 858]
+Name=LiftingCheckArtifact.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\PgsExt\
+Flags=1
+Disk=0
+
+[File 859]
+Name=LongRebarInstance.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\PgsExt\
+Flags=1
+Disk=0
+
+[File 860]
+Name=PgsExt.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\PgsExt\
+Flags=1
+Disk=0
+
+[File 861]
+Name=PgsExtExp.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\PgsExt\
+Flags=1
+Disk=0
+
+[File 862]
+Name=PgsExtLib.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\PgsExt\
+Flags=1
+Disk=0
+
+[File 863]
+Name=PhysicalConverter.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\PgsExt\
+Flags=1
+Disk=0
+
+[File 864]
+Name=PierData.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\PgsExt\
+Flags=1
+Disk=0
+
+[File 865]
+Name=PoiArtifactKey.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\PgsExt\
+Flags=1
+Disk=0
+
+[File 866]
+Name=PoiMgr.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\PgsExt\
+Flags=1
+Disk=0
+
+[File 867]
+Name=PointLoadData.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\PgsExt\
+Flags=1
+Disk=0
+
+[File 868]
+Name=PointOfInterest.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\PgsExt\
+Flags=1
+Disk=0
+
+[File 869]
+Name=PrecastIGirderDetailingArtifact.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\PgsExt\
+Flags=1
+Disk=0
+
+[File 870]
+Name=ReportStyleHolder.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\PgsExt\
+Flags=1
+Disk=0
+
+[File 871]
+Name=ShearData.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\PgsExt\
+Flags=1
+Disk=0
+
+[File 872]
+Name=ShearZoneData.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\PgsExt\
+Flags=1
+Disk=0
+
+[File 873]
+Name=StatusItem.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\PgsExt\
+Flags=1
+Disk=0
+
+[File 874]
+Name=StirrupCheckArtifact.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\PgsExt\
+Flags=1
+Disk=0
+
+[File 875]
+Name=StirrupCheckAtPoisArtifact.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\PgsExt\
+Flags=1
+Disk=0
+
+[File 876]
+Name=StirrupCheckAtZonesArtifact.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\PgsExt\
+Flags=1
+Disk=0
+
+[File 877]
+Name=StrandSlopeArtifact.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\PgsExt\
+Flags=1
+Disk=0
+
+[File 878]
+Name=StrandStressArtifact.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\PgsExt\
+Flags=1
+Disk=0
+
+[File 879]
+Name=XSectionData.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\PgsExt\
+Flags=1
+Disk=0
+
+[File 880]
+Name=PGSuperCatCom.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\
+Flags=1
+Disk=0
+
+[File 881]
+Name=PGSuperTypes.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\
+Flags=1
+Disk=0
+
+[File 882]
+Name=PGSuperUnits.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\
+Flags=1
+Disk=0
+
+[File 883]
+Name=AutoLib.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\psgLib\
+Flags=1
+Disk=0
+
+[File 884]
+Name=BeamDimensionGrid.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\psgLib\
+Flags=1
+Disk=0
+
+[File 885]
+Name=ConcreteEntryDlg.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\psgLib\
+Flags=1
+Disk=0
+
+[File 886]
+Name=ConcreteLibraryEntry.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\psgLib\
+Flags=1
+Disk=0
+
+[File 887]
+Name=ConnectionEntryDlg.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\psgLib\
+Flags=1
+Disk=0
+
+[File 888]
+Name=ConnectionLibraryEntry.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\psgLib\
+Flags=1
+Disk=0
+
+[File 889]
+Name=DiaphragmGrid.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\psgLib\
+Flags=1
+Disk=0
+
+[File 890]
+Name=DiaphragmLayoutDlg.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\psgLib\
+Flags=1
+Disk=0
+
+[File 891]
+Name=DiaphragmLayoutEntry.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\psgLib\
+Flags=1
+Disk=0
+
+[File 892]
+Name=GirderDimensionsPage.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\psgLib\
+Flags=1
+Disk=0
+
+[File 893]
+Name=GirderHarpedStrandPage.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\psgLib\
+Flags=1
+Disk=0
+
+[File 894]
+Name=GirderLibraryEntry.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\psgLib\
+Flags=1
+Disk=0
+
+[File 895]
+Name=GirderMainSheet.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\psgLib\
+Flags=1
+Disk=0
+
+[File 896]
+Name=GirderMiscPage.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\psgLib\
+Flags=1
+Disk=0
+
+[File 897]
+Name=GirderStraightStrandPage.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\psgLib\
+Flags=1
+Disk=0
+
+[File 898]
+Name=GirderStrandGrid.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\psgLib\
+Flags=1
+Disk=0
+
+[File 899]
+Name=GirderStrandGridClient.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\psgLib\
+Flags=1
+Disk=0
+
+[File 900]
+Name=ISupportIcon.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\psgLib\
+Flags=1
+Disk=0
+
+[File 901]
+Name=ISupportLibraryManager.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\psgLib\
+Flags=1
+Disk=0
+
+[File 902]
+Name=LibraryManager.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\psgLib\
+Flags=1
+Disk=0
+
+[File 903]
+Name=LongSteelGrid.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\psgLib\
+Flags=1
+Disk=0
+
+[File 904]
+Name=LongSteelPage.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\psgLib\
+Flags=1
+Disk=0
+
+[File 905]
+Name=psgLib.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\psgLib\
+Flags=1
+Disk=0
+
+[File 906]
+Name=psgLibLib.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\psgLib\
+Flags=1
+Disk=0
+
+[File 907]
+Name=ShearSteelGrid.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\psgLib\
+Flags=1
+Disk=0
+
+[File 908]
+Name=ShearSteelPage.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\psgLib\
+Flags=1
+Disk=0
+
+[File 909]
+Name=SpecLibraryEntry.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\psgLib\
+Flags=1
+Disk=0
+
+[File 910]
+Name=SpecMainSheet.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\psgLib\
+Flags=1
+Disk=0
+
+[File 911]
+Name=StructuredLoad.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\psgLib\
+Flags=1
+Disk=0
+
+[File 912]
+Name=StructuredSave.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\psgLib\
+Flags=1
+Disk=0
+
+[File 913]
+Name=trafficbarrierdlg.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\psgLib\
+Flags=1
+Disk=0
+
+[File 914]
+Name=TrafficBarrierEntry.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Include\psgLib\
+Flags=1
+Disk=0
+
+[File 915]
+Name=PGSuper_Source.pfw
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\installer\
+Flags=1
+Disk=0
+
+[File 916]
+Name=Readme.txt
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\installer\
+Flags=1
+Disk=0
+
+[File 917]
+Name=KcEqn-SI.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 918]
+Name=KcEqn-US.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 919]
+Name=KfEqn-SI.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 920]
+Name=KfEqn-US.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 921]
+Name=Kg Equation.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 922]
+Name=LeverRuleExterior.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 923]
+Name=LeverRuleInterior.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 924]
+Name=LibChildFrm.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 925]
+Name=LibChildFrm.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 926]
+Name=GirderSection.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\LibraryEditor\
+Flags=1
+Disk=0
+
+[File 927]
+Name=LibEditorListView.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\LibraryEditor\
+Flags=1
+Disk=0
+
+[File 928]
+Name=LibEditorListView.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\LibraryEditor\
+Flags=1
+Disk=0
+
+[File 929]
+Name=LibraryEditor.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\LibraryEditor\
+Flags=1
+Disk=0
+
+[File 930]
+Name=LibraryEditor.dsp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\LibraryEditor\
+Flags=1
+Disk=0
+
+[File 931]
+Name=LibraryEditor.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\LibraryEditor\
+Flags=1
+Disk=0
+
+[File 932]
+Name=LibraryEditor.rc
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\LibraryEditor\
+Flags=1
+Disk=0
+
+[File 933]
+Name=LibraryEditorChildFrm.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\LibraryEditor\
+Flags=1
+Disk=0
+
+[File 934]
+Name=LibraryEditorChildFrm.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\LibraryEditor\
+Flags=1
+Disk=0
+
+[File 935]
+Name=LibraryEditorDoc.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\LibraryEditor\
+Flags=1
+Disk=0
+
+[File 936]
+Name=LibraryEditorDoc.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\LibraryEditor\
+Flags=1
+Disk=0
+
+[File 937]
+Name=libraryEditorView.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\LibraryEditor\
+Flags=1
+Disk=0
+
+[File 938]
+Name=libraryEditorView.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\LibraryEditor\
+Flags=1
+Disk=0
+
+[File 939]
+Name=MainFrm.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\LibraryEditor\
+Flags=1
+Disk=0
+
+[File 940]
+Name=MainFrm.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\LibraryEditor\
+Flags=1
+Disk=0
+
+[File 941]
+Name=MakeHelp.bat
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\LibraryEditor\
+Flags=65537
+Disk=0
+
+[File 942]
+Name=MyChildFrame.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\LibraryEditor\
+Flags=1
+Disk=0
+
+[File 943]
+Name=MyChildFrame.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\LibraryEditor\
+Flags=1
+Disk=0
+
+[File 944]
+Name=ReadMe.txt
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\LibraryEditor\
+Flags=1
+Disk=0
+
+[File 945]
+Name=aaaa.ico
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\LibraryEditor\res\
+Flags=1
+Disk=0
+
+[File 946]
+Name=bitmap2.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\LibraryEditor\res\
+Flags=1
+Disk=0
+
+[File 947]
+Name=bmp00001.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\LibraryEditor\res\
+Flags=1
+Disk=0
+
+[File 948]
+Name=bmp00002.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\LibraryEditor\res\
+Flags=1
+Disk=0
+
+[File 949]
+Name=bmp00003.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\LibraryEditor\res\
+Flags=1
+Disk=0
+
+[File 950]
+Name=bmp00004.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\LibraryEditor\res\
+Flags=1
+Disk=0
+
+[File 951]
+Name=bmp00005.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\LibraryEditor\res\
+Flags=1
+Disk=0
+
+[File 952]
+Name=bmp00006.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\LibraryEditor\res\
+Flags=1
+Disk=0
+
+[File 953]
+Name=bmp00007.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\LibraryEditor\res\
+Flags=1
+Disk=0
+
+[File 954]
+Name=bmp00008.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\LibraryEditor\res\
+Flags=1
+Disk=0
+
+[File 955]
+Name=bmp00009.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\LibraryEditor\res\
+Flags=1
+Disk=0
+
+[File 956]
+Name=bmp00010.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\LibraryEditor\res\
+Flags=1
+Disk=0
+
+[File 957]
+Name=bmp00011.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\LibraryEditor\res\
+Flags=1
+Disk=0
+
+[File 958]
+Name=bmp00012.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\LibraryEditor\res\
+Flags=1
+Disk=0
+
+[File 959]
+Name=bss.ico
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\LibraryEditor\res\
+Flags=1
+Disk=0
+
+[File 960]
+Name=concrete.ico
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\LibraryEditor\res\
+Flags=1
+Disk=0
+
+[File 961]
+Name=connecti.ico
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\LibraryEditor\res\
+Flags=1
+Disk=0
+
+[File 962]
+Name=default_.ico
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\LibraryEditor\res\
+Flags=1
+Disk=0
+
+[File 963]
+Name=folder.ico
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\LibraryEditor\res\
+Flags=1
+Disk=0
+
+[File 964]
+Name=ico00001.ico
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\LibraryEditor\res\
+Flags=1
+Disk=0
+
+[File 965]
+Name=ico00002.ico
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\LibraryEditor\res\
+Flags=1
+Disk=0
+
+[File 966]
+Name=ico00004.ico
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\LibraryEditor\res\
+Flags=1
+Disk=0
+
+[File 967]
+Name=ico00007.ico
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\LibraryEditor\res\
+Flags=1
+Disk=0
+
+[File 968]
+Name=ico00010.ico
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\LibraryEditor\res\
+Flags=1
+Disk=0
+
+[File 969]
+Name=ico00011.ico
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\LibraryEditor\res\
+Flags=1
+Disk=0
+
+[File 970]
+Name=ico00013.ico
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\LibraryEditor\res\
+Flags=1
+Disk=0
+
+[File 971]
+Name=icon1.ico
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\LibraryEditor\res\
+Flags=1
+Disk=0
+
+[File 972]
+Name=idr_main.ico
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\LibraryEditor\res\
+Flags=1
+Disk=0
+
+[File 973]
+Name=LibraryEditor.ico
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\LibraryEditor\res\
+Flags=1
+Disk=0
+
+[File 974]
+Name=LibraryEditor.rc2
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\LibraryEditor\res\
+Flags=1
+Disk=0
+
+[File 975]
+Name=LibraryEditorDoc.ico
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\LibraryEditor\res\
+Flags=1
+Disk=0
+
+[File 976]
+Name=open_folder.ico
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\LibraryEditor\res\
+Flags=1
+Disk=0
+
+[File 977]
+Name=Toolbar.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\LibraryEditor\res\
+Flags=1
+Disk=0
+
+[File 978]
+Name=Wsdot.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\LibraryEditor\res\
+Flags=1
+Disk=0
+
+[File 979]
+Name=Wsdot.ico
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\LibraryEditor\res\
+Flags=1
+Disk=0
+
+[File 980]
+Name=resource.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\LibraryEditor\
+Flags=1
+Disk=0
+
+[File 981]
+Name=StdAfx.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\LibraryEditor\
+Flags=1
+Disk=0
+
+[File 982]
+Name=StdAfx.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\LibraryEditor\
+Flags=1
+Disk=0
+
+[File 983]
+Name=LibraryEditor.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 984]
+Name=LibraryEditor.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 985]
+Name=License.txt
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 986]
+Name=LicensePlateChildFrm.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 987]
+Name=LicensePlateChildFrm.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 988]
+Name=LimitingCapacityOfOverReinforcedSections.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 989]
+Name=LiveLoadDistFactorsDlg.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 990]
+Name=LiveLoadDistFactorsDlg.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 991]
+Name=Longitudinal Reinforcement Check Equation.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 992]
+Name=longReinfEqn.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 993]
+Name=LRFDCreepEqn.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 994]
+Name=MainFrm.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 995]
+Name=MainFrm.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 996]
+Name=MakeHelp.bat
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=65537
+Disk=0
+
+[File 997]
+Name=mfcdual.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 998]
+Name=mfcdual.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 999]
+Name=mg 1 MI Type C SI.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1000]
+Name=mg 1 MI Type C US.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1001]
+Name=mg 1 MI Type K SI.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1002]
+Name=mg 1 MI Type K US.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1003]
+Name=mg 1 VI Type C SI.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1004]
+Name=mg 1 VI Type C US.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1005]
+Name=mg 1 VI Type K SI.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1006]
+Name=mg 1 VI Type K US.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1007]
+Name=mg 2 ME Type C SI.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1008]
+Name=mg 2 ME Type C US.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1009]
+Name=mg 2 ME Type K SI.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1010]
+Name=mg 2 ME Type K US.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1011]
+Name=mg 2 MI Type C SI.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1012]
+Name=mg 2 MI Type C US.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1013]
+Name=mg 2 MI Type K SI.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1014]
+Name=mg 2 MI Type K US.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1015]
+Name=mg 2 VE Type C SI.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1016]
+Name=mg 2 VE Type C US.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1017]
+Name=mg 2 VE Type K SI.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1018]
+Name=mg 2 VE Type K US.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1019]
+Name=mg 2 VI Type C SI.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1020]
+Name=mg 2 VI TYpe C US.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1021]
+Name=mg 2 VI Type K SI.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1022]
+Name=mg 2 VI Type K US.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1023]
+Name=Min Transverse Reinforcement SI.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1024]
+Name=Min Transverse Reinforcement US.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1025]
+Name=Mlat - Lifting.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1026]
+Name=NUbeam.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1027]
+Name=OptionsDlg.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1028]
+Name=OptionsDlg.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1029]
+Name=OutputChildFrame.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1030]
+Name=OutputChildFrame.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1031]
+Name=P Equation.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1032]
+Name=AutoProgress.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\PgsExt\
+Flags=1
+Disk=0
+
+[File 1033]
+Name=ConstructabilityArtifact.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\PgsExt\
+Flags=1
+Disk=0
+
+[File 1034]
+Name=DeflectionCheckArtifact.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\PgsExt\
+Flags=1
+Disk=0
+
+[File 1035]
+Name=DesignArtifact.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\PgsExt\
+Flags=1
+Disk=0
+
+[File 1036]
+Name=DistributedLoadData.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\PgsExt\
+Flags=1
+Disk=0
+
+[File 1037]
+Name=FlexuralCapacityArtifact.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\PgsExt\
+Flags=1
+Disk=0
+
+[File 1038]
+Name=FlexuralStressArtifact.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\PgsExt\
+Flags=1
+Disk=0
+
+[File 1039]
+Name=GirderArtifact.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\PgsExt\
+Flags=1
+Disk=0
+
+[File 1040]
+Name=GirderData.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\PgsExt\
+Flags=1
+Disk=0
+
+[File 1041]
+Name=HaulingAnalysisArtifact.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\PgsExt\
+Flags=1
+Disk=0
+
+[File 1042]
+Name=HaulingCheckArtifact.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\PgsExt\
+Flags=1
+Disk=0
+
+[File 1043]
+Name=HoldDownForceArtifact.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\PgsExt\
+Flags=1
+Disk=0
+
+[File 1044]
+Name=LiftingAnalysisArtifact.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\PgsExt\
+Flags=1
+Disk=0
+
+[File 1045]
+Name=LiftingCheckArtifact.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\PgsExt\
+Flags=1
+Disk=0
+
+[File 1046]
+Name=LongRebarInstance.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\PgsExt\
+Flags=1
+Disk=0
+
+[File 1047]
+Name=main.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\PgsExt\
+Flags=1
+Disk=0
+
+[File 1048]
+Name=PgsExt.dsp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\PgsExt\
+Flags=1
+Disk=0
+
+[File 1049]
+Name=pgsExtUtil.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\PgsExt\
+Flags=1
+Disk=0
+
+[File 1050]
+Name=pgsExtUtil.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\PgsExt\
+Flags=1
+Disk=0
+
+[File 1051]
+Name=PierData.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\PgsExt\
+Flags=1
+Disk=0
+
+[File 1052]
+Name=PoiArtifactKey.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\PgsExt\
+Flags=1
+Disk=0
+
+[File 1053]
+Name=PoiMgr.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\PgsExt\
+Flags=1
+Disk=0
+
+[File 1054]
+Name=PointLoadData.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\PgsExt\
+Flags=1
+Disk=0
+
+[File 1055]
+Name=PointOfInterest.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\PgsExt\
+Flags=1
+Disk=0
+
+[File 1056]
+Name=PrecastIGirderDetailingArtifact.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\PgsExt\
+Flags=1
+Disk=0
+
+[File 1057]
+Name=ReportStyleHolder.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\PgsExt\
+Flags=1
+Disk=0
+
+[File 1058]
+Name=ShearData.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\PgsExt\
+Flags=1
+Disk=0
+
+[File 1059]
+Name=ShearZoneData.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\PgsExt\
+Flags=1
+Disk=0
+
+[File 1060]
+Name=StatusItem.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\PgsExt\
+Flags=1
+Disk=0
+
+[File 1061]
+Name=StirrupCheckArtifact.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\PgsExt\
+Flags=1
+Disk=0
+
+[File 1062]
+Name=StirrupCheckAtPoisArtifact.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\PgsExt\
+Flags=1
+Disk=0
+
+[File 1063]
+Name=StirrupCheckAtZonesArtifact.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\PgsExt\
+Flags=1
+Disk=0
+
+[File 1064]
+Name=StrandSlopeArtifact.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\PgsExt\
+Flags=1
+Disk=0
+
+[File 1065]
+Name=StrandStressArtifact.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\PgsExt\
+Flags=1
+Disk=0
+
+[File 1066]
+Name=XSectionData.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\PgsExt\
+Flags=1
+Disk=0
+
+[File 1067]
+Name=PGSuper.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1068]
+Name=PGSuper.dsp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1069]
+Name=Pgsuper.dsw
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1070]
+Name=PGSuper.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1071]
+Name=PGSuper.ini
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1072]
+Name=PGSuper.lbr
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1073]
+Name=PGSuper.odl
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1074]
+Name=PGSuper.rc
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1075]
+Name=PGSuper.reg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1076]
+Name=PGSuper.tip
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1077]
+Name=PGSuperCalculationSheet.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1078]
+Name=PGSuperCalculationSheet.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1079]
+Name=PgsuperCommandLineInfo.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1080]
+Name=PgsuperCommandLineInfo.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1081]
+Name=PGSuperConfig.ini
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1082]
+Name=PGSuperDoc.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1083]
+Name=PGSuperDoc.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1084]
+Name=PgsuperException.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1085]
+Name=PGSuperStatusBar.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1086]
+Name=PGSuperStatusBar.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1087]
+Name=PointLoadDrawStrategy.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1088]
+Name=PointLoadDrawStrategyImpl.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1089]
+Name=PointLoadDrawStrategyImpl.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1090]
+Name=CPProjectAgent.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ProjectAgent\
+Flags=1
+Disk=0
+
+[File 1091]
+Name=LibraryEntryObserver.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ProjectAgent\
+Flags=1
+Disk=0
+
+[File 1092]
+Name=LibraryEntryObserver.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ProjectAgent\
+Flags=1
+Disk=0
+
+[File 1093]
+Name=ProjectAgent.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ProjectAgent\
+Flags=1
+Disk=0
+
+[File 1094]
+Name=ProjectAgent.def
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ProjectAgent\
+Flags=1
+Disk=0
+
+[File 1095]
+Name=ProjectAgent.dsp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ProjectAgent\
+Flags=1
+Disk=0
+
+[File 1096]
+Name=ProjectAgent.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ProjectAgent\
+Flags=1
+Disk=0
+
+[File 1097]
+Name=ProjectAgent.idl
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ProjectAgent\
+Flags=1
+Disk=0
+
+[File 1098]
+Name=ProjectAgent.rc
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ProjectAgent\
+Flags=1
+Disk=0
+
+[File 1099]
+Name=ProjectAgent.rgs
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ProjectAgent\
+Flags=1
+Disk=0
+
+[File 1100]
+Name=ProjectAgentImp.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ProjectAgent\
+Flags=1
+Disk=0
+
+[File 1101]
+Name=ProjectAgentImp.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ProjectAgent\
+Flags=1
+Disk=0
+
+[File 1102]
+Name=resource.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ProjectAgent\
+Flags=1
+Disk=0
+
+[File 1103]
+Name=StdAfx.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ProjectAgent\
+Flags=1
+Disk=0
+
+[File 1104]
+Name=StdAfx.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ProjectAgent\
+Flags=1
+Disk=0
+
+[File 1105]
+Name=ProjectPropertiesDlg.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1106]
+Name=ProjectPropertiesDlg.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1107]
+Name=BeamDimensionGrid.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1108]
+Name=ConcreteEntryDlg.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1109]
+Name=ConcreteLibraryEntry.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1110]
+Name=ConnectionEntryDlg.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1111]
+Name=ConnectionLibraryEntry.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1112]
+Name=DiaphragmGrid.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1113]
+Name=DiaphragmLayoutDlg.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1114]
+Name=DiaphragmLayoutEntry.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1115]
+Name=GirderDimensionsPage.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1116]
+Name=GirderErrorDlg.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1117]
+Name=GirderErrorDlg.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1118]
+Name=GirderHarpedStrandPage.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1119]
+Name=GirderLibraryEntry.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1120]
+Name=GirderMainSheet.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1121]
+Name=GirderMiscPage.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1122]
+Name=GirderSection.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1123]
+Name=GirderStraightStrandPage.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1124]
+Name=GirderStrandGrid.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1125]
+Name=LibraryEntryConflict.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1126]
+Name=LibraryEntryConflict.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1127]
+Name=LibraryManager.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1128]
+Name=LongSteelGrid.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1129]
+Name=LongSteelPage.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1130]
+Name=psgLib.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1131]
+Name=psgLib.def
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1132]
+Name=psgLib.dsp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1133]
+Name=psgLib.odl
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1134]
+Name=psgLib.rc
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1135]
+Name=psgLib_D.def
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1136]
+Name=RenameLibraryEntry.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1137]
+Name=RenameLibraryEntry.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1138]
+Name=Connection.emf
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\res\
+Flags=1
+Disk=0
+
+[File 1139]
+Name=GirderDim.emf
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\res\
+Flags=1
+Disk=0
+
+[File 1140]
+Name=ico00001.ico
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\res\
+Flags=1
+Disk=0
+
+[File 1141]
+Name=ico00002.ico
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\res\
+Flags=1
+Disk=0
+
+[File 1142]
+Name=ico00003.ico
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\res\
+Flags=1
+Disk=0
+
+[File 1143]
+Name=ico00004.ico
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\res\
+Flags=1
+Disk=0
+
+[File 1144]
+Name=ico00005.ico
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\res\
+Flags=1
+Disk=0
+
+[File 1145]
+Name=icon1.ico
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\res\
+Flags=1
+Disk=0
+
+[File 1146]
+Name=psgLib.rc2
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\res\
+Flags=1
+Disk=0
+
+[File 1147]
+Name=TrafficBarrier.emf
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\res\
+Flags=1
+Disk=0
+
+[File 1148]
+Name=resource.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1149]
+Name=resource.hm
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1150]
+Name=SectionViewDialog.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1151]
+Name=SectionViewDialog.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1152]
+Name=ShearSteelGrid.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1153]
+Name=ShearSteelPage.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1154]
+Name=SpecBridgeSite1Page.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1155]
+Name=SpecBridgeSite1Page.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1156]
+Name=SpecBridgeSite2Page.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1157]
+Name=SpecBridgeSite2Page.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1158]
+Name=SpecBridgeSitePage.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1159]
+Name=SpecBridgeSitePage.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1160]
+Name=SpecCastingYardPage.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1161]
+Name=SpecCastingYardPage.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1162]
+Name=SpecCreepPage.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1163]
+Name=SpecCreepPage.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1164]
+Name=SpecDescrPage.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1165]
+Name=SpecDescrPage.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1166]
+Name=SpecHaulingErectionPage.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1167]
+Name=SpecHaulingErectionPage.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1168]
+Name=SpecLibraryEntry.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1169]
+Name=SpecLiftingPage.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1170]
+Name=SpecLiftingPage.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1171]
+Name=SpecLossPage.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1172]
+Name=SpecLossPage.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1173]
+Name=SpecMainSheet.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1174]
+Name=SpecPSLimitPage.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1175]
+Name=SpecPSLimitPage.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1176]
+Name=StdAfx.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1177]
+Name=StdAfx.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1178]
+Name=StructuredLoad.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1179]
+Name=StructuredSave.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1180]
+Name=trafficbarrierdlg.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1181]
+Name=TrafficBarrierEntry.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\psgLib\
+Flags=1
+Disk=0
+
+[File 1182]
+Name=Q Equation.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1183]
+Name=ReadMe.txt
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1184]
+Name=RefinedAnalysisOptionsDlg.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1185]
+Name=RefinedAnalysisOptionsDlg.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1186]
+Name=1250_Diff.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\RegressionTest\1250_Diff\
+Flags=1
+Disk=0
+
+[File 1187]
+Name=1250_Diff.dsp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\RegressionTest\1250_Diff\
+Flags=1
+Disk=0
+
+[File 1188]
+Name=1250_Diff.dsw
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\RegressionTest\1250_Diff\
+Flags=1
+Disk=0
+
+[File 1189]
+Name=ReadMe.txt
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\RegressionTest\1250_Diff\
+Flags=1
+Disk=0
+
+[File 1190]
+Name=StdAfx.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\RegressionTest\1250_Diff\
+Flags=1
+Disk=0
+
+[File 1191]
+Name=StdAfx.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\RegressionTest\1250_Diff\
+Flags=1
+Disk=0
+
+[File 1192]
+Name=dodiff.bat
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\RegressionTest\Current\
+Flags=65537
+Disk=0
+
+[File 1193]
+Name=Reg001.pgs
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\RegressionTest\Current\
+Flags=1
+Disk=0
+
+[File 1194]
+Name=Reg002.pgs
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\RegressionTest\Current\
+Flags=1
+Disk=0
+
+[File 1195]
+Name=Reg003.pgs
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\RegressionTest\Current\
+Flags=1
+Disk=0
+
+[File 1196]
+Name=Reg004.pgs
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\RegressionTest\Current\
+Flags=1
+Disk=0
+
+[File 1197]
+Name=Reg005.pgs
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\RegressionTest\Current\
+Flags=1
+Disk=0
+
+[File 1198]
+Name=Reg006.pgs
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\RegressionTest\Current\
+Flags=1
+Disk=0
+
+[File 1199]
+Name=Reg007.pgs
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\RegressionTest\Current\
+Flags=1
+Disk=0
+
+[File 1200]
+Name=Reg008.pgs
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\RegressionTest\Current\
+Flags=1
+Disk=0
+
+[File 1201]
+Name=Reg009.pgs
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\RegressionTest\Current\
+Flags=1
+Disk=0
+
+[File 1202]
+Name=Reg010.pgs
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\RegressionTest\Current\
+Flags=1
+Disk=0
+
+[File 1203]
+Name=Reg011.pgs
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\RegressionTest\Current\
+Flags=1
+Disk=0
+
+[File 1204]
+Name=Reg012.pgs
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\RegressionTest\Current\
+Flags=1
+Disk=0
+
+[File 1205]
+Name=Reg013.pgs
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\RegressionTest\Current\
+Flags=1
+Disk=0
+
+[File 1206]
+Name=Reg014.pgs
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\RegressionTest\Current\
+Flags=1
+Disk=0
+
+[File 1207]
+Name=Reg015.pgs
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\RegressionTest\Current\
+Flags=1
+Disk=0
+
+[File 1208]
+Name=Reg016.pgs
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\RegressionTest\Current\
+Flags=1
+Disk=0
+
+[File 1209]
+Name=Reg017.pgs
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\RegressionTest\Current\
+Flags=1
+Disk=0
+
+[File 1210]
+Name=Reg018.pgs
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\RegressionTest\Current\
+Flags=1
+Disk=0
+
+[File 1211]
+Name=Reg019.pgs
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\RegressionTest\Current\
+Flags=1
+Disk=0
+
+[File 1212]
+Name=Reg020.pgs
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\RegressionTest\Current\
+Flags=1
+Disk=0
+
+[File 1213]
+Name=Reg021.pgs
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\RegressionTest\Current\
+Flags=1
+Disk=0
+
+[File 1214]
+Name=Reg001.dbr
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\RegressionTest\Datum\
+Flags=1
+Disk=0
+
+[File 1215]
+Name=Reg002.dbr
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\RegressionTest\Datum\
+Flags=1
+Disk=0
+
+[File 1216]
+Name=Reg003.dbr
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\RegressionTest\Datum\
+Flags=1
+Disk=0
+
+[File 1217]
+Name=Reg004.dbr
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\RegressionTest\Datum\
+Flags=1
+Disk=0
+
+[File 1218]
+Name=Reg005.dbr
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\RegressionTest\Datum\
+Flags=1
+Disk=0
+
+[File 1219]
+Name=Reg006.dbr
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\RegressionTest\Datum\
+Flags=1
+Disk=0
+
+[File 1220]
+Name=Reg007.dbr
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\RegressionTest\Datum\
+Flags=1
+Disk=0
+
+[File 1221]
+Name=Reg008.dbr
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\RegressionTest\Datum\
+Flags=1
+Disk=0
+
+[File 1222]
+Name=Reg009.dbr
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\RegressionTest\Datum\
+Flags=1
+Disk=0
+
+[File 1223]
+Name=Reg010.dbr
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\RegressionTest\Datum\
+Flags=1
+Disk=0
+
+[File 1224]
+Name=Reg011.dbr
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\RegressionTest\Datum\
+Flags=1
+Disk=0
+
+[File 1225]
+Name=Reg012.dbr
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\RegressionTest\Datum\
+Flags=1
+Disk=0
+
+[File 1226]
+Name=Reg013.dbr
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\RegressionTest\Datum\
+Flags=1
+Disk=0
+
+[File 1227]
+Name=Reg014.dbr
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\RegressionTest\Datum\
+Flags=1
+Disk=0
+
+[File 1228]
+Name=Reg015.dbr
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\RegressionTest\Datum\
+Flags=1
+Disk=0
+
+[File 1229]
+Name=Reg016.dbr
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\RegressionTest\Datum\
+Flags=1
+Disk=0
+
+[File 1230]
+Name=Reg017.dbr
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\RegressionTest\Datum\
+Flags=1
+Disk=0
+
+[File 1231]
+Name=Reg018.dbr
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\RegressionTest\Datum\
+Flags=1
+Disk=0
+
+[File 1232]
+Name=Reg019.dbr
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\RegressionTest\Datum\
+Flags=1
+Disk=0
+
+[File 1233]
+Name=Reg020.dbr
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\RegressionTest\Datum\
+Flags=1
+Disk=0
+
+[File 1234]
+Name=Reg021.dbr
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\RegressionTest\Datum\
+Flags=1
+Disk=0
+
+[File 1235]
+Name=PGSuperRegTestLibrary.lbr
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\RegressionTest\
+Flags=1
+Disk=0
+
+[File 1236]
+Name=RunRegression.js
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\RegressionTest\
+Flags=1
+Disk=0
+
+[File 1237]
+Name=ADimChapterBuilder.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1238]
+Name=ADimChapterBuilder.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1239]
+Name=BridgeDescChapterBuilder.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1240]
+Name=BridgeDescChapterBuilder.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1241]
+Name=BridgeDescDetailsChapterBuilder.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1242]
+Name=BridgeDescDetailsChapterBuilder.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1243]
+Name=BurstingZoneCheckTable.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1244]
+Name=BurstingZoneCheckTable.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1245]
+Name=BurstingZoneDetailsChapterBuilder.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1246]
+Name=BurstingZoneDetailsChapterBuilder.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1247]
+Name=CamberChapterBuilder.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1248]
+Name=CamberChapterBuilder.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1249]
+Name=CamberTable.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1250]
+Name=CamberTable.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1251]
+Name=CastingYardMomentsTable.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1252]
+Name=CastingYardMomentsTable.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1253]
+Name=ChapterBuilder.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1254]
+Name=ChapterBuilder.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1255]
+Name=CombinedMomentsTable.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1256]
+Name=CombinedMomentsTable.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1257]
+Name=CombinedReactionTable.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1258]
+Name=CombinedReactionTable.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1259]
+Name=CombinedShearTable.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1260]
+Name=CombinedShearTable.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1261]
+Name=ConfinementCheckTable.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1262]
+Name=ConfinementCheckTable.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1263]
+Name=ConstructabilityCheckTable.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1264]
+Name=ConstructabilityCheckTable.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1265]
+Name=CreepCoefficientChapterBuilder.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1266]
+Name=CreepCoefficientChapterBuilder.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1267]
+Name=CritSectionChapterBuilder.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1268]
+Name=CritSectionChapterBuilder.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1269]
+Name=CSpecCheckChapterBuilder.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1270]
+Name=DesignOutcomeChapterBuilder.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1271]
+Name=DesignOutcomeChapterBuilder.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1272]
+Name=DistributionFactorDetailsChapterBuilder.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1273]
+Name=DistributionFactorDetailsChapterBuilder.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1274]
+Name=DummyChapter.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1275]
+Name=DummyChapter.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1276]
+Name=EffFlangeWidthDetailsChapterBuilder.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1277]
+Name=EffFlangeWidthDetailsChapterBuilder.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1278]
+Name=FlexuralCapacityCheckTable.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1279]
+Name=FlexuralCapacityCheckTable.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1280]
+Name=FlexuralStressCheckTable.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1281]
+Name=FlexuralStressCheckTable.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1282]
+Name=GeometryChapterBuilder.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1283]
+Name=GeometryChapterBuilder.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1284]
+Name=GirderComparisonChapterBuilder.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1285]
+Name=GirderComparisonChapterBuilder.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1286]
+Name=GirderDetailingCheck.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1287]
+Name=GirderDetailingCheck.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1288]
+Name=GirderScheduleChapterBuilder.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1289]
+Name=GirderScheduleChapterBuilder.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1290]
+Name=HaulingCheck.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1291]
+Name=HaulingCheck.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1292]
+Name=HaulingCheckChapterBuilder.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1293]
+Name=HaulingCheckChapterBuilder.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1294]
+Name=HaulingCheckDetailsChapterBuilder.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1295]
+Name=HaulingCheckDetailsChapterBuilder.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1296]
+Name=HoldDownForceArtifact.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1297]
+Name=HoldDownForceCheck.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1298]
+Name=InputSummaryChapter.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1299]
+Name=InputSummaryChapter.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1300]
+Name=InterfaceShearDetails.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1301]
+Name=InterfaceShearDetails.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1302]
+Name=InterfaceShearTable.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1303]
+Name=InterfaceShearTable.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1304]
+Name=LiftingCheck.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1305]
+Name=LiftingCheck.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1306]
+Name=LiftingCheckChapterBuilder.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1307]
+Name=LiftingCheckChapterBuilder.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1308]
+Name=LiftingCheckDetailsChapterBuilder.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1309]
+Name=LiftingCheckDetailsChapterBuilder.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1310]
+Name=LiveLoadDistributionFactorTable.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1311]
+Name=LiveLoadDistributionFactorTable.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1312]
+Name=LoadingDetailsChapterBuilder.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1313]
+Name=LoadingDetailsChapterBuilder.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1314]
+Name=LongRebarLocations.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1315]
+Name=LongRebarLocations.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1316]
+Name=LongReinfShearCheck.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1317]
+Name=LongReinfShearCheck.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1318]
+Name=LongReinfShearCheckChapterBuilder.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1319]
+Name=LongReinfShearCheckChapterBuilder.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1320]
+Name=LossesChapterBuilder.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1321]
+Name=LossesChapterBuilder.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1322]
+Name=MomentCapacityDetailsChapterBuilder.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1323]
+Name=MomentCapacityDetailsChapterBuilder.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1324]
+Name=MVRChapterBuilder.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1325]
+Name=MVRChapterBuilder.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1326]
+Name=OptionalDeflectionCheck.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1327]
+Name=OptionalDeflectionCheck.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1328]
+Name=OutputSummaryChapter.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1329]
+Name=OutputSummaryChapter.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1330]
+Name=PrestressForceChapterBuilder.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1331]
+Name=PrestressForceChapterBuilder.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1332]
+Name=ProductDisplacementsTable.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1333]
+Name=ProductDisplacementsTable.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1334]
+Name=ProductMomentsTable.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1335]
+Name=ProductMomentsTable.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1336]
+Name=ProductReactionTable.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1337]
+Name=ProductReactionTable.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1338]
+Name=ProductShearTable.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1339]
+Name=ProductShearTable.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1340]
+Name=ProjectCriteriaChapterBuilder.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1341]
+Name=ProjectCriteriaChapterBuilder.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1342]
+Name=Report.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1343]
+Name=Report.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1344]
+Name=ReportAgent.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1345]
+Name=ReportAgent.def
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1346]
+Name=ReportAgent.dsp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1347]
+Name=ReportAgent.idl
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1348]
+Name=ReportAgent.rc
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1349]
+Name=ReportBuilder.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1350]
+Name=ReportBuilder.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1351]
+Name=ReportDesc.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1352]
+Name=ReportDesc.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1353]
+Name=Reporter.rgs
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1354]
+Name=ReporterImp.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1355]
+Name=ReporterImp.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1356]
+Name=ReportNotes.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1357]
+Name=ReportSpec.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1358]
+Name=ReportSpec.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1359]
+Name=resource.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1360]
+Name=SectPropChapterBuilder.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1361]
+Name=SectPropChapterBuilder.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1362]
+Name=SectPropTable.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1363]
+Name=SectPropTable.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1364]
+Name=SectPropTable2.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1365]
+Name=SectPropTable2.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1366]
+Name=ShearCapacityDetailsChapterBuilder.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1367]
+Name=ShearCapacityDetailsChapterBuilder.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1368]
+Name=ShearCheckTable.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1369]
+Name=ShearCheckTable.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1370]
+Name=SpanDataChapterBuilder.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1371]
+Name=SpanDataChapterBuilder.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1372]
+Name=SpecCheckChapterBuilder.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1373]
+Name=SpecCheckSummaryChapterBuilder.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1374]
+Name=SpecCheckSummaryChapterBuilder.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1375]
+Name=StdAfx.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1376]
+Name=StdAfx.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1377]
+Name=StirrupDetailingCheckChapterBuilder.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1378]
+Name=StirrupDetailingCheckChapterBuilder.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1379]
+Name=StirrupDetailingCheckTable.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1380]
+Name=StirrupDetailingCheckTable.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1381]
+Name=StirrupTable.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1382]
+Name=StirrupTable.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1383]
+Name=StrandEccTable.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1384]
+Name=StrandEccTable.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1385]
+Name=StrandLocations.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1386]
+Name=StrandLocations.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1387]
+Name=StrandSlopeCheck.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1388]
+Name=StrandSlopeCheck.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1389]
+Name=StrandStressCheckTable.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1390]
+Name=StrandStressCheckTable.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1391]
+Name=TestChapterBuilder.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1392]
+Name=TestChapterBuilder.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1393]
+Name=TexasIBNSChapterBuilder.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1394]
+Name=TexasIBNSChapterBuilder.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1395]
+Name=UserDefinedLoadsChapterBuilder.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1396]
+Name=UserDefinedLoadsChapterBuilder.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1397]
+Name=UserDisplacementsTable.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1398]
+Name=UserDisplacementsTable.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1399]
+Name=UserMomentsTable.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1400]
+Name=UserMomentsTable.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1401]
+Name=UserReactionTable.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1402]
+Name=UserReactionTable.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1403]
+Name=UserShearTable.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1404]
+Name=UserShearTable.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1405]
+Name=WBCmdGroup.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1406]
+Name=webbrowser.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1407]
+Name=webbrowser.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\ReportAgent\
+Flags=1
+Disk=0
+
+[File 1408]
+Name=ReportDlg.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1409]
+Name=ReportDlg.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1410]
+Name=ReportView.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1411]
+Name=ReportView.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1412]
+Name=AnalysisResultsView.ico
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\res\
+Flags=1
+Disk=0
+
+[File 1413]
+Name=bitmap1.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\res\
+Flags=1
+Disk=0
+
+[File 1414]
+Name=bitmap2.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\res\
+Flags=1
+Disk=0
+
+[File 1415]
+Name=bmp00001.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\res\
+Flags=1
+Disk=0
+
+[File 1416]
+Name=bmp00002.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\res\
+Flags=1
+Disk=0
+
+[File 1417]
+Name=bmp00003.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\res\
+Flags=1
+Disk=0
+
+[File 1418]
+Name=bmp00004.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\res\
+Flags=1
+Disk=0
+
+[File 1419]
+Name=bmp00005.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\res\
+Flags=1
+Disk=0
+
+[File 1420]
+Name=bmp00006.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\res\
+Flags=1
+Disk=0
+
+[File 1421]
+Name=bmp00007.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\res\
+Flags=1
+Disk=0
+
+[File 1422]
+Name=bmp00008.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\res\
+Flags=1
+Disk=0
+
+[File 1423]
+Name=bmp00009.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\res\
+Flags=1
+Disk=0
+
+[File 1424]
+Name=bmp00010.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\res\
+Flags=1
+Disk=0
+
+[File 1425]
+Name=bmp00011.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\res\
+Flags=1
+Disk=0
+
+[File 1426]
+Name=bmp00012.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\res\
+Flags=1
+Disk=0
+
+[File 1427]
+Name=Bridge.ico
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\res\
+Flags=1
+Disk=0
+
+[File 1428]
+Name=bss.ico
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\res\
+Flags=1
+Disk=0
+
+[File 1429]
+Name=edit_loa.ico
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\res\
+Flags=1
+Disk=0
+
+[File 1430]
+Name=GirderDesigner.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\res\
+Flags=1
+Disk=0
+
+[File 1431]
+Name=GirderView.ico
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\res\
+Flags=1
+Disk=0
+
+[File 1432]
+Name=HaulingOverhangs.emf
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\res\
+Flags=1
+Disk=0
+
+[File 1433]
+Name=HelpToolbar.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\res\
+Flags=1
+Disk=0
+
+[File 1434]
+Name=ico00001.ico
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\res\
+Flags=1
+Disk=0
+
+[File 1435]
+Name=ico00002.ico
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\res\
+Flags=1
+Disk=0
+
+[File 1436]
+Name=ico00003.ico
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\res\
+Flags=1
+Disk=0
+
+[File 1437]
+Name=ico00004.ico
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\res\
+Flags=1
+Disk=0
+
+[File 1438]
+Name=ico00005.ico
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\res\
+Flags=1
+Disk=0
+
+[File 1439]
+Name=icon1.ico
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\res\
+Flags=1
+Disk=0
+
+[File 1440]
+Name=LibraryToolbar.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\res\
+Flags=1
+Disk=0
+
+[File 1441]
+Name=litebulb.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\res\
+Flags=1
+Disk=0
+
+[File 1442]
+Name=lpframe.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\res\
+Flags=1
+Disk=0
+
+[File 1443]
+Name=north_ar.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\res\
+Flags=1
+Disk=0
+
+[File 1444]
+Name=PGSuper.ico
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\res\
+Flags=1
+Disk=0
+
+[File 1445]
+Name=PGSuper.rc2
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\res\
+Flags=1
+Disk=0
+
+[File 1446]
+Name=PGSuperDoc.ico
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\res\
+Flags=1
+Disk=0
+
+[File 1447]
+Name=pgs_template.ico
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\res\
+Flags=1
+Disk=0
+
+[File 1448]
+Name=point_lo.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\res\
+Flags=1
+Disk=0
+
+[File 1449]
+Name=ReportView.ico
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\res\
+Flags=1
+Disk=0
+
+[File 1450]
+Name=splash.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\res\
+Flags=1
+Disk=0
+
+[File 1451]
+Name=Stable.ico
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\res\
+Flags=1
+Disk=0
+
+[File 1452]
+Name=Toolbar.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\res\
+Flags=1
+Disk=0
+
+[File 1453]
+Name=warning2.ico
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\res\
+Flags=1
+Disk=0
+
+[File 1454]
+Name=Wsdot.ico
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\res\
+Flags=1
+Disk=0
+
+[File 1455]
+Name=wsdotlogo.bmp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\res\
+Flags=1
+Disk=0
+
+[File 1456]
+Name=resource.fd
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1457]
+Name=resource.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1458]
+Name=Rev.txt
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1459]
+Name=RigidMethod.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1460]
+Name=SectionCutDisplayImpl.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1461]
+Name=SectionCutDisplayImpl.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1462]
+Name=SectionCutDlg.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1463]
+Name=SectionCutDlg.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1464]
+Name=SectionCutDlgEx.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1465]
+Name=SectionCutDlgEx.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1466]
+Name=SectionCutDrawStrategy.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1467]
+Name=Shear Zone Pic.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1468]
+Name=Skew Correction for Moment SI.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1469]
+Name=Skew Correction for Moment Type C.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1470]
+Name=Skew Correction for Moment US.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1471]
+Name=Skew Correction for Shear SI.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1472]
+Name=Skew Correction for Shear Type C SI.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1473]
+Name=Skew Correction for Shear Type C US.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1474]
+Name=Skew Correction for Shear US.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1475]
+Name=Slab Geometry Pic.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1476]
+Name=Span Length Pic.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1477]
+Name=resource.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\SpecAgent\
+Flags=1
+Disk=0
+
+[File 1478]
+Name=SpecAgent.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\SpecAgent\
+Flags=1
+Disk=0
+
+[File 1479]
+Name=SpecAgent.def
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\SpecAgent\
+Flags=1
+Disk=0
+
+[File 1480]
+Name=SpecAgent.dsp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\SpecAgent\
+Flags=1
+Disk=0
+
+[File 1481]
+Name=SpecAgent.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\SpecAgent\
+Flags=1
+Disk=0
+
+[File 1482]
+Name=SpecAgent.idl
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\SpecAgent\
+Flags=1
+Disk=0
+
+[File 1483]
+Name=SpecAgent.rc
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\SpecAgent\
+Flags=1
+Disk=0
+
+[File 1484]
+Name=SpecAgent.rgs
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\SpecAgent\
+Flags=1
+Disk=0
+
+[File 1485]
+Name=SpecAgentImp.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\SpecAgent\
+Flags=1
+Disk=0
+
+[File 1486]
+Name=SpecAgentImp.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\SpecAgent\
+Flags=1
+Disk=0
+
+[File 1487]
+Name=StdAfx.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\SpecAgent\
+Flags=1
+Disk=0
+
+[File 1488]
+Name=StdAfx.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\SpecAgent\
+Flags=1
+Disk=0
+
+[File 1489]
+Name=SpecDlg.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1490]
+Name=SpecDlg.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1491]
+Name=Splash.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1492]
+Name=Splash.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1493]
+Name=SplitChildFrm.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1494]
+Name=SplitChildFrm.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1495]
+Name=StatusCallbacks.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1496]
+Name=StatusCallbacks.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1497]
+Name=StatusCenterDlg.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1498]
+Name=StatusCenterDlg.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1499]
+Name=StatusCenterImp.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1500]
+Name=StatusCenterImp.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1501]
+Name=StdAfx.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1502]
+Name=StdAfx.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1503]
+Name=Strand Slope.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1504]
+Name=SupportDrawStrategy.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1505]
+Name=SupportDrawStrategyImpl.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1506]
+Name=SupportDrawStrategyImpl.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1507]
+Name=ChangeControlProcedure.doc
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Supporting Documents\
+Flags=1
+Disk=0
+
+[File 1508]
+Name=Check Flow Chart.vsd
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Supporting Documents\
+Flags=1
+Disk=0
+
+[File 1509]
+Name=Design Flow Chart.vsd
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Supporting Documents\
+Flags=1
+Disk=0
+
+[File 1510]
+Name=Package Model.vsd
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Supporting Documents\
+Flags=1
+Disk=0
+
+[File 1511]
+Name=Adding a Bean Section to PGSuper.doc
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Supporting Documents\Procedures\
+Flags=1
+Disk=0
+
+[File 1512]
+Name=Adding an Interface to an Agent.doc
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Supporting Documents\Procedures\
+Flags=1
+Disk=0
+
+[File 1513]
+Name=Adding Status Items to PGSuper.doc
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Supporting Documents\Procedures\
+Flags=1
+Disk=0
+
+[File 1514]
+Name=Creating a PGSuper Agent.doc
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Supporting Documents\Procedures\
+Flags=1
+Disk=0
+
+[File 1515]
+Name=PGSuper Regression Testing.doc
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Supporting Documents\Procedures\
+Flags=1
+Disk=0
+
+[File 1516]
+Name=SoftwareDevelopmentPlan.doc
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Supporting Documents\
+Flags=1
+Disk=0
+
+[File 1517]
+Name=ToDoList.xls
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Supporting Documents\
+Flags=1
+Disk=0
+
+[File 1518]
+Name=Analysis Model Editor.doc
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Supporting Documents\UI Spec\
+Flags=1
+Disk=0
+
+[File 1519]
+Name=Analysis Results View.doc
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Supporting Documents\UI Spec\
+Flags=1
+Disk=0
+
+[File 1520]
+Name=Bridge Model Editor.doc
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Supporting Documents\UI Spec\
+Flags=1
+Disk=0
+
+[File 1521]
+Name=Dialogs.doc
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Supporting Documents\UI Spec\
+Flags=1
+Disk=0
+
+[File 1522]
+Name=Error Handling.doc
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Supporting Documents\UI Spec\
+Flags=1
+Disk=0
+
+[File 1523]
+Name=Girder Model Editor.doc
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Supporting Documents\UI Spec\
+Flags=1
+Disk=0
+
+[File 1524]
+Name=Glossary of Terms.doc
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Supporting Documents\UI Spec\
+Flags=1
+Disk=0
+
+[File 1525]
+Name=Integration with the Operating System.doc
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Supporting Documents\UI Spec\
+Flags=1
+Disk=0
+
+[File 1526]
+Name=Menus.doc
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Supporting Documents\UI Spec\
+Flags=1
+Disk=0
+
+[File 1527]
+Name=Program Operation.doc
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Supporting Documents\UI Spec\
+Flags=1
+Disk=0
+
+[File 1528]
+Name=Status Bars.doc
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Supporting Documents\UI Spec\
+Flags=1
+Disk=0
+
+[File 1529]
+Name=Toolbars.doc
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Supporting Documents\UI Spec\
+Flags=1
+Disk=0
+
+[File 1530]
+Name=User Interface Specification.doc
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Supporting Documents\UI Spec\
+Flags=1
+Disk=0
+
+[File 1531]
+Name=Views and Windows.doc
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Supporting Documents\UI Spec\
+Flags=1
+Disk=0
+
+[File 1532]
+Name=Volume 1 - Requirements.doc
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Supporting Documents\
+Flags=1
+Disk=0
+
+[File 1533]
+Name=Volume 2 - Specifications.doc
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Supporting Documents\
+Flags=1
+Disk=0
+
+[File 1534]
+Name=Volume 3 - Algorithms.doc
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Supporting Documents\
+Flags=1
+Disk=0
+
+[File 1535]
+Name=W42G.pgt
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Templates\I-Girders\
+Flags=1
+Disk=0
+
+[File 1536]
+Name=W50G.pgt
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Templates\I-Girders\
+Flags=1
+Disk=0
+
+[File 1537]
+Name=W58G.pgt
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Templates\I-Girders\
+Flags=1
+Disk=0
+
+[File 1538]
+Name=W74G.pgt
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Templates\I-Girders\
+Flags=1
+Disk=0
+
+[File 1539]
+Name=W83G.pgt
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Templates\I-Girders\
+Flags=1
+Disk=0
+
+[File 1540]
+Name=W95G.pgt
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Templates\I-Girders\
+Flags=1
+Disk=0
+
+[File 1541]
+Name=U54G4.pgt
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Templates\U-Girders\
+Flags=1
+Disk=0
+
+[File 1542]
+Name=U54G5.pgt
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Templates\U-Girders\
+Flags=1
+Disk=0
+
+[File 1543]
+Name=U54G6.pgt
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Templates\U-Girders\
+Flags=1
+Disk=0
+
+[File 1544]
+Name=WBT32G.pgt
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Templates\WBT-Girders\
+Flags=1
+Disk=0
+
+[File 1545]
+Name=WBT38G.pgt
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Templates\WBT-Girders\
+Flags=1
+Disk=0
+
+[File 1546]
+Name=WBT62G.pgt
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Templates\WBT-Girders\
+Flags=1
+Disk=0
+
+[File 1547]
+Name=WF42G.pgt
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Templates\WF-Girders\
+Flags=1
+Disk=0
+
+[File 1548]
+Name=WF50G.pgt
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Templates\WF-Girders\
+Flags=1
+Disk=0
+
+[File 1549]
+Name=WF58G.pgt
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Templates\WF-Girders\
+Flags=1
+Disk=0
+
+[File 1550]
+Name=WF74G.pgt
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Templates\WF-Girders\
+Flags=1
+Disk=0
+
+[File 1551]
+Name=dlldata.c
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\TestAgent\
+Flags=1
+Disk=0
+
+[File 1552]
+Name=resource.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\TestAgent\
+Flags=1
+Disk=0
+
+[File 1553]
+Name=StdAfx.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\TestAgent\
+Flags=1
+Disk=0
+
+[File 1554]
+Name=StdAfx.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\TestAgent\
+Flags=1
+Disk=0
+
+[File 1555]
+Name=TestAgent.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\TestAgent\
+Flags=1
+Disk=0
+
+[File 1556]
+Name=TestAgent.def
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\TestAgent\
+Flags=1
+Disk=0
+
+[File 1557]
+Name=TestAgent.dsp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\TestAgent\
+Flags=1
+Disk=0
+
+[File 1558]
+Name=TestAgent.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\TestAgent\
+Flags=1
+Disk=0
+
+[File 1559]
+Name=TestAgent.idl
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\TestAgent\
+Flags=1
+Disk=0
+
+[File 1560]
+Name=TestAgent.rc
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\TestAgent\
+Flags=1
+Disk=0
+
+[File 1561]
+Name=TestAgent.rgs
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\TestAgent\
+Flags=1
+Disk=0
+
+[File 1562]
+Name=TestAgentImp.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\TestAgent\
+Flags=1
+Disk=0
+
+[File 1563]
+Name=TestAgentImp.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\TestAgent\
+Flags=1
+Disk=0
+
+[File 1564]
+Name=TestAgentps.def
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\TestAgent\
+Flags=1
+Disk=0
+
+[File 1565]
+Name=Theta - Hauling.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1566]
+Name=Theta Max - Lifting.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1567]
+Name=Theta prime Max - Hauilng.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1568]
+Name=Theta Prime Max - Lifting.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1569]
+Name=TipDlg.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1570]
+Name=TipDlg.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1571]
+Name=ToolBarDlg.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1572]
+Name=ToolBarDlg.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1573]
+Name=Traffic Barrier Dimensions.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1574]
+Name=UBeam.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1575]
+Name=Ultimate Moment Capacity Pic.gif
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1576]
+Name=UnitsDlg.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1577]
+Name=UnitsDlg.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1578]
+Name=UpdateBinFiles.bat
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=65537
+Disk=0
+
+[File 1579]
+Name=UserInfoPage.cpp
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1580]
+Name=UserInfoPage.h
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1581]
+Name=v Equation.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1582]
+Name=Vc Equation -SI.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1583]
+Name=Vc Equation -US.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1584]
+Name=CamberEqns.vsd
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Visio Pics\
+Flags=1
+Disk=0
+
+[File 1585]
+Name=ChapterLibrary.vsd
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Visio Pics\
+Flags=1
+Disk=0
+
+[File 1586]
+Name=Connection Type A.vsd
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Visio Pics\
+Flags=1
+Disk=0
+
+[File 1587]
+Name=Critical Section Picture.vsd
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Visio Pics\
+Flags=1
+Disk=0
+
+[File 1588]
+Name=Diaphragm Pic.vsd
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Visio Pics\
+Flags=1
+Disk=0
+
+[File 1589]
+Name=Distribution Factors.vsd
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Visio Pics\
+Flags=1
+Disk=0
+
+[File 1590]
+Name=Effective Flange Width.vsd
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Visio Pics\
+Flags=1
+Disk=0
+
+[File 1591]
+Name=Effective Shear Depth Pic.vsd
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Visio Pics\
+Flags=1
+Disk=0
+
+[File 1592]
+Name=eg Pic.vsd
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Visio Pics\
+Flags=1
+Disk=0
+
+[File 1593]
+Name=ex Equation 2000.vsd
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Visio Pics\
+Flags=1
+Disk=0
+
+[File 1594]
+Name=Flexure Check Flowcharts.vsd
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Visio Pics\
+Flags=1
+Disk=0
+
+[File 1595]
+Name=Flowcharts.vsd
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Visio Pics\
+Flags=1
+Disk=0
+
+[File 1596]
+Name=Fpc Pic.vsd
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Visio Pics\
+Flags=1
+Disk=0
+
+[File 1597]
+Name=Girder.vsd
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Visio Pics\
+Flags=1
+Disk=0
+
+[File 1598]
+Name=HaulingOverhangs.vsd
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Visio Pics\
+Flags=1
+Disk=0
+
+[File 1599]
+Name=IBeam.vsd
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Visio Pics\
+Flags=1
+Disk=0
+
+[File 1600]
+Name=KcEqn-SI.vsd
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Visio Pics\
+Flags=1
+Disk=0
+
+[File 1601]
+Name=KcEqn-US.vsd
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Visio Pics\
+Flags=1
+Disk=0
+
+[File 1602]
+Name=KfEqn-SI.vsd
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Visio Pics\
+Flags=1
+Disk=0
+
+[File 1603]
+Name=KfEqn-US.vsd
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Visio Pics\
+Flags=1
+Disk=0
+
+[File 1604]
+Name=LeverRuleExterior.vsd
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Visio Pics\
+Flags=1
+Disk=0
+
+[File 1605]
+Name=LeverRuleInterior.vsd
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Visio Pics\
+Flags=1
+Disk=0
+
+[File 1606]
+Name=LimitingCapacityOfOverReinforcedSections.vsd
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Visio Pics\
+Flags=1
+Disk=0
+
+[File 1607]
+Name=LRFDCreepEqn.vsd
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Visio Pics\
+Flags=1
+Disk=0
+
+[File 1608]
+Name=RigidMethod.vsd
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Visio Pics\
+Flags=1
+Disk=0
+
+[File 1609]
+Name=Shear Check Flowcharts.vsd
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Visio Pics\
+Flags=1
+Disk=0
+
+[File 1610]
+Name=Shear Zone Pic.vsd
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Visio Pics\
+Flags=1
+Disk=0
+
+[File 1611]
+Name=Slab Geometry Pic.vsd
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Visio Pics\
+Flags=1
+Disk=0
+
+[File 1612]
+Name=Span Length Pic.vsd
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Visio Pics\
+Flags=1
+Disk=0
+
+[File 1613]
+Name=Strand Slope.vsd
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Visio Pics\
+Flags=1
+Disk=0
+
+[File 1614]
+Name=System Diagram.vsd
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Visio Pics\
+Flags=1
+Disk=0
+
+[File 1615]
+Name=Traffic Barrier Dimensions.vsd
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Visio Pics\
+Flags=1
+Disk=0
+
+[File 1616]
+Name=UBeam.vsd
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Visio Pics\
+Flags=1
+Disk=0
+
+[File 1617]
+Name=Ultimate Moment Capacity Pic.vsd
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Visio Pics\
+Flags=1
+Disk=0
+
+[File 1618]
+Name=UserDefinedLoads.vsd
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Visio Pics\
+Flags=1
+Disk=0
+
+[File 1619]
+Name=WSDOTCreepEqn.vsd
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\Visio Pics\
+Flags=1
+Disk=0
+
+[File 1620]
+Name=Vs Equation.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1621]
+Name=WSDOTCreepEqn.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1622]
+Name=WSDOTlogo.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1623]
+Name=Zo - Lifting.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1624]
+Name=Zo Prime - Hauling.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0
+
+[File 1625]
+Name=Zo Prime - Lifting.jpg
+Path=C:\ARP_RELEASE\PGSuper\1.6.0\src\
+Flags=1
+Disk=0

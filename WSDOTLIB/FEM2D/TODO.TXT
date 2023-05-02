@@ -1,0 +1,11 @@
+To Do List
+================================================================================
+1. Clean up envelope handling.
+2. Implement unique id checking for all loadings.
+3. Implement recursion checks for dependent loads.
+4. Allow for load combinations to be performed during and after stiffness
+   analysis.
+5. GTSTRUDL commands for DEAD LOADING and LOADING COMBINATION.
+6. Debugging equilibrium check.
+7. Add exception handling
+

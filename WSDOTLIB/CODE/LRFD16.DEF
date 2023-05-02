@@ -1,0 +1,17 @@
+;------------------------------------------------
+;   Project LRFDCODE
+;
+;   Copyright © 1996. All Rights Reserved.
+;
+;   SUBSYSTEM:    CODE Module Defintion File
+;   FILE:         code.def
+;   AUTHOR:       Richard A. Brice
+;
+;------------------------------------------------
+
+LIBRARY        LRFD16
+DESCRIPTION    'LRFD Code Library'
+EXETYPE        WINDOWS
+CODE           PRELOAD MOVEABLE DISCARDABLE
+DATA           PRELOAD MOVEABLE SINGLE
+HEAPSIZE       1024

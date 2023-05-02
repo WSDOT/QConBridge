@@ -1,0 +1,16 @@
+Microsoft (R) Help Compiler
+HCRTF 4.03.0002
+Copyright (c) Microsoft Corp 1990 - 1995. All rights reserved.
+QConBridge.hpj
+    HC3048: Warning: topic #1 of G:\QConBridge\Help\HPreface.rtf : 
+	Nonscrolling region defined after scrolling region.
+223	Topics
+438	Jumps
+228	Keywords
+72	Bitmaps
+
+
+Created G:\QConBridge\Help\QConBridge.hlp, 475,455 bytes
+Bitmaps: 216,076 bytes
+Compile time: 0 minutes, 1 second
+16 notes, 1 warning
